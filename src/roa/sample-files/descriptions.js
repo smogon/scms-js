@@ -1,0 +1,21 @@
+var Descriptions = {
+    gen1monotype: {
+        "[PvK] Psychic with Mr. Mime": `This Psychic-type team spreads paralysis efficiently to achieve a Slowbro sweep. Jynx is the most consistent Sleep lead and has Counter to beat Normal-type attacking leads, such as Dodrio on Flying- and Normal-type teams. 
+
+The combination of Alakazam and Starmie make for a difficult special offense to stop, especially with their access to Recover. This allows for Thunder Wave to gradually spread to the rest of the opposing team, enabling Slowbro to use Amnesia and win. Exeggutor acts as a backup sleeper, and with Double-Edge provides the team with much-needed physical offense. 
+
+To assist with Psychic's difficulties with breaking Water, Mr. Mime is used in the last team slot for its access to Thunderbolt. However, it is very replaceable, with Hypno being another potential option with a strong support movepool. It can, however, use Meditate and Body Slam for physical offense, reducing reliance on Exeggutor as the team's answer to physical walls like Reflect Chansey.`,
+        "[PvK] Normal with Counter Kang v2": `This Normal-type team is centered around using Normal-types attackers to force through more physically frail teams, most notably Psychic and Fire. Dodrio is used as a lead, as it has a 46.2% chance to OHKO Jynx with Hyper Beam, while having a near-guaranteed 2HKO on Poliwrath with Drill Peck. This gives Normal its best possible lead against the other top types, as it has issues stopping sleep.
+
+Chansey serves as your sleeper, as well as the defensive backbone of the team; it's also the main paralysis absorber, preventing the fast attackers in the back from having their offense incapacitated. Considering the entire team is immune to paralysis from Body Slam, Thunder Wave is a constant presence in its matchups, so efficient pivoting with Chansey is of great importance to the team's success. Snorlax and Tauros have Amnesia and Thunderbolt, respectively, to give the team stronger special offense. 
+
+Kangaskhan fills the last slot for Counter, allowing for a better matchup against opposing Normal teams while universally deterring Body Slam. Dodrio's immunity to Earthquake helps here, as Counter only works on Normal and Fighting-type attacks. This acts as a strong deterrent to the move's use, thus encouraging moves like Body Slam from the opponent. Thus, it becomes more difficult for the opponent to scout for Counter from Kangaskhan, increasing the likelihood of its success. Self-Destruct Snorlax also comes into play here: if Kangaskhan forces a foe out as it switches in, it can Counter the Self-Destruct that Snorlax used before, likely picking up a KO.
+
+Normal is at its most flexible when looking at sets. Chansey and Snorlax have plenty of room for exploration by virtue of their massive movepools; Chansey can utilize BoltBeam coverage, Thunder Wave and more, while Snorlax can utilize Reflect or all-out attacker sets. Outside of this, Kangaskhan is replaceable - especially if Chansey is given Counter - leaving room for Clefable or even Super Fang Raticate as potential options. Toxic is a valid option on Persian to counter ToxWrap teams, particularly Flying and Fire, as it causes users of partial trapping to take more damage than they deal.`,
+    },
+    gen1uu: {
+         "[PvK] Venomoth + Dragonite": `This is a team aiming to make the best use of Venomoth, a D-rank on the UU Viability Rankings. Tentacruel is used as a lead to weave Venomoth in early via Wrap, circumventing its mediocre lead matchups and getting an early, consistent Sleep Powder as soon as possible. From there, Stun Spore, Psychic or a switch can be used accordingly to gain a significant early lead. Venomoth relieves the team of some teambuilding pressure, allowing Hypno to use Seismic Toss and Psychic in the same moveset, as it doesn't need Hypnosis. 
+
+Once Venomoth has provided the team with its early lead, it's on Tentacruel and Hypno to do their business, whittling opposing teams into range for Persian and Dugtrio to KO them. Dragonite is also around to abuse Agility + Wrap to further whittle teams down. Venomoth can also come in on Toxic if you think the opponent is going to try and poison Dragonite.`
+    },
+};
