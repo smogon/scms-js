@@ -1,1 +1,1 @@
-# scms-scripts
+This is a transitional repository, related to the long-term project of retiring Smogon's legacy CMS.
