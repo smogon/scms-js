@@ -67,18 +67,18 @@
 // isComplete is used to award an extra point to a player that goes undefeated in a double elim tour
 // i.e. their final win should count as a "winner's bracket win", which awards two points, not one.
 
-var seasonals = window.scmsJSON.seasonals;
-
-var ssnlOrder = Object.keys(seasonals);
-
-var playerDatabase = window.scmsJSON.playerDatabase || {};
-
 function toID(text) {
 	text = text + '';
 	return text.toLowerCase().replace(/[^a-z0-9]/g, '');
 }
 // the good stuff
 $(document).ready(function () {
+    var seasonals = window.scmsJSON.seasonals;
+
+    var ssnlOrder = Object.keys(seasonals);
+
+    var playerDatabase = window.scmsJSON.playerDatabase || {};
+
     $('#show').click(function () {
         $("#help").show(600);
         $("#show").hide(600);
