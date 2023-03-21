@@ -330,7 +330,8 @@ $(document).ready(function () {
         $.each(standings, function (index, playerScore) {
             if (previousScore > playerScore[1]) currentRank = index + 1;
             previousScore = playerScore[1];
-            text += "<tr class=\"row" + (currentRank <= 12 ? " top12" : "") + "\">";
+            // TODO: Make customizable with window JSON
+            text += "<tr class=\"row" + (currentRank <= 8 ? " top8" : "") + "\">";
             text += "<td class=\"rank\">" + currentRank + ".</td>";
             text += "<td class=\"name\"><a href=\"/forums/members/" + playerScore[0] + "/\" target=\"_blank\">" + playerDatabase[playerScore[0]]["name"] + "</a></td>";
 
