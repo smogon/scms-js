@@ -189,7 +189,7 @@ $(document).ready(function () {
                         if (window.scmsJSON.BFL) {
                             for (var i in playerDatabase) {
                                 let openCount = 0;
-                                for (var ssnlKey in playerDatabase[i].seasons.seasons) {
+                                for (var ssnlKey in playerDatabase[i].seasons) {
                                     openCount++;
                                 }
                                 if (openCount > window.scmsJSON.BFL) playerDatabase[i].enforceBFL = true;
