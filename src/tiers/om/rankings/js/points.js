@@ -74,10 +74,9 @@ function toID(text) {
 // the good stuff
 $(document).ready(function () {
     var seasonals = window.scmsJSON.seasonals;
-
     var ssnlOrder = Object.keys(seasonals);
-
     var playerDatabase = window.scmsJSON.playerDatabase || {};
+    var useOldScoring = window.scmsJSON.useOldScoring;
 
     $('#show').click(function () {
         $("#help").show(600);
@@ -119,8 +118,10 @@ $(document).ready(function () {
     }
 
     Promise.all(deffereds).then(function () {
+        var roundSizes = {};
         // All the threads are loaded, lgi!
         $.each(seasonals, function (seasonalKey, seasonal) {
+            if (!roundSizes[seasonalKey]) roundSizes[seasonalKey] = [];
             $.each(seasonal.threads, function (threadIndex, thread) {
                 var threadInfo = seasonal.threadInfo[thread];
 
@@ -149,6 +150,8 @@ $(document).ready(function () {
 
                         // initialization
                         var playerIds = ['0','0'];
+                        if (!roundSizes[seasonalKey][threadIndex]) roundSizes[seasonalKey][threadIndex] = 0;
+                        roundSizes[seasonalKey][threadIndex] += 2;
                         var playerNames = ['', ''];
                         var winner = -1;
                         var isCoinflip = false;
@@ -209,7 +212,7 @@ $(document).ready(function () {
                             // we don't know who won. log that the match happened, but it is possible no points were awarded
                             playerDatabase[playerIds[0]].seasons[seasonalKey].results[threadIndex] = "u";
                             playerDatabase[playerIds[1]].seasons[seasonalKey].results[threadIndex] = "u";
-                            console.log('Didn\'t record a result for: ' + playerNames[0] + ' vs ' + playerNames[1] + '(round ' + (threadIndex+1) + ', ' + seasonalKey + ')');
+                            console.log('Didn\'t record a result for: ' + playerNames[0] + ' vs ' + playerNames[1] + '(round ' + (threadIndex + 1) + ', ' + seasonalKey + ')');
                         }
                     } catch (e) {
                         console.error(e, e.stack);
@@ -250,9 +253,25 @@ $(document).ready(function () {
                     switch (seasonals[ssnlName]["scoring-type"]) {
                         case 'single':
                         case 'single-rr':
-                            var pointValues = [1, 2, 3, 5, 7, 9, 11, 13, 15, 17, 19];
-                            var lastWin = results.lastIndexOf("w");
-                            if (lastWin > -1 && lastWin < pointValues.length) points = points + pointValues[lastWin];
+                            if (useOldScoring) {
+                                var pointValues = [1, 2, 3, 5, 7, 9, 11, 13, 15, 17, 19];
+                                var lastWin = results.lastIndexOf("w");
+                                if (lastWin > -1 && lastWin < pointValues.length) points = points + pointValues[lastWin];
+                            } else {
+                                if (roundSizes[ssnlName]) {
+                                    console.log(roundSizes[ssnlName]);
+                                    for (var q = 0; q < roundSizes[ssnlName].length; q++) {
+                                        var roundSize = roundSizes[ssnlName][q];
+                                        if (results[q]) {
+                                            if (results[q] === 'u' || results[q] === 'l' || (results[q] === 'c' && results[q + 1] && results[q + 1] !== 'w')) continue;
+                                            points += 1;
+                                            if (roundSize <= (seasonals[ssnlName]["scoring-type"] === 'single-rr' ? 48 : 32)) {
+                                                points += 1;
+                                            }
+                                        }
+                                    }
+                                }
+                            }
                             // extra point for RR champion
                             if (seasonals[ssnlName]["scoring-type"] === 'single-rr' &&
                                 lastWin + 1 === seasonals[ssnlName]["threads"].length && seasonals[ssnlName]["isComplete"]) {
