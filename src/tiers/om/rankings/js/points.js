@@ -68,8 +68,8 @@
 // i.e. their final win should count as a "winner's bracket win", which awards two points, not one.
 
 function toID(text) {
-	text = text + '';
-	return text.toLowerCase().replace(/[^a-z0-9]/g, '');
+    text = text + '';
+    return text.toLowerCase().replace(/[^a-z0-9]/g, '');
 }
 // the good stuff
 $(document).ready(function () {
@@ -231,6 +231,7 @@ $(document).ready(function () {
             for (var s = 0; s < ssnlOrder.length; s++) {
                 var ssnlName = ssnlOrder[s];
                 if (ssnlName in playerData.seasons) {
+                    /*
                     if (playerData.enforceBFL) {
                         var runs = [];
                         for (var x in playerData.seasons) {
@@ -245,6 +246,7 @@ $(document).ready(function () {
                             playerData.seasons[ssnlName].results = [];
                         }
                     }
+                    */
                     var points = 0;
                     var results = playerData.seasons[ssnlName].results;
                     for (var r=0; r<results.length; r++) {
@@ -309,6 +311,18 @@ $(document).ready(function () {
 
                     // Ensure points are never negative
                     if (points < 0) points = 0;
+                    if (playerData.enforceBFL) {
+                        var sortedScores = playerScore.slice(2).map(a => a === '--' ? 0 : a).sort((a, b) => b - a);
+                        if (sortedScores.length >= window.scmsJSON.BFL) {
+                            if (points > sortedScores[window.scmsJSON.BFL - 1]) {
+                                // replace lowest score
+                                playerScore[1] -= sortedScores[window.scmsJSON.BFL - 1];
+                                playerScore[playerScore.lastIndexOf(sortedScores[window.scmsJSON.BFL - 1])] = 0;
+                            } else {
+                                points = 0;
+                            }
+                        }
+                    }
                     playerScore.push(points);
                     playerScore[1] = playerScore[1] + points; // total points
                 } else {
