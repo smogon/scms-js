@@ -12,7 +12,7 @@ $(document).ready(function () {
     var qcURL = json.qcURL;
     var description = json.description +
         (json.replayLine && json.replayURL ?
-            ("<br /><br /><a href=\"" + json.replayURL + "\" target=\"_blank\">" + json.replayLine + "</a>") : "");
+            ('<br /><br /><a href="' + json.replayURL + '" target="_blank">' + json.replayLine + '</a>') : '');
     var formatid = toID(json.formatName);
     var obj = PokemonTeams.importTeam($("#set").text());
     obj.format = formatid;
@@ -20,8 +20,8 @@ $(document).ready(function () {
     var buf = '';
     buf += '<div class="header">';
     buf += '<h1 style="font-size:x-large;display: inline-block; background: url(/forums//media/minisprites/' + set.species.toLowerCase().replace(/\./g, '').replace(/ /g, '-') + '.png) no-repeat left;">' + json.formatName + ' Set Spotlight: ' + json.setName + ' ' + set.species + '</h1>';
-    buf += '<p class="author">Written by <a href="/forums/members/' + authorURL[1] + '/">' + authorURL[0] + '</a>';
-    if (qcURL) buf += ' | Quality checked by <a href="/forums/members/' + qcURL[1] + '/">' + qcURL[0] + '</a>';
+    buf += '<p class="author">Written by <a href="/forums/members/' + authorURL[1] + '/" target="_blank">' + authorURL[0] + '</a>';
+    if (qcURL) buf += ' | Quality checked by <a href="/forums/members/' + qcURL[1] + '/" target="_blank">' + qcURL[0] + '</a>';
     if (gpURL) buf += ' | Grammar checked by <a href="/forums/members/' + gpURL[1] + '/" target="_blank">' + gpURL[0] + '</a>';
     buf += '</p></div>';
     // image handling
