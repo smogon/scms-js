@@ -255,9 +255,9 @@ $(document).ready(function () {
                     switch (seasonals[ssnlName]["scoring-type"]) {
                         case 'single':
                         case 'single-rr':
+                            var lastWin = results.lastIndexOf("w");
                             if (useOldScoring) {
                                 var pointValues = [1, 2, 3, 5, 7, 9, 11, 13, 15, 17, 19];
-                                var lastWin = results.lastIndexOf("w");
                                 if (lastWin > -1 && lastWin < pointValues.length) points = points + pointValues[lastWin];
                             } else {
                                 if (roundSizes[ssnlName]) {
