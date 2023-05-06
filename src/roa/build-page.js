@@ -153,8 +153,8 @@ function buildPage(teamStr, format) {
         return buf.join('') + '</div>';
     }
     buf.push('<h2>' + reformatFileToFormatName(format) + ' teams</h2>');
-    var teams = PokemonTeams.importTeams(teamStr);
-    buf.push('<p class="hide" id="allteams">' + escapeHTML(PokemonTeams.exportTeams(teams), true) + '</p>');
+    var teams = pkmn.sets.Teams.importTeams(teamStr);
+    buf.push('<p class="hide" id="allteams">' + escapeHTML(pkmn.sets.Teams.exportTeams(teams), true) + '</p>');
     buf.push('<div><button class="button" onclick="copyElement(\'#allteams\', \'Successfully copied all teams!\')">Copy All Teams</button></div>');
     for (var i = 0; i < teams.length; i++) {
         var skip = false;
