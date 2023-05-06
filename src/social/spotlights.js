@@ -14,7 +14,7 @@ $(document).ready(function () {
         (json.replayLine && json.replayURL ?
             ('<br /><br /><a href="' + json.replayURL + '" target="_blank">' + json.replayLine + '</a>') : '');
     var formatid = toID(json.formatName);
-    var obj = PokemonTeams.importTeam($("#set").text());
+    var obj = pkmn.sets.Teams.importTeam($("#set").text());
     obj.format = formatid;
     var set = obj.team[0];
     var buf = '';
@@ -34,7 +34,7 @@ $(document).ready(function () {
     if (set.item.includes('/')) set.item = set.item.split('/')[0].trim();
     var itemSprite = '/forums//media/minisprites/' + set.item.toLowerCase().replace(/ /g, '-') + '.png';
     buf += '<img class="img-item" src="' + itemSprite + '" /></div>';
-    buf += '<pre>' + $("#set").text().trim().replace(/\n/g, '<br />');
+    buf += '<pre>' + pkmn.sets.Sets.exportSet(set);
     buf += '<div id="description"><br />' + description + '</div></pre>';
     buf += '</article>';
     $('title').html("Social Media Spotlight: " + json.formatName + ' ' + json.setName + ' ' + set.species);
