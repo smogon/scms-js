@@ -18,17 +18,13 @@ Object.defineProperty(String.prototype, 'endsWith', {
     }
 });
 
-const FORMATS = [
-    'gen11v1', 'gen1lc', 'gen1nu', 'gen1ou', 'gen1stadiumou', 'gen1ubers', 'gen1uu', 'gen1nintendocup1997', 'gen1tradebacksou', 'gen1lcl100', 'gen1middlecup', 'gen21v1', 'gen2lc', 'gen2nu', 'gen2ou', 'gen2pu', 'gen2ubers', 'gen2uu', 'gen31v1', 'gen3lc', 'gen3nu', 'gen3ou', 'gen3pu', 'gen3ubers', 'gen3uu', 'gen3zu', 'gen41v1', 'gen4lc', 'gen4monotype', 'gen4nu', 'gen4ou', 'gen4pu', 'gen4ubers', 'gen4uu', 'gen4zu', 'gen51v1', 'gen5lc', 'gen5nu', 'gen5ou', 'gen5pu', 'gen5ru', 'gen5ubers', 'gen5uu', 'gen5zu', 'gen61v1', 'gen6lc', 'gen6monotype', 'gen6nu', 'gen6ou', 'gen6pu', 'gen6ru', 'gen6ubers', 'gen6uu', 'gen6zu', 'gen71v1', 'gen7lc', 'gen7letsgoou', 'gen7monotype', 'gen7nu', 'gen7ou', 'gen7pu', 'gen7ru', 'gen7ubers', 'gen7uu', 'gen1monotype', 'index', 'gen2zu', 'gen5monotype', 'gen8ubers',
-];
+const FORMATS = window.scmsJSON.FORMATS;
 
 function reformatFileToFormatName(str) {
-    if (str === 'gen7letsgoou') return '[Gen 7 Let\'s Go] OU';
-    if (str === 'gen1stadiumou') return '[Gen 1] Stadium OU';
-    if (str === 'gen1tradebacksou') return '[Gen 1] Tradebacks OU';
-    if (str === 'gen1nintendocup1997') return '[Gen 1] Nintendo Cup 1997';
-    if (str === 'gen1lcl100') return '[Gen 1] LC L100';
-    if (str === 'gen1middlecup') return '[Gen 1] Middle Cup';
+    const nameWhitelist = window.scmsJSON.nameWhitelist;
+    if (nameWhitelist && nameWhitelist[str]) {
+        return nameWhitelist[str];
+    }
     var gen;
     if (str.slice(4).length > 2) {
         gen = '[Gen ' + str.slice(3, 4) + '] ' + str.slice(4, 5).toUpperCase() + str.slice(5);
