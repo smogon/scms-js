@@ -12,45 +12,132 @@ Object.defineProperty(String.prototype, 'startsWith', {
 Object.defineProperty(String.prototype, 'endsWith', {
     value: function(search, this_len) {
         if (this_len === undefined || this_len > search.length) {
-          this_len = search.length;
+            this_len = search.length;
         }
         return this.substring(this_len - search.length, this_len) === search;
     }
 });
 
-$(document).ready(function () {
-    const FORMATS = window.scmsJSON.FORMATS;
+function reformatFileToFormatName(str) {
+    const nameWhitelist = window.scmsJSON.nameWhitelist;
+    if (nameWhitelist && nameWhitelist[str]) {
+        return nameWhitelist[str];
+    }
+    var gen;
+    if (str.slice(4).length > 2) {
+        gen = '[Gen ' + str.slice(3, 4) + '] ' + str.slice(4, 5).toUpperCase() + str.slice(5);
+    } else {
+        gen = '[Gen ' + str.slice(3, 4) + '] ' + str.slice(4).toUpperCase();
+    }
+    return gen;
+};
 
-    function reformatFileToFormatName(str) {
-        const nameWhitelist = window.scmsJSON.nameWhitelist;
-        if (nameWhitelist && nameWhitelist[str]) {
-            return nameWhitelist[str];
+function getFormat() {
+    var format = false;
+    var q = window.location.search.substring(1).split('&');
+    for (var i = 0; i < q.length; i++) {
+        var p = q[i].split('=');
+        if (p[0] === 'format') {
+            format = p[1];
+            break;
         }
-        var gen;
-        if (str.slice(4).length > 2) {
-            gen = '[Gen ' + str.slice(3, 4) + '] ' + str.slice(4, 5).toUpperCase() + str.slice(5);
-        } else {
-            gen = '[Gen ' + str.slice(3, 4) + '] ' + str.slice(4).toUpperCase();
-        }
-        return gen;
-    };
+    }
+    return format;
+}
 
-    function getFormat() {
-        var format = false;
-        var q = window.location.search.substring(1).split('&');
-        for (var i = 0; i < q.length; i++) {
-            var p = q[i].split('=');
-            if (p[0] === 'format') {
-                format = p[1];
+function goToTeams(formatid) {
+    window.location = window.location.pathname + (!formatid ? '?format=index' : '?format=' + formatid);
+}
+
+function generateDescriptionBox(format, teamName) {
+    var desc = Descriptions[format];
+    if (!desc) return '';
+    desc = desc[teamName];
+    if (!desc) return '';
+    var lines = desc.split('\n');
+    var broken = false;
+    for (var i = 0; i < lines.length; i++) {
+        if (/^\[bull(et)?\]/gi.test(lines[i])) {
+            var openIndex = lines[i].search(/^\[bull(et)?\]/gi);
+            var closeIndex = lines[i].search(/\[\/bull(et)?\]$/gi);
+            if (closeIndex < 0 || closeIndex < openIndex) {
+                broken = 'Contact Kris or Links; open [bull] or [BULL] tag found but no closing [/bull] or [/BULL] tag found.';
                 break;
             }
+            // var newLine = lines[i].replace(/\[bull(et)?\]/gi, '<li>').replace(/\[\/bull(et)?\]/gi, '</li>').trim();
+            var newLine = '&bullet; ' + lines[i].replace(/\[bull(et)?\]/gi, '').replace(/\[\/bull(et)?\]/gi, '').trim();
+            lines[i] = newLine;
         }
-        return format;
+        if (/\[b\]/gi.test(lines[i])) {
+            var openIndex = lines[i].search(/\[b\]/gi);
+            var closeIndex = lines[i].search(/\[\/b\]/gi);
+            if (closeIndex < 0 || closeIndex < openIndex) {
+                broken = 'Contact Kris or Links; open [b] or [B] tag found but no closing [/b] or [/B] tag found.';
+                break;
+            }
+            var newLine = lines[i].replace(/\[b\]/gi, '<b>').replace(/\[\/b\]/gi, '</b>');
+            lines[i] = newLine;
+        }
     }
+    if (broken) return broken;
+    var newLines = lines;
+    /*for (var i = 0; i < newLines.length; i++) {
+      if (newLines[i].startsWith('<li>')) {
+      if (!newLines[i - 1]) {
+      newlines[i] = '<ul>' + newLines[i];
+      } else {
+      if (newLines[i - 1].startsWith('<li>')) continue;
+      if (!newLines[i - 1].endsWith('<ul>')) {
+      newLines[i - 1] += '<ul>';
+      }
+      }
+      if (!newLines[i + 1]) {
+      newlines[i] += '</ul>';
+      } else {
+      if (newLines[i + 1].startsWith('<li>')) continue;
+      if (!newLines[i + 1].endsWith('</ul>')) {
+      newLines[i + 1] += '</ul>';
+      }
+      }
+      }
+      }*/
+    var buf = [];
+    buf.push('<h3>Description</h3>');
+    buf.push('<p>' + newLines.join('</p><p>').replace(/<p><\/p>/g, '') + '</p>');
+    return buf.join('');
+}
 
-    function goToTeams(formatid) {
-        window.location = window.location.pathname + (!formatid ? '?format=index' : '?format=' + formatid);
-    }
+
+
+function copyElement(element, msg) {
+    copyText($(element).text(), msg);
+}
+
+function copyText(text, msg) {
+    var $t = $('<textarea>');
+    $('#b').append($t);
+    $t.val(text.replace(/<br \/>/g, '')).select();
+    document.execCommand("copy");
+    $t.remove();
+    if (msg) alert(msg);
+}
+
+function escapeHTML(str, importable) {
+    if (!str) return '';
+    str = ('' + str)
+        .replace(/&/g, '&amp;')
+        .replace(/</g, '&lt;')
+        .replace(/>/g, '&gt;')
+        .replace(/"/g, '&quot;')
+        .replace(/'/g, '&apos;')
+        .replace(/\//g, '&#x2f;');
+    if (importable) str = str.replace(/\n/g, '\r\n<br />');
+    return str;
+}
+
+
+$(document).ready(function () {
+    const FORMATS = window.scmsJSON.FORMATS;
 
     function allTeamButtons(format, homePage) {
         var buf = [];
@@ -83,65 +170,7 @@ $(document).ready(function () {
         if (!homePage) buf.push('</details>');
         return buf.join('');
     }
-
-    function generateDescriptionBox(format, teamName) {
-        var desc = Descriptions[format];
-        if (!desc) return '';
-        desc = desc[teamName];
-        if (!desc) return '';
-        var lines = desc.split('\n');
-        var broken = false;
-        for (var i = 0; i < lines.length; i++) {
-            if (/^\[bull(et)?\]/gi.test(lines[i])) {
-                var openIndex = lines[i].search(/^\[bull(et)?\]/gi);
-                var closeIndex = lines[i].search(/\[\/bull(et)?\]$/gi);
-                if (closeIndex < 0 || closeIndex < openIndex) {
-                    broken = 'Contact Kris or Links; open [bull] or [BULL] tag found but no closing [/bull] or [/BULL] tag found.';
-                    break;
-                }
-                // var newLine = lines[i].replace(/\[bull(et)?\]/gi, '<li>').replace(/\[\/bull(et)?\]/gi, '</li>').trim();
-                var newLine = '&bullet; ' + lines[i].replace(/\[bull(et)?\]/gi, '').replace(/\[\/bull(et)?\]/gi, '').trim();
-                lines[i] = newLine;
-            }
-            if (/\[b\]/gi.test(lines[i])) {
-                var openIndex = lines[i].search(/\[b\]/gi);
-                var closeIndex = lines[i].search(/\[\/b\]/gi);
-                if (closeIndex < 0 || closeIndex < openIndex) {
-                    broken = 'Contact Kris or Links; open [b] or [B] tag found but no closing [/b] or [/B] tag found.';
-                    break;
-                }
-                var newLine = lines[i].replace(/\[b\]/gi, '<b>').replace(/\[\/b\]/gi, '</b>');
-                lines[i] = newLine;
-            }
-        }
-        if (broken) return broken;
-        var newLines = lines;
-        /*for (var i = 0; i < newLines.length; i++) {
-            if (newLines[i].startsWith('<li>')) {
-                if (!newLines[i - 1]) {
-                    newlines[i] = '<ul>' + newLines[i];
-                } else {
-                    if (newLines[i - 1].startsWith('<li>')) continue;
-                    if (!newLines[i - 1].endsWith('<ul>')) {
-                        newLines[i - 1] += '<ul>';
-                    }
-                }
-                if (!newLines[i + 1]) {
-                    newlines[i] += '</ul>';
-                } else {
-                    if (newLines[i + 1].startsWith('<li>')) continue;
-                    if (!newLines[i + 1].endsWith('</ul>')) {
-                        newLines[i + 1] += '</ul>';
-                    }
-                }
-            }
-        }*/
-        var buf = [];
-        buf.push('<h3>Description</h3>');
-        buf.push('<p>' + newLines.join('</p><p>').replace(/<p><\/p>/g, '') + '</p>');
-        return buf.join('');
-    }
-
+    
     function buildPage(teamStr, format) {
         var buf = [];
         buf.push('<div id="t" style="text-align:center;margin:12px 0;">');
@@ -197,31 +226,6 @@ $(document).ready(function () {
         return buf.join('');
     }
 
-    function copyElement(element, msg) {
-        copyText($(element).text(), msg);
-    }
-
-    function copyText(text, msg) {
-        var $t = $('<textarea>');
-        $('#b').append($t);
-        $t.val(text.replace(/<br \/>/g, '')).select();
-        document.execCommand("copy");
-        $t.remove();
-        if (msg) alert(msg);
-    }
-
-    function escapeHTML(str, importable) {
-        if (!str) return '';
-        str = ('' + str)
-            .replace(/&/g, '&amp;')
-            .replace(/</g, '&lt;')
-            .replace(/>/g, '&gt;')
-            .replace(/"/g, '&quot;')
-            .replace(/'/g, '&apos;')
-            .replace(/\//g, '&#x2f;');
-        if (importable) str = str.replace(/\n/g, '\r\n<br />');
-        return str;
-    }
 
     var format = getFormat();
     if (!format || FORMATS.indexOf(format.toLowerCase().replace(/[^a-z0-9]+/g, '')) < 0) format = 'index';
