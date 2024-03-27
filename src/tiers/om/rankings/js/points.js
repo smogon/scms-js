@@ -261,7 +261,7 @@ $(document).ready(function () {
                                 if (lastWin > -1 && lastWin < pointValues.length) points = points + pointValues[lastWin];
                             } else {
                                 if (roundSizes[ssnlName]) {
-                                    console.log(roundSizes[ssnlName]);
+                                    // console.log(roundSizes[ssnlName]);
                                     for (var q = 0; q < roundSizes[ssnlName].length; q++) {
                                         var roundSize = roundSizes[ssnlName][q];
                                         if (results[q]) {
