@@ -209,7 +209,7 @@ $(document).ready(function () {
                     } else {
                         spriteid = baseName;
                     }
-                    if (spriteid === 'ho-oh') spriteid === 'hooh';
+                    if (spriteid === 'ho-oh') spriteid = 'hooh';
                     buf.push('<img src="//play.pokemonshowdown.com/sprites/' + directory + '/' + spriteid + '.' + (genNum < 5 ? 'png' : 'gif') + '" alt="' + mon.species + '" />');
                 }
             }
