@@ -1,0 +1,2637 @@
+/* line 1, ../sass/hub.scss */
+html, body {
+  background-color: rgba(242, 242, 255, 0.8);
+  font: 13px 'Raleway', sans-serif !important;
+  height: 100%;
+}
+
+/* line 7, ../sass/hub.scss */
+#inner-footer {
+  position: relative;
+  margin-top: 10px;
+  margin-bottom: 10px;
+  width: 100%;
+  text-align: center;
+}
+
+/* line 15, ../sass/hub.scss */
+#nav-container {
+  position: relative;
+  width: 100%;
+  margin: 0 auto;
+  text-align: center;
+}
+
+/* line 21, ../sass/hub.scss */
+#navigation {
+  position: relative;
+  width: 100%;
+  margin: 0 auto;
+  text-align: center;
+  display: none;
+}
+
+/* line 28, ../sass/hub.scss */
+#welcome-text {
+  display: table;
+  text-align: center;
+  height: 100px;
+  line-height: 100px;
+  width: 100%;
+}
+
+/* line 35, ../sass/hub.scss */
+.v-center-helper {
+  display: table-cell;
+  vertical-align: middle;
+  line-height: normal;
+  font-size: 40px;
+  padding-top: 20px;
+}
+
+/* line 43, ../sass/hub.scss */
+.professor {
+  width: 18%;
+  display: inline-block;
+  text-align: center;
+  list-style-type: none;
+  overflow: hidden;
+}
+
+/* line 50, ../sass/hub.scss */
+.professor:hover {
+  background: #DDDDDD;
+}
+
+/* line 53, ../sass/hub.scss */
+.clickedBG {
+  background: lightgray !important;
+}
+
+/* line 56, ../sass/hub.scss */
+.professor img {
+  width: 80%;
+  margin: 0 auto;
+}
+
+/* line 60, ../sass/hub.scss */
+.header-text {
+  text-align: center;
+  vertical-align: middle;
+  width: 100%;
+  font-size: 1.6em;
+}
+
+/* line 67, ../sass/hub.scss */
+#main-content-container {
+  position: relative;
+  width: 100%;
+  margin: 0 auto;
+}
+
+/* line 72, ../sass/hub.scss */
+#main-content-container a:hover {
+  background: none;
+  /* Be sure bg yellow hovers don't effect */
+}
+
+/* line 75, ../sass/hub.scss */
+.analysis-hex-inner, .type-hex-inner, .vr-hex-inner, .rc-hex-inner {
+  cursor: pointer;
+}
+
+/* line 78, ../sass/hub.scss */
+#type-select-container {
+  background: rgba(242, 242, 255, 0.8);
+  position: relative;
+  width: 100%;
+}
+
+/* line 83, ../sass/hub.scss */
+#analyses-container, #something-container, #sample-teams-container, #role-compendium-container {
+  position: relative;
+  width: 100%;
+  text-align: center;
+  margin: 0 auto;
+  display: none;
+}
+
+/* line 91, ../sass/hub.scss */
+#viability-rankings-container {
+  position: relative;
+  width: 100%;
+  text-align: center;
+  margin: 0 auto;
+  display: table;
+  border-spacing: 10px;
+  border-collapse: separate;
+}
+
+/* line 101, ../sass/hub.scss */
+#viability-rankings-container {
+  display: none;
+}
+
+/* line 104, ../sass/hub.scss */
+#type-menu {
+  overflow: hidden;
+  width: 96%;
+  padding: 0.866% 0;
+  font-size: 1em;
+  margin: 0 auto;
+}
+
+/* line 111, ../sass/hub.scss */
+#type-menu:after {
+  content: "";
+  display: block;
+  clear: both;
+}
+
+/* line 117, ../sass/hub.scss */
+.section-intro {
+  padding-top: 30px;
+}
+
+/* line 121, ../sass/hub.scss */
+.vr-section-container {
+  width: 18%;
+  display: table-cell;
+  border-radius: 10px;
+  padding: 5px;
+  vertical-align: top;
+}
+
+/* line 129, ../sass/hub.scss */
+.vr-section-container h2 {
+  margin-bottom: 4px;
+}
+
+/* line 133, ../sass/hub.scss */
+.vr-section-container p {
+  font-size: 1vw;
+  margin-top: 0px;
+}
+
+/* line 137, ../sass/hub.scss */
+.vr-hex-inner:hover img {
+  opacity: 0.7;
+}
+
+/* line 141, ../sass/hub.scss */
+.rc-section-container {
+  width: 22%;
+  display: inline-block;
+  border-radius: 10px;
+  padding: 5px;
+  vertical-align: top;
+  text-align: center;
+  margin: 0.8%;
+}
+
+/* line 151, ../sass/hub.scss */
+.rc-section-container h2 {
+  margin-bottom: 10px;
+}
+
+/* line 155, ../sass/hub.scss */
+.rc-section-container p {
+  font-size: 1vw;
+  margin-top: 0px;
+}
+
+/* line 159, ../sass/hub.scss */
+.rc-hex-inner:hover img {
+  opacity: 0.7;
+}
+
+/* line 163, ../sass/hub.scss */
+.sample-team-section-header {
+  font-size: 35px;
+  padding-top: 15px;
+  margin-bottom: 5px;
+}
+
+/* line 168, ../sass/hub.scss */
+.sample-team-container {
+  position: relative;
+  width: 44%;
+  display: inline-block;
+  border-radius: 10px;
+  padding: 1%;
+  vertical-align: top;
+  margin-left: 1.5%;
+  margin-right: 1.5%;
+  margin-bottom: 90px;
+}
+
+/* line 179, ../sass/hub.scss */
+.sample-team-container h2 {
+  margin-bottom: 0px;
+}
+
+/* line 182, ../sass/hub.scss */
+.created-by-text {
+  font-size: 1vw;
+  margin-top: 4px;
+  margin-bottom: 3px;
+}
+
+/* line 187, ../sass/hub.scss */
+.dbl-click-text {
+  font-size: 0.8vw;
+  font-style: italic;
+  margin-top: 0px;
+}
+
+/* line 192, ../sass/hub.scss */
+.st-sprite {
+  left: -100%;
+  right: -100%;
+  width: auto;
+  height: 100%;
+  margin: 0 auto;
+}
+
+/* line 199, ../sass/hub.scss */
+.st-set-text {
+  font-size: 0.9vw;
+  font-weight: 500;
+  color: black;
+  top: 18%;
+  left: -100%;
+  right: -100%;
+  display: none;
+}
+
+/* line 208, ../sass/hub.scss */
+.show-importable, .show-sets, .hide-sets {
+  position: absolute;
+  bottom: 6.5%;
+  left: 1%;
+  font-size: 1.2vw;
+  line-height: 1.2vw;
+  padding: 0.5vw;
+  background: #DDD;
+  border: 2px solid black;
+  border-radius: 0.5vw;
+  cursor: pointer;
+}
+
+/* line 220, ../sass/hub.scss */
+.show-sets, .hide-sets {
+  bottom: 16%;
+}
+
+/* line 223, ../sass/hub.scss */
+.hide-sets {
+  display: none;
+}
+
+/* line 226, ../sass/hub.scss */
+.show-importable:hover, .show-sets:hover, .hide-sets:hover, .hide-importable:hover {
+  background: lightgray;
+}
+
+/* line 229, ../sass/hub.scss */
+.importable {
+  position: absolute;
+  width: 98%;
+  height: 110%;
+  overflow-y: scroll;
+  left: -100%;
+  right: -100%;
+  margin: 0 auto;
+  z-index: 2;
+  display: none;
+  background: white;
+}
+
+/* line 241, ../sass/hub.scss */
+.hide-importable {
+  z-index: 3;
+  display: none;
+  position: absolute;
+  top: 4%;
+  right: 4%;
+  font-size: 1.2vw;
+  line-height: 1.2vw;
+  padding: 0.5vw;
+  background: #DDD;
+  border: 2px solid black;
+  border-radius: 0.5vw;
+  cursor: pointer;
+}
+
+/* line 256, ../sass/hub.scss */
+#analysis-selection-container {
+  width: 30%;
+  display: inline-block;
+  vertical-align: top;
+}
+
+/* line 261, ../sass/hub.scss */
+.analysis-hex-inner:hover {
+  opacity: 0.7;
+}
+
+/* line 264, ../sass/hub.scss */
+#analysis-container {
+  width: 60%;
+  display: inline-block;
+}
+
+/* line 271, ../sass/hub.scss */
+#sprite-container {
+  display: inline-block;
+  position: relative;
+  height: 200px;
+  line-height: 200px;
+  width: 30%;
+  vertical-align: top;
+  margin: auto;
+}
+
+/* line 281, ../sass/hub.scss */
+#sprite-container img, #abilities-container div {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+}
+
+/* line 288, ../sass/hub.scss */
+#abilities-container {
+  display: inline-block;
+  position: relative;
+  height: 200px;
+  width: 20%;
+  vertical-align: top;
+  font-size: 1.2vw;
+}
+
+/* line 296, ../sass/hub.scss */
+#abilities-container a {
+  display: block;
+  margin-bottom: 9px;
+}
+
+/* line 301, ../sass/hub.scss */
+#stats-container {
+  display: inline-block;
+  width: 40%;
+  height: 200px;
+  vertical-align: top;
+}
+
+/* line 307, ../sass/hub.scss */
+.stats-canvas {
+  width: 80%;
+  height: 100%;
+  float: left;
+}
+
+/* line 312, ../sass/hub.scss */
+#overview-container {
+  padding-left: 20px;
+  text-align: left;
+}
+
+/* line 316, ../sass/hub.scss */
+#overview-container h3 {
+  text-align: left;
+  font-size: 18px;
+  margin-bottom: 0.5em;
+}
+
+/* line 321, ../sass/hub.scss */
+#overview-container p {
+  font-size: 15px;
+  line-height: 19px;
+  margin-top: 0px;
+}
+
+/* line 327, ../sass/hub.scss */
+#checks-container {
+  text-align: left;
+}
+
+/* line 330, ../sass/hub.scss */
+#checks-container h3 {
+  font-size: 18px;
+  margin-bottom: 0.5em;
+}
+
+/* line 334, ../sass/hub.scss */
+.check-container {
+  display: inline-block;
+  text-align: center;
+  width: 21%;
+  margin: 0.5%;
+  border-radius: 10px;
+  padding: 5px;
+  overflow-y: auto;
+  vertical-align: top;
+  max-height: 300px;
+}
+
+/* line 345, ../sass/hub.scss */
+.check-container img {
+  margin-bottom: 15px;
+}
+
+/* line 350, ../sass/hub.scss */
+#sets-container {
+  background: transparent;
+  border: none;
+  font: 13px 'Raleway', sans-serif !important;
+}
+
+/* line 355, ../sass/hub.scss */
+#sets-container .ui-widget-header {
+  background: transparent;
+  border: none;
+  border-bottom: 1px solid #c0c0c0;
+  -moz-border-radius: 0px;
+  -webkit-border-radius: 0px;
+  border-radius: 0px;
+}
+
+/* line 363, ../sass/hub.scss */
+#sets-container .ui-tabs-nav .ui-state-default {
+  background: transparent;
+  border: none;
+}
+
+/* line 367, ../sass/hub.scss */
+#sets-container .ui-tabs-nav .ui-state-active {
+  background: transparent;
+  border: none;
+}
+
+/* line 371, ../sass/hub.scss */
+#sets-container .ui-tabs-nav .ui-state-default a {
+  color: #c0c0c0;
+}
+
+/* line 374, ../sass/hub.scss */
+#sets-container .ui-tabs-nav .ui-state-active a {
+  color: black;
+}
+
+/* line 377, ../sass/hub.scss */
+.ui-tabs-anchor {
+  font-size: 18px;
+  font-weight: 400;
+}
+
+/* line 381, ../sass/hub.scss */
+.ui-widget-content {
+  text-align: left;
+}
+
+/* line 384, ../sass/hub.scss */
+.ui-widget-content h2 {
+  font-size: 18px;
+  margin-bottom: 0.5em;
+}
+
+/* line 388, ../sass/hub.scss */
+.ui-widget-content p {
+  font-size: 15px;
+  line-height: 19px;
+  margin-top: 0px;
+}
+
+/* line 468, ../sass/hub.scss */
+.bug {
+  background-color: rgba(160, 191, 4, 0.6);
+}
+
+/* line 471, ../sass/hub.scss */
+.bug-hover {
+  background-color: rgba(160, 191, 4, 0.7);
+}
+
+/* line 475, ../sass/hub.scss */
+.dark {
+  background-color: rgba(38, 35, 32, 0.6);
+}
+
+/* line 478, ../sass/hub.scss */
+.dark-hover {
+  background-color: rgba(38, 35, 32, 0.7);
+}
+
+/* line 482, ../sass/hub.scss */
+.dragon {
+  background-color: rgba(112, 56, 248, 0.6);
+}
+
+/* line 485, ../sass/hub.scss */
+.dragon-hover {
+  background-color: rgba(112, 56, 248, 0.7);
+}
+
+/* line 489, ../sass/hub.scss */
+.electric {
+  background-color: rgba(251, 188, 0, 0.4);
+}
+
+/* line 492, ../sass/hub.scss */
+.electric-hover {
+  background-color: rgba(251, 188, 0, 0.4);
+}
+
+/* line 496, ../sass/hub.scss */
+.fairy {
+  background-color: rgba(255, 101, 213, 0.6);
+}
+
+/* line 499, ../sass/hub.scss */
+.fairy-hover {
+  background-color: rgba(255, 101, 213, 0.7);
+}
+
+/* line 503, ../sass/hub.scss */
+.fighting {
+  background-color: rgba(144, 48, 40, 0.6);
+}
+
+/* line 506, ../sass/hub.scss */
+.fighting-hover {
+  background-color: rgba(144, 48, 40, 0.7);
+}
+
+/* line 510, ../sass/hub.scss */
+.fire {
+  background-color: rgba(255, 39, 0, 0.6);
+}
+
+/* line 513, ../sass/hub.scss */
+.fire-hover {
+  background-color: rgba(255, 39, 0, 0.7);
+}
+
+/* line 517, ../sass/hub.scss */
+.flying {
+  background-color: rgba(178, 130, 242, 0.6);
+}
+
+/* line 520, ../sass/hub.scss */
+.flying-hover {
+  background-color: rgba(178, 130, 242, 0.7);
+}
+
+/* line 524, ../sass/hub.scss */
+.ghost {
+  background-color: rgba(112, 88, 152, 0.6);
+}
+
+/* line 527, ../sass/hub.scss */
+.ghost-hover {
+  background-color: rgba(112, 88, 152, 0.7);
+}
+
+/* line 531, ../sass/hub.scss */
+.grass {
+  background-color: rgba(120, 200, 80, 0.6);
+}
+
+/* line 534, ../sass/hub.scss */
+.grass-hover {
+  background-color: rgba(120, 200, 80, 0.7);
+}
+
+/* line 538, ../sass/hub.scss */
+.ground {
+  background-color: rgba(227, 194, 96, 0.6);
+}
+
+/* line 541, ../sass/hub.scss */
+.ground-hover {
+  background-color: rgba(227, 194, 96, 0.7);
+}
+
+/* line 545, ../sass/hub.scss */
+.ice {
+  background-color: rgba(135, 220, 218, 0.6);
+}
+
+/* line 548, ../sass/hub.scss */
+.ice-hover {
+  background-color: rgba(135, 220, 218, 0.7);
+}
+
+/* line 552, ../sass/hub.scss */
+.normal {
+  background-color: rgba(166, 171, 118, 0.6);
+}
+
+/* line 555, ../sass/hub.scss */
+.normal-hover {
+  background-color: rgba(166, 171, 118, 0.7);
+}
+
+/* line 559, ../sass/hub.scss */
+.poison {
+  background-color: rgba(160, 64, 160, 0.6);
+}
+
+/* line 562, ../sass/hub.scss */
+.poison-hover {
+  background-color: rgba(160, 64, 160, 0.7);
+}
+
+/* line 566, ../sass/hub.scss */
+.psychic {
+  background-color: rgba(255, 36, 130, 0.6);
+}
+
+/* line 569, ../sass/hub.scss */
+.psychic-hover {
+  background-color: rgba(255, 36, 130, 0.7);
+}
+
+/* line 573, ../sass/hub.scss */
+.rock {
+  background-color: rgba(185, 163, 43, 0.6);
+}
+
+/* line 576, ../sass/hub.scss */
+.rock-hover {
+  background-color: rgba(185, 163, 43, 0.7);
+}
+
+/* line 580, ../sass/hub.scss */
+.steel {
+  background-color: rgba(184, 184, 208, 0.6);
+}
+
+/* line 583, ../sass/hub.scss */
+.steel-hover {
+  background-color: rgba(184, 184, 208, 0.7);
+}
+
+/* line 587, ../sass/hub.scss */
+.water {
+  background-color: rgba(106, 135, 243, 0.6);
+}
+
+/* line 590, ../sass/hub.scss */
+.water-hover {
+  background-color: rgba(106, 135, 243, 0.7);
+}
+
+/* line 595, ../sass/hub.scss */
+.latios {
+  right: -180% !important;
+  bottom: 19% !important;
+}
+
+/* line 599, ../sass/hub.scss */
+.latias {
+  right: -160% !important;
+}
+
+/* line 602, ../sass/hub.scss */
+.kyuremblack {
+  right: -80% !important;
+}
+
+/* line 605, ../sass/hub.scss */
+.haxorus {
+  bottom: -11% !important;
+  right: -75% !important;
+}
+
+/* line 609, ../sass/hub.scss */
+.tyrantrum {
+  bottom: -11% !important;
+  right: -150% !important;
+}
+
+/* line 613, ../sass/hub.scss */
+.yanmega {
+  right: -162% !important;
+  bottom: 10% !important;
+}
+
+/* line 617, ../sass/hub.scss */
+.armaldo {
+  bottom: -10% !important;
+  right: -140% !important;
+}
+
+/* line 621, ../sass/hub.scss */
+.tyranitar {
+  bottom: -10% !important;
+}
+
+/* line 624, ../sass/hub.scss */
+.tyranitarmega {
+  bottom: -5% !important;
+  right: -75% !important;
+}
+
+/* line 628, ../sass/hub.scss */
+.zoroark {
+  bottom: -5% !important;
+  right: -175% !important;
+}
+
+/* line 632, ../sass/hub.scss */
+.gardevoirmega {
+  right: -170% !important;
+}
+
+/* line 635, ../sass/hub.scss */
+.pangoro {
+  bottom: -12% !important;
+  right: -130% !important;
+}
+
+/* line 639, ../sass/hub.scss */
+.torkoal {
+  bottom: -15% !important;
+  right: -143% !important;
+}
+
+/* line 643, ../sass/hub.scss */
+.arcanine {
+  bottom: -12% !important;
+  right: -70% !important;
+}
+
+/* line 647, ../sass/hub.scss */
+.entei {
+  bottom: -10% !important;
+}
+
+/* line 650, ../sass/hub.scss */
+.landorus {
+  bottom: -10% !important;
+}
+
+/* line 653, ../sass/hub.scss */
+.xatu {
+  bottom: -6% !important;
+  right: -110% !important;
+}
+
+/* line 657, ../sass/hub.scss */
+.salamence {
+  bottom: -6% !important;
+  right: -85% !important;
+}
+
+/* line 661, ../sass/hub.scss */
+.breloom {
+  bottom: -9% !important;
+  right: -80% !important;
+}
+
+/* line 665, ../sass/hub.scss */
+.serperior {
+  bottom: -10% !important;
+  right: -62% !important;
+}
+
+/* line 669, ../sass/hub.scss */
+.sceptilemega {
+  bottom: -10% !important;
+  right: -95% !important;
+}
+
+/* line 673, ../sass/hub.scss */
+.nidoking {
+  bottom: -10% !important;
+  right: -60% !important;
+}
+
+/* line 677, ../sass/hub.scss */
+.quagsire {
+  bottom: -10% !important;
+  right: -135% !important;
+}
+
+/* line 681, ../sass/hub.scss */
+.piloswine {
+  bottom: 14% !important;
+}
+
+/* line 684, ../sass/hub.scss */
+.skuntank {
+  bottom: 8% !important;
+  right: -83% !important;
+}
+
+/* line 688, ../sass/hub.scss */
+.qwilfish {
+  bottom: -0% !important;
+  right: -165% !important;
+}
+
+/* line 692, ../sass/hub.scss */
+.slowbro {
+  right: -70% !important;
+  bottom: -10% !important;
+}
+
+/* line 696, ../sass/hub.scss */
+.lanturn {
+  right: -162% !important;
+  bottom: -3% !important;
+}
+
+/* line 700, ../sass/hub.scss */
+.suicune {
+  bottom: -20% !important;
+}
+
+/* line 703, ../sass/hub.scss */
+.sharpedomega {
+  right: -80% !important;
+}
+
+/* line 706, ../sass/hub.scss */
+.kyurem {
+  right: -39% !important;
+  bottom: -8% !important;
+}
+
+/* line 710, ../sass/hub.scss */
+.walrein {
+  right: -70% !important;
+  bottom: -10% !important;
+}
+
+/* line 714, ../sass/hub.scss */
+.houndoom {
+  right: -131% !important;
+  bottom: -10% !important;
+}
+
+/* line 718, ../sass/hub.scss */
+.houndoommega {
+  right: -149% !important;
+  bottom: 0% !important;
+}
+/* line 1, ../sass/hub.scss */
+html, body {
+  background-color: rgba(242, 242, 255, 0.8);
+  font: 13px 'Raleway', sans-serif !important;
+  height: 100%;
+}
+
+/* line 7, ../sass/hub.scss */
+#inner-footer {
+  position: relative;
+  margin-top: 10px;
+  margin-bottom: 10px;
+  width: 100%;
+  text-align: center;
+}
+
+/* line 15, ../sass/hub.scss */
+#nav-container {
+  position: relative;
+  width: 100%;
+  margin: 0 auto;
+  text-align: center;
+}
+
+/* line 21, ../sass/hub.scss */
+#navigation {
+  position: relative;
+  width: 100%;
+  margin: 0 auto;
+  text-align: center;
+  display: none;
+}
+
+/* line 28, ../sass/hub.scss */
+#welcome-text {
+  display: table;
+  text-align: center;
+  height: 100px;
+  line-height: 100px;
+  width: 100%;
+}
+
+/* line 35, ../sass/hub.scss */
+.v-center-helper {
+  display: table-cell;
+  vertical-align: middle;
+  line-height: normal;
+  font-size: 40px;
+  padding-top: 20px;
+}
+
+/* line 43, ../sass/hub.scss */
+.professor {
+  width: 18%;
+  display: inline-block;
+  text-align: center;
+  list-style-type: none;
+  overflow: hidden;
+}
+
+/* line 50, ../sass/hub.scss */
+.professor:hover {
+  background: #DDDDDD;
+}
+
+/* line 53, ../sass/hub.scss */
+.clickedBG {
+  background: lightgray !important;
+}
+
+/* line 56, ../sass/hub.scss */
+.professor img {
+  width: 80%;
+  margin: 0 auto;
+}
+
+/* line 60, ../sass/hub.scss */
+.header-text {
+  text-align: center;
+  vertical-align: middle;
+  width: 100%;
+  font-size: 1.6em;
+}
+
+/* line 67, ../sass/hub.scss */
+#main-content-container {
+  position: relative;
+  width: 100%;
+  margin: 0 auto;
+}
+
+/* line 72, ../sass/hub.scss */
+#main-content-container a:hover {
+  background: none;
+  /* Be sure bg yellow hovers don't effect */
+}
+
+/* line 75, ../sass/hub.scss */
+.analysis-hex-inner, .type-hex-inner, .vr-hex-inner, .rc-hex-inner {
+  cursor: pointer;
+}
+
+/* line 78, ../sass/hub.scss */
+#type-select-container {
+  background: rgba(242, 242, 255, 0.8);
+  position: relative;
+  width: 100%;
+}
+
+/* line 83, ../sass/hub.scss */
+#analyses-container, #something-container, #sample-teams-container, #role-compendium-container {
+  position: relative;
+  width: 100%;
+  text-align: center;
+  margin: 0 auto;
+  display: none;
+}
+
+/* line 91, ../sass/hub.scss */
+#viability-rankings-container {
+  position: relative;
+  width: 100%;
+  text-align: center;
+  margin: 0 auto;
+  display: table;
+  border-spacing: 10px;
+  border-collapse: separate;
+}
+
+/* line 101, ../sass/hub.scss */
+#viability-rankings-container {
+  display: none;
+}
+
+/* line 104, ../sass/hub.scss */
+#type-menu {
+  overflow: hidden;
+  width: 96%;
+  padding: 0.866% 0;
+  font-size: 1em;
+  margin: 0 auto;
+}
+
+/* line 111, ../sass/hub.scss */
+#type-menu:after {
+  content: "";
+  display: block;
+  clear: both;
+}
+
+/* line 117, ../sass/hub.scss */
+.section-intro {
+  padding-top: 30px;
+}
+
+/* line 121, ../sass/hub.scss */
+.vr-section-container {
+  width: 18%;
+  display: table-cell;
+  border-radius: 10px;
+  padding: 5px;
+  vertical-align: top;
+}
+
+/* line 129, ../sass/hub.scss */
+.vr-section-container h2 {
+  margin-bottom: 4px;
+}
+
+/* line 133, ../sass/hub.scss */
+.vr-section-container p {
+  font-size: 1vw;
+  margin-top: 0px;
+}
+
+/* line 137, ../sass/hub.scss */
+.vr-hex-inner:hover img {
+  opacity: 0.7;
+}
+
+/* line 141, ../sass/hub.scss */
+.rc-section-container {
+  width: 22%;
+  display: inline-block;
+  border-radius: 10px;
+  padding: 5px;
+  vertical-align: top;
+  text-align: center;
+  margin: 0.8%;
+}
+
+/* line 151, ../sass/hub.scss */
+.rc-section-container h2 {
+  margin-bottom: 10px;
+}
+
+/* line 155, ../sass/hub.scss */
+.rc-section-container p {
+  font-size: 1vw;
+  margin-top: 0px;
+}
+
+/* line 159, ../sass/hub.scss */
+.rc-hex-inner:hover img {
+  opacity: 0.7;
+}
+
+/* line 163, ../sass/hub.scss */
+.sample-team-section-header {
+  font-size: 35px;
+  padding-top: 15px;
+  margin-bottom: 5px;
+}
+
+/* line 168, ../sass/hub.scss */
+.sample-team-container {
+  position: relative;
+  width: 44%;
+  display: inline-block;
+  border-radius: 10px;
+  padding: 1%;
+  vertical-align: top;
+  margin-left: 1.5%;
+  margin-right: 1.5%;
+  margin-bottom: 90px;
+}
+
+/* line 179, ../sass/hub.scss */
+.sample-team-container h2 {
+  margin-bottom: 0px;
+}
+
+/* line 182, ../sass/hub.scss */
+.created-by-text {
+  font-size: 1vw;
+  margin-top: 4px;
+  margin-bottom: 3px;
+}
+
+/* line 187, ../sass/hub.scss */
+.dbl-click-text {
+  font-size: 0.8vw;
+  font-style: italic;
+  margin-top: 0px;
+}
+
+/* line 192, ../sass/hub.scss */
+.st-sprite {
+  left: -100%;
+  right: -100%;
+  width: auto;
+  height: 100%;
+  margin: 0 auto;
+}
+
+/* line 199, ../sass/hub.scss */
+.st-set-text {
+  font-size: 0.9vw;
+  font-weight: 500;
+  color: black;
+  top: 18%;
+  left: -100%;
+  right: -100%;
+  display: none;
+}
+
+/* line 208, ../sass/hub.scss */
+.show-importable, .show-sets, .hide-sets {
+  position: absolute;
+  bottom: 6.5%;
+  left: 1%;
+  font-size: 1.2vw;
+  line-height: 1.2vw;
+  padding: 0.5vw;
+  background: #DDD;
+  border: 2px solid black;
+  border-radius: 0.5vw;
+  cursor: pointer;
+}
+
+/* line 220, ../sass/hub.scss */
+.show-sets, .hide-sets {
+  bottom: 16%;
+}
+
+/* line 223, ../sass/hub.scss */
+.hide-sets {
+  display: none;
+}
+
+/* line 226, ../sass/hub.scss */
+.show-importable:hover, .show-sets:hover, .hide-sets:hover, .hide-importable:hover {
+  background: lightgray;
+}
+
+/* line 229, ../sass/hub.scss */
+.importable {
+  position: absolute;
+  width: 98%;
+  height: 110%;
+  overflow-y: scroll;
+  left: -100%;
+  right: -100%;
+  margin: 0 auto;
+  z-index: 2;
+  display: none;
+  background: white;
+}
+
+/* line 241, ../sass/hub.scss */
+.hide-importable {
+  z-index: 3;
+  display: none;
+  position: absolute;
+  top: 4%;
+  right: 4%;
+  font-size: 1.2vw;
+  line-height: 1.2vw;
+  padding: 0.5vw;
+  background: #DDD;
+  border: 2px solid black;
+  border-radius: 0.5vw;
+  cursor: pointer;
+}
+
+/* line 256, ../sass/hub.scss */
+#analysis-selection-container {
+  width: 30%;
+  display: inline-block;
+  vertical-align: top;
+}
+
+/* line 261, ../sass/hub.scss */
+.analysis-hex-inner:hover {
+  opacity: 0.7;
+}
+
+/* line 264, ../sass/hub.scss */
+#analysis-container {
+  width: 60%;
+  display: inline-block;
+}
+
+/* line 271, ../sass/hub.scss */
+#sprite-container {
+  display: inline-block;
+  position: relative;
+  height: 200px;
+  line-height: 200px;
+  width: 30%;
+  vertical-align: top;
+  margin: auto;
+}
+
+/* line 281, ../sass/hub.scss */
+#sprite-container img, #abilities-container div {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+}
+
+/* line 288, ../sass/hub.scss */
+#abilities-container {
+  display: inline-block;
+  position: relative;
+  height: 200px;
+  width: 20%;
+  vertical-align: top;
+  font-size: 1.2vw;
+}
+
+/* line 296, ../sass/hub.scss */
+#abilities-container a {
+  display: block;
+  margin-bottom: 9px;
+}
+
+/* line 301, ../sass/hub.scss */
+#stats-container {
+  display: inline-block;
+  width: 40%;
+  height: 200px;
+  vertical-align: top;
+}
+
+/* line 307, ../sass/hub.scss */
+.stats-canvas {
+  width: 80%;
+  height: 100%;
+  float: left;
+}
+
+/* line 312, ../sass/hub.scss */
+#overview-container {
+  padding-left: 20px;
+  text-align: left;
+}
+
+/* line 316, ../sass/hub.scss */
+#overview-container h3 {
+  text-align: left;
+  font-size: 18px;
+  margin-bottom: 0.5em;
+}
+
+/* line 321, ../sass/hub.scss */
+#overview-container p {
+  font-size: 15px;
+  line-height: 19px;
+  margin-top: 0px;
+}
+
+/* line 327, ../sass/hub.scss */
+#checks-container {
+  text-align: left;
+}
+
+/* line 330, ../sass/hub.scss */
+#checks-container h3 {
+  font-size: 18px;
+  margin-bottom: 0.5em;
+}
+
+/* line 334, ../sass/hub.scss */
+.check-container {
+  display: inline-block;
+  text-align: center;
+  width: 21%;
+  margin: 0.5%;
+  border-radius: 10px;
+  padding: 5px;
+  overflow-y: auto;
+  vertical-align: top;
+  max-height: 300px;
+}
+
+/* line 345, ../sass/hub.scss */
+.check-container img {
+  margin-bottom: 15px;
+}
+
+/* line 350, ../sass/hub.scss */
+#sets-container {
+  background: transparent;
+  border: none;
+  font: 13px 'Raleway', sans-serif !important;
+}
+
+/* line 355, ../sass/hub.scss */
+#sets-container .ui-widget-header {
+  background: transparent;
+  border: none;
+  border-bottom: 1px solid #c0c0c0;
+  -moz-border-radius: 0px;
+  -webkit-border-radius: 0px;
+  border-radius: 0px;
+}
+
+/* line 363, ../sass/hub.scss */
+#sets-container .ui-tabs-nav .ui-state-default {
+  background: transparent;
+  border: none;
+}
+
+/* line 367, ../sass/hub.scss */
+#sets-container .ui-tabs-nav .ui-state-active {
+  background: transparent;
+  border: none;
+}
+
+/* line 371, ../sass/hub.scss */
+#sets-container .ui-tabs-nav .ui-state-default a {
+  color: #c0c0c0;
+}
+
+/* line 374, ../sass/hub.scss */
+#sets-container .ui-tabs-nav .ui-state-active a {
+  color: black;
+}
+
+/* line 377, ../sass/hub.scss */
+.ui-tabs-anchor {
+  font-size: 18px;
+  font-weight: 400;
+}
+
+/* line 381, ../sass/hub.scss */
+.ui-widget-content {
+  text-align: left;
+}
+
+/* line 384, ../sass/hub.scss */
+.ui-widget-content h2 {
+  font-size: 18px;
+  margin-bottom: 0.5em;
+}
+
+/* line 388, ../sass/hub.scss */
+.ui-widget-content p {
+  font-size: 15px;
+  line-height: 19px;
+  margin-top: 0px;
+}
+
+/* line 468, ../sass/hub.scss */
+.bug {
+  background-color: rgba(160, 191, 4, 0.6);
+}
+
+/* line 471, ../sass/hub.scss */
+.bug-hover {
+  background-color: rgba(160, 191, 4, 0.7);
+}
+
+/* line 475, ../sass/hub.scss */
+.dark {
+  background-color: rgba(38, 35, 32, 0.6);
+}
+
+/* line 478, ../sass/hub.scss */
+.dark-hover {
+  background-color: rgba(38, 35, 32, 0.7);
+}
+
+/* line 482, ../sass/hub.scss */
+.dragon {
+  background-color: rgba(112, 56, 248, 0.6);
+}
+
+/* line 485, ../sass/hub.scss */
+.dragon-hover {
+  background-color: rgba(112, 56, 248, 0.7);
+}
+
+/* line 489, ../sass/hub.scss */
+.electric {
+  background-color: rgba(251, 188, 0, 0.4);
+}
+
+/* line 492, ../sass/hub.scss */
+.electric-hover {
+  background-color: rgba(251, 188, 0, 0.4);
+}
+
+/* line 496, ../sass/hub.scss */
+.fairy {
+  background-color: rgba(255, 101, 213, 0.6);
+}
+
+/* line 499, ../sass/hub.scss */
+.fairy-hover {
+  background-color: rgba(255, 101, 213, 0.7);
+}
+
+/* line 503, ../sass/hub.scss */
+.fighting {
+  background-color: rgba(144, 48, 40, 0.6);
+}
+
+/* line 506, ../sass/hub.scss */
+.fighting-hover {
+  background-color: rgba(144, 48, 40, 0.7);
+}
+
+/* line 510, ../sass/hub.scss */
+.fire {
+  background-color: rgba(255, 39, 0, 0.6);
+}
+
+/* line 513, ../sass/hub.scss */
+.fire-hover {
+  background-color: rgba(255, 39, 0, 0.7);
+}
+
+/* line 517, ../sass/hub.scss */
+.flying {
+  background-color: rgba(178, 130, 242, 0.6);
+}
+
+/* line 520, ../sass/hub.scss */
+.flying-hover {
+  background-color: rgba(178, 130, 242, 0.7);
+}
+
+/* line 524, ../sass/hub.scss */
+.ghost {
+  background-color: rgba(112, 88, 152, 0.6);
+}
+
+/* line 527, ../sass/hub.scss */
+.ghost-hover {
+  background-color: rgba(112, 88, 152, 0.7);
+}
+
+/* line 531, ../sass/hub.scss */
+.grass {
+  background-color: rgba(120, 200, 80, 0.6);
+}
+
+/* line 534, ../sass/hub.scss */
+.grass-hover {
+  background-color: rgba(120, 200, 80, 0.7);
+}
+
+/* line 538, ../sass/hub.scss */
+.ground {
+  background-color: rgba(227, 194, 96, 0.6);
+}
+
+/* line 541, ../sass/hub.scss */
+.ground-hover {
+  background-color: rgba(227, 194, 96, 0.7);
+}
+
+/* line 545, ../sass/hub.scss */
+.ice {
+  background-color: rgba(135, 220, 218, 0.6);
+}
+
+/* line 548, ../sass/hub.scss */
+.ice-hover {
+  background-color: rgba(135, 220, 218, 0.7);
+}
+
+/* line 552, ../sass/hub.scss */
+.normal {
+  background-color: rgba(166, 171, 118, 0.6);
+}
+
+/* line 555, ../sass/hub.scss */
+.normal-hover {
+  background-color: rgba(166, 171, 118, 0.7);
+}
+
+/* line 559, ../sass/hub.scss */
+.poison {
+  background-color: rgba(160, 64, 160, 0.6);
+}
+
+/* line 562, ../sass/hub.scss */
+.poison-hover {
+  background-color: rgba(160, 64, 160, 0.7);
+}
+
+/* line 566, ../sass/hub.scss */
+.psychic {
+  background-color: rgba(255, 36, 130, 0.6);
+}
+
+/* line 569, ../sass/hub.scss */
+.psychic-hover {
+  background-color: rgba(255, 36, 130, 0.7);
+}
+
+/* line 573, ../sass/hub.scss */
+.rock {
+  background-color: rgba(185, 163, 43, 0.6);
+}
+
+/* line 576, ../sass/hub.scss */
+.rock-hover {
+  background-color: rgba(185, 163, 43, 0.7);
+}
+
+/* line 580, ../sass/hub.scss */
+.steel {
+  background-color: rgba(184, 184, 208, 0.6);
+}
+
+/* line 583, ../sass/hub.scss */
+.steel-hover {
+  background-color: rgba(184, 184, 208, 0.7);
+}
+
+/* line 587, ../sass/hub.scss */
+.water {
+  background-color: rgba(106, 135, 243, 0.6);
+}
+
+/* line 590, ../sass/hub.scss */
+.water-hover {
+  background-color: rgba(106, 135, 243, 0.7);
+}
+
+/* line 595, ../sass/hub.scss */
+.latios {
+  right: -180% !important;
+  bottom: 19% !important;
+}
+
+/* line 599, ../sass/hub.scss */
+.latias {
+  right: -160% !important;
+}
+
+/* line 602, ../sass/hub.scss */
+.kyuremblack {
+  right: -80% !important;
+}
+
+/* line 605, ../sass/hub.scss */
+.haxorus {
+  bottom: -11% !important;
+  right: -75% !important;
+}
+
+/* line 609, ../sass/hub.scss */
+.tyrantrum {
+  bottom: -11% !important;
+  right: -150% !important;
+}
+
+/* line 613, ../sass/hub.scss */
+.yanmega {
+  right: -162% !important;
+  bottom: 10% !important;
+}
+
+/* line 617, ../sass/hub.scss */
+.armaldo {
+  bottom: -10% !important;
+  right: -140% !important;
+}
+
+/* line 621, ../sass/hub.scss */
+.tyranitar {
+  bottom: -10% !important;
+}
+
+/* line 624, ../sass/hub.scss */
+.tyranitarmega {
+  bottom: -5% !important;
+  right: -75% !important;
+}
+
+/* line 628, ../sass/hub.scss */
+.zoroark {
+  bottom: -5% !important;
+  right: -175% !important;
+}
+
+/* line 632, ../sass/hub.scss */
+.gardevoirmega {
+  right: -170% !important;
+}
+
+/* line 635, ../sass/hub.scss */
+.pangoro {
+  bottom: -12% !important;
+  right: -130% !important;
+}
+
+/* line 639, ../sass/hub.scss */
+.torkoal {
+  bottom: -15% !important;
+  right: -143% !important;
+}
+
+/* line 643, ../sass/hub.scss */
+.arcanine {
+  bottom: -12% !important;
+  right: -70% !important;
+}
+
+/* line 647, ../sass/hub.scss */
+.entei {
+  bottom: -10% !important;
+}
+
+/* line 650, ../sass/hub.scss */
+.landorus {
+  bottom: -10% !important;
+}
+
+/* line 653, ../sass/hub.scss */
+.xatu {
+  bottom: -6% !important;
+  right: -110% !important;
+}
+
+/* line 657, ../sass/hub.scss */
+.salamence {
+  bottom: -6% !important;
+  right: -85% !important;
+}
+
+/* line 661, ../sass/hub.scss */
+.breloom {
+  bottom: -9% !important;
+  right: -80% !important;
+}
+
+/* line 665, ../sass/hub.scss */
+.serperior {
+  bottom: -10% !important;
+  right: -62% !important;
+}
+
+/* line 669, ../sass/hub.scss */
+.sceptilemega {
+  bottom: -10% !important;
+  right: -95% !important;
+}
+
+/* line 673, ../sass/hub.scss */
+.nidoking {
+  bottom: -10% !important;
+  right: -60% !important;
+}
+
+/* line 677, ../sass/hub.scss */
+.quagsire {
+  bottom: -10% !important;
+  right: -135% !important;
+}
+
+/* line 681, ../sass/hub.scss */
+.piloswine {
+  bottom: 14% !important;
+}
+
+/* line 684, ../sass/hub.scss */
+.skuntank {
+  bottom: 8% !important;
+  right: -83% !important;
+}
+
+/* line 688, ../sass/hub.scss */
+.qwilfish {
+  bottom: -0% !important;
+  right: -165% !important;
+}
+
+/* line 692, ../sass/hub.scss */
+.slowbro {
+  right: -70% !important;
+  bottom: -10% !important;
+}
+
+/* line 696, ../sass/hub.scss */
+.lanturn {
+  right: -162% !important;
+  bottom: -3% !important;
+}
+
+/* line 700, ../sass/hub.scss */
+.suicune {
+  bottom: -20% !important;
+}
+
+/* line 703, ../sass/hub.scss */
+.sharpedomega {
+  right: -80% !important;
+}
+
+/* line 706, ../sass/hub.scss */
+.kyurem {
+  right: -39% !important;
+  bottom: -8% !important;
+}
+
+/* line 710, ../sass/hub.scss */
+.walrein {
+  right: -70% !important;
+  bottom: -10% !important;
+}
+
+/* line 714, ../sass/hub.scss */
+.houndoom {
+  right: -131% !important;
+  bottom: -10% !important;
+}
+
+/* line 718, ../sass/hub.scss */
+.houndoommega {
+  right: -149% !important;
+  bottom: 0% !important;
+}
+/* line 1, ../sass/hub.scss */
+html, body {
+  background-color: rgba(242, 242, 255, 0.8);
+  font: 13px 'Raleway', sans-serif !important;
+  height: 100%;
+}
+
+/* line 7, ../sass/hub.scss */
+#inner-footer {
+  position: relative;
+  margin-top: 10px;
+  margin-bottom: 10px;
+  width: 100%;
+  text-align: center;
+}
+
+/* line 15, ../sass/hub.scss */
+#nav-container {
+  position: relative;
+  width: 100%;
+  margin: 0 auto;
+  text-align: center;
+}
+
+/* line 21, ../sass/hub.scss */
+#navigation {
+  position: relative;
+  width: 100%;
+  margin: 0 auto;
+  text-align: center;
+  display: none;
+}
+
+/* line 28, ../sass/hub.scss */
+#welcome-text {
+  display: table;
+  text-align: center;
+  height: 100px;
+  line-height: 100px;
+  width: 100%;
+}
+
+/* line 35, ../sass/hub.scss */
+.v-center-helper {
+  display: table-cell;
+  vertical-align: middle;
+  line-height: normal;
+  font-size: 40px;
+  padding-top: 20px;
+}
+
+/* line 43, ../sass/hub.scss */
+.professor {
+  width: 18%;
+  display: inline-block;
+  text-align: center;
+  list-style-type: none;
+  overflow: hidden;
+}
+
+/* line 50, ../sass/hub.scss */
+.professor:hover {
+  background: #DDDDDD;
+}
+
+/* line 53, ../sass/hub.scss */
+.clickedBG {
+  background: lightgray !important;
+}
+
+/* line 56, ../sass/hub.scss */
+.professor img {
+  width: 80%;
+  margin: 0 auto;
+}
+
+/* line 60, ../sass/hub.scss */
+.header-text {
+  text-align: center;
+  vertical-align: middle;
+  width: 100%;
+  font-size: 1.6em;
+}
+
+/* line 67, ../sass/hub.scss */
+#main-content-container {
+  position: relative;
+  width: 100%;
+  margin: 0 auto;
+}
+
+/* line 72, ../sass/hub.scss */
+#main-content-container a:hover {
+  background: none;
+  /* Be sure bg yellow hovers don't effect */
+}
+
+/* line 75, ../sass/hub.scss */
+.analysis-hex-inner, .type-hex-inner, .vr-hex-inner, .rc-hex-inner {
+  cursor: pointer;
+}
+
+/* line 78, ../sass/hub.scss */
+#type-select-container {
+  background: rgba(242, 242, 255, 0.8);
+  position: relative;
+  width: 100%;
+}
+
+/* line 83, ../sass/hub.scss */
+#analyses-container, #something-container, #sample-teams-container, #role-compendium-container {
+  position: relative;
+  width: 100%;
+  text-align: center;
+  margin: 0 auto;
+  display: none;
+}
+
+/* line 91, ../sass/hub.scss */
+#viability-rankings-container {
+  position: relative;
+  width: 100%;
+  text-align: center;
+  margin: 0 auto;
+  display: table;
+  border-spacing: 10px;
+  border-collapse: separate;
+}
+
+/* line 101, ../sass/hub.scss */
+#viability-rankings-container {
+  display: none;
+}
+
+/* line 104, ../sass/hub.scss */
+#type-menu {
+  overflow: hidden;
+  width: 96%;
+  padding: 0.866% 0;
+  font-size: 1em;
+  margin: 0 auto;
+}
+
+/* line 111, ../sass/hub.scss */
+#type-menu:after {
+  content: "";
+  display: block;
+  clear: both;
+}
+
+/* line 117, ../sass/hub.scss */
+.section-intro {
+  padding-top: 30px;
+}
+
+/* line 121, ../sass/hub.scss */
+.vr-section-container {
+  width: 18%;
+  display: table-cell;
+  border-radius: 10px;
+  padding: 5px;
+  vertical-align: top;
+}
+
+/* line 129, ../sass/hub.scss */
+.vr-section-container h2 {
+  margin-bottom: 4px;
+}
+
+/* line 133, ../sass/hub.scss */
+.vr-section-container p {
+  font-size: 1vw;
+  margin-top: 0px;
+}
+
+/* line 137, ../sass/hub.scss */
+.vr-hex-inner:hover img {
+  opacity: 0.7;
+}
+
+/* line 141, ../sass/hub.scss */
+.rc-section-container {
+  width: 22%;
+  display: inline-block;
+  border-radius: 10px;
+  padding: 5px;
+  vertical-align: top;
+  text-align: center;
+  margin: 0.8%;
+}
+
+/* line 151, ../sass/hub.scss */
+.rc-section-container h2 {
+  margin-bottom: 10px;
+}
+
+/* line 155, ../sass/hub.scss */
+.rc-section-container p {
+  font-size: 1vw;
+  margin-top: 0px;
+}
+
+/* line 159, ../sass/hub.scss */
+.rc-hex-inner:hover img {
+  opacity: 0.7;
+}
+
+/* line 163, ../sass/hub.scss */
+.sample-team-section-header {
+  font-size: 35px;
+  padding-top: 15px;
+  margin-bottom: 5px;
+}
+
+/* line 168, ../sass/hub.scss */
+.sample-team-container {
+  position: relative;
+  width: 44%;
+  display: inline-block;
+  border-radius: 10px;
+  padding: 1%;
+  vertical-align: top;
+  margin-left: 1.5%;
+  margin-right: 1.5%;
+  margin-bottom: 90px;
+}
+
+/* line 179, ../sass/hub.scss */
+.sample-team-container h2 {
+  margin-bottom: 0px;
+}
+
+/* line 182, ../sass/hub.scss */
+.created-by-text {
+  font-size: 1vw;
+  margin-top: 4px;
+  margin-bottom: 3px;
+}
+
+/* line 187, ../sass/hub.scss */
+.dbl-click-text {
+  font-size: 0.8vw;
+  font-style: italic;
+  margin-top: 0px;
+}
+
+/* line 192, ../sass/hub.scss */
+.st-sprite {
+  left: -100%;
+  right: -100%;
+  width: auto;
+  height: 100%;
+  margin: 0 auto;
+}
+
+/* line 199, ../sass/hub.scss */
+.st-set-text {
+  font-size: 0.9vw;
+  font-weight: 500;
+  color: black;
+  top: 18%;
+  left: -100%;
+  right: -100%;
+  display: none;
+}
+
+/* line 208, ../sass/hub.scss */
+.show-importable, .show-sets, .hide-sets {
+  position: absolute;
+  bottom: 6.5%;
+  left: 1%;
+  font-size: 1.2vw;
+  line-height: 1.2vw;
+  padding: 0.5vw;
+  background: #DDD;
+  border: 2px solid black;
+  border-radius: 0.5vw;
+  cursor: pointer;
+}
+
+/* line 220, ../sass/hub.scss */
+.show-sets, .hide-sets {
+  bottom: 16%;
+}
+
+/* line 223, ../sass/hub.scss */
+.hide-sets {
+  display: none;
+}
+
+/* line 226, ../sass/hub.scss */
+.show-importable:hover, .show-sets:hover, .hide-sets:hover, .hide-importable:hover {
+  background: lightgray;
+}
+
+/* line 229, ../sass/hub.scss */
+.importable {
+  position: absolute;
+  width: 98%;
+  height: 110%;
+  overflow-y: scroll;
+  left: -100%;
+  right: -100%;
+  margin: 0 auto;
+  z-index: 2;
+  display: none;
+  background: white;
+}
+
+/* line 241, ../sass/hub.scss */
+.hide-importable {
+  z-index: 3;
+  display: none;
+  position: absolute;
+  top: 4%;
+  right: 4%;
+  font-size: 1.2vw;
+  line-height: 1.2vw;
+  padding: 0.5vw;
+  background: #DDD;
+  border: 2px solid black;
+  border-radius: 0.5vw;
+  cursor: pointer;
+}
+
+/* line 256, ../sass/hub.scss */
+#analysis-selection-container {
+  width: 30%;
+  display: inline-block;
+  vertical-align: top;
+}
+
+/* line 261, ../sass/hub.scss */
+.analysis-hex-inner:hover {
+  opacity: 0.7;
+}
+
+/* line 264, ../sass/hub.scss */
+#analysis-container {
+  width: 60%;
+  display: inline-block;
+}
+
+/* line 271, ../sass/hub.scss */
+#sprite-container {
+  display: inline-block;
+  position: relative;
+  height: 200px;
+  line-height: 200px;
+  width: 30%;
+  vertical-align: top;
+  margin: auto;
+}
+
+/* line 281, ../sass/hub.scss */
+#sprite-container img, #abilities-container div {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+}
+
+/* line 288, ../sass/hub.scss */
+#abilities-container {
+  display: inline-block;
+  position: relative;
+  height: 200px;
+  width: 20%;
+  vertical-align: top;
+  font-size: 1.2vw;
+}
+
+/* line 296, ../sass/hub.scss */
+#abilities-container a {
+  display: block;
+  margin-bottom: 9px;
+}
+
+/* line 301, ../sass/hub.scss */
+#stats-container {
+  display: inline-block;
+  width: 40%;
+  height: 200px;
+  vertical-align: top;
+}
+
+/* line 307, ../sass/hub.scss */
+.stats-canvas {
+  width: 80%;
+  height: 100%;
+  float: left;
+}
+
+/* line 312, ../sass/hub.scss */
+#overview-container {
+  padding-left: 20px;
+  text-align: left;
+}
+
+/* line 316, ../sass/hub.scss */
+#overview-container h3 {
+  text-align: left;
+  font-size: 18px;
+  margin-bottom: 0.5em;
+}
+
+/* line 321, ../sass/hub.scss */
+#overview-container p {
+  font-size: 15px;
+  line-height: 19px;
+  margin-top: 0px;
+}
+
+/* line 327, ../sass/hub.scss */
+#checks-container {
+  text-align: left;
+}
+
+/* line 330, ../sass/hub.scss */
+#checks-container h3 {
+  font-size: 18px;
+  margin-bottom: 0.5em;
+}
+
+/* line 334, ../sass/hub.scss */
+.check-container {
+  display: inline-block;
+  text-align: center;
+  width: 21%;
+  margin: 0.5%;
+  border-radius: 10px;
+  padding: 5px;
+  overflow-y: auto;
+  vertical-align: top;
+  max-height: 300px;
+}
+
+/* line 345, ../sass/hub.scss */
+.check-container img {
+  margin-bottom: 15px;
+}
+
+/* line 350, ../sass/hub.scss */
+#sets-container {
+  background: transparent;
+  border: none;
+  font: 13px 'Raleway', sans-serif !important;
+}
+
+/* line 355, ../sass/hub.scss */
+#sets-container .ui-widget-header {
+  background: transparent;
+  border: none;
+  border-bottom: 1px solid #c0c0c0;
+  -moz-border-radius: 0px;
+  -webkit-border-radius: 0px;
+  border-radius: 0px;
+}
+
+/* line 363, ../sass/hub.scss */
+#sets-container .ui-tabs-nav .ui-state-default {
+  background: transparent;
+  border: none;
+}
+
+/* line 367, ../sass/hub.scss */
+#sets-container .ui-tabs-nav .ui-state-active {
+  background: transparent;
+  border: none;
+}
+
+/* line 371, ../sass/hub.scss */
+#sets-container .ui-tabs-nav .ui-state-default a {
+  color: #c0c0c0;
+}
+
+/* line 374, ../sass/hub.scss */
+#sets-container .ui-tabs-nav .ui-state-active a {
+  color: black;
+}
+
+/* line 377, ../sass/hub.scss */
+.ui-tabs-anchor {
+  font-size: 18px;
+  font-weight: 400;
+}
+
+/* line 381, ../sass/hub.scss */
+.ui-widget-content {
+  text-align: left;
+}
+
+/* line 384, ../sass/hub.scss */
+.ui-widget-content h2 {
+  font-size: 18px;
+  margin-bottom: 0.5em;
+}
+
+/* line 388, ../sass/hub.scss */
+.ui-widget-content p {
+  font-size: 15px;
+  line-height: 19px;
+  margin-top: 0px;
+}
+
+/* line 468, ../sass/hub.scss */
+.bug {
+  background-color: rgba(160, 191, 4, 0.6);
+}
+
+/* line 471, ../sass/hub.scss */
+.bug-hover {
+  background-color: rgba(160, 191, 4, 0.7);
+}
+
+/* line 475, ../sass/hub.scss */
+.dark {
+  background-color: rgba(38, 35, 32, 0.6);
+}
+
+/* line 478, ../sass/hub.scss */
+.dark-hover {
+  background-color: rgba(38, 35, 32, 0.7);
+}
+
+/* line 482, ../sass/hub.scss */
+.dragon {
+  background-color: rgba(112, 56, 248, 0.6);
+}
+
+/* line 485, ../sass/hub.scss */
+.dragon-hover {
+  background-color: rgba(112, 56, 248, 0.7);
+}
+
+/* line 489, ../sass/hub.scss */
+.electric {
+  background-color: rgba(251, 188, 0, 0.4);
+}
+
+/* line 492, ../sass/hub.scss */
+.electric-hover {
+  background-color: rgba(251, 188, 0, 0.4);
+}
+
+/* line 496, ../sass/hub.scss */
+.fairy {
+  background-color: rgba(255, 101, 213, 0.6);
+}
+
+/* line 499, ../sass/hub.scss */
+.fairy-hover {
+  background-color: rgba(255, 101, 213, 0.7);
+}
+
+/* line 503, ../sass/hub.scss */
+.fighting {
+  background-color: rgba(144, 48, 40, 0.6);
+}
+
+/* line 506, ../sass/hub.scss */
+.fighting-hover {
+  background-color: rgba(144, 48, 40, 0.7);
+}
+
+/* line 510, ../sass/hub.scss */
+.fire {
+  background-color: rgba(255, 39, 0, 0.6);
+}
+
+/* line 513, ../sass/hub.scss */
+.fire-hover {
+  background-color: rgba(255, 39, 0, 0.7);
+}
+
+/* line 517, ../sass/hub.scss */
+.flying {
+  background-color: rgba(178, 130, 242, 0.6);
+}
+
+/* line 520, ../sass/hub.scss */
+.flying-hover {
+  background-color: rgba(178, 130, 242, 0.7);
+}
+
+/* line 524, ../sass/hub.scss */
+.ghost {
+  background-color: rgba(112, 88, 152, 0.6);
+}
+
+/* line 527, ../sass/hub.scss */
+.ghost-hover {
+  background-color: rgba(112, 88, 152, 0.7);
+}
+
+/* line 531, ../sass/hub.scss */
+.grass {
+  background-color: rgba(120, 200, 80, 0.6);
+}
+
+/* line 534, ../sass/hub.scss */
+.grass-hover {
+  background-color: rgba(120, 200, 80, 0.7);
+}
+
+/* line 538, ../sass/hub.scss */
+.ground {
+  background-color: rgba(227, 194, 96, 0.6);
+}
+
+/* line 541, ../sass/hub.scss */
+.ground-hover {
+  background-color: rgba(227, 194, 96, 0.7);
+}
+
+/* line 545, ../sass/hub.scss */
+.ice {
+  background-color: rgba(135, 220, 218, 0.6);
+}
+
+/* line 548, ../sass/hub.scss */
+.ice-hover {
+  background-color: rgba(135, 220, 218, 0.7);
+}
+
+/* line 552, ../sass/hub.scss */
+.normal {
+  background-color: rgba(166, 171, 118, 0.6);
+}
+
+/* line 555, ../sass/hub.scss */
+.normal-hover {
+  background-color: rgba(166, 171, 118, 0.7);
+}
+
+/* line 559, ../sass/hub.scss */
+.poison {
+  background-color: rgba(160, 64, 160, 0.6);
+}
+
+/* line 562, ../sass/hub.scss */
+.poison-hover {
+  background-color: rgba(160, 64, 160, 0.7);
+}
+
+/* line 566, ../sass/hub.scss */
+.psychic {
+  background-color: rgba(255, 36, 130, 0.6);
+}
+
+/* line 569, ../sass/hub.scss */
+.psychic-hover {
+  background-color: rgba(255, 36, 130, 0.7);
+}
+
+/* line 573, ../sass/hub.scss */
+.rock {
+  background-color: rgba(185, 163, 43, 0.6);
+}
+
+/* line 576, ../sass/hub.scss */
+.rock-hover {
+  background-color: rgba(185, 163, 43, 0.7);
+}
+
+/* line 580, ../sass/hub.scss */
+.steel {
+  background-color: rgba(184, 184, 208, 0.6);
+}
+
+/* line 583, ../sass/hub.scss */
+.steel-hover {
+  background-color: rgba(184, 184, 208, 0.7);
+}
+
+/* line 587, ../sass/hub.scss */
+.water {
+  background-color: rgba(106, 135, 243, 0.6);
+}
+
+/* line 590, ../sass/hub.scss */
+.water-hover {
+  background-color: rgba(106, 135, 243, 0.7);
+}
+
+/* line 595, ../sass/hub.scss */
+.latios {
+  right: -180% !important;
+  bottom: 19% !important;
+}
+
+/* line 599, ../sass/hub.scss */
+.latias {
+  right: -160% !important;
+}
+
+/* line 602, ../sass/hub.scss */
+.kyuremblack {
+  right: -80% !important;
+}
+
+/* line 605, ../sass/hub.scss */
+.haxorus {
+  bottom: -11% !important;
+  right: -75% !important;
+}
+
+/* line 609, ../sass/hub.scss */
+.tyrantrum {
+  bottom: -11% !important;
+  right: -150% !important;
+}
+
+/* line 613, ../sass/hub.scss */
+.yanmega {
+  right: -162% !important;
+  bottom: 10% !important;
+}
+
+/* line 617, ../sass/hub.scss */
+.armaldo {
+  bottom: -10% !important;
+  right: -140% !important;
+}
+
+/* line 621, ../sass/hub.scss */
+.tyranitar {
+  bottom: -10% !important;
+}
+
+/* line 624, ../sass/hub.scss */
+.tyranitarmega {
+  bottom: -5% !important;
+  right: -75% !important;
+}
+
+/* line 628, ../sass/hub.scss */
+.zoroark {
+  bottom: -5% !important;
+  right: -175% !important;
+}
+
+/* line 632, ../sass/hub.scss */
+.gardevoirmega {
+  right: -170% !important;
+}
+
+/* line 635, ../sass/hub.scss */
+.pangoro {
+  bottom: -12% !important;
+  right: -130% !important;
+}
+
+/* line 639, ../sass/hub.scss */
+.torkoal {
+  bottom: -15% !important;
+  right: -143% !important;
+}
+
+/* line 643, ../sass/hub.scss */
+.arcanine {
+  bottom: -12% !important;
+  right: -70% !important;
+}
+
+/* line 647, ../sass/hub.scss */
+.entei {
+  bottom: -10% !important;
+}
+
+/* line 650, ../sass/hub.scss */
+.landorus {
+  bottom: -10% !important;
+}
+
+/* line 653, ../sass/hub.scss */
+.xatu {
+  bottom: -6% !important;
+  right: -110% !important;
+}
+
+/* line 657, ../sass/hub.scss */
+.salamence {
+  bottom: -6% !important;
+  right: -85% !important;
+}
+
+/* line 661, ../sass/hub.scss */
+.breloom {
+  bottom: -9% !important;
+  right: -80% !important;
+}
+
+/* line 665, ../sass/hub.scss */
+.serperior {
+  bottom: -10% !important;
+  right: -62% !important;
+}
+
+/* line 669, ../sass/hub.scss */
+.sceptilemega {
+  bottom: -10% !important;
+  right: -95% !important;
+}
+
+/* line 673, ../sass/hub.scss */
+.nidoking {
+  bottom: -10% !important;
+  right: -60% !important;
+}
+
+/* line 677, ../sass/hub.scss */
+.quagsire {
+  bottom: -10% !important;
+  right: -135% !important;
+}
+
+/* line 681, ../sass/hub.scss */
+.piloswine {
+  bottom: 14% !important;
+}
+
+/* line 684, ../sass/hub.scss */
+.skuntank {
+  bottom: 8% !important;
+  right: -83% !important;
+}
+
+/* line 688, ../sass/hub.scss */
+.qwilfish {
+  bottom: -0% !important;
+  right: -165% !important;
+}
+
+/* line 692, ../sass/hub.scss */
+.slowbro {
+  right: -70% !important;
+  bottom: -10% !important;
+}
+
+/* line 696, ../sass/hub.scss */
+.lanturn {
+  right: -162% !important;
+  bottom: -3% !important;
+}
+
+/* line 700, ../sass/hub.scss */
+.suicune {
+  bottom: -20% !important;
+}
+
+/* line 703, ../sass/hub.scss */
+.sharpedomega {
+  right: -80% !important;
+}
+
+/* line 706, ../sass/hub.scss */
+.kyurem {
+  right: -39% !important;
+  bottom: -8% !important;
+}
+
+/* line 710, ../sass/hub.scss */
+.walrein {
+  right: -70% !important;
+  bottom: -10% !important;
+}
+
+/* line 714, ../sass/hub.scss */
+.houndoom {
+  right: -131% !important;
+  bottom: -10% !important;
+}
+
+/* line 718, ../sass/hub.scss */
+.houndoommega {
+  right: -149% !important;
+  bottom: 0% !important;
+}

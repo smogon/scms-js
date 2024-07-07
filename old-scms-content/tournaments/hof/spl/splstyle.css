@@ -1,0 +1,306 @@
+/********************** HOME *************************/
+#mainlogo {
+	background:url('http://imagizer.imageshack.us/v2/700x88q90/196/blws.png') no-repeat center;
+	height:250px;
+}
+#mainlogo h1{
+	display:none;
+}
+#fin li {
+	display:inline;
+	list-style:none;
+}
+/********************* Seasons **********************/
+#spl {
+	text-align:center;
+	background:url('http://imagizer.imageshack.us/v2/700x88q90/196/blws.png') no-repeat center;
+	height:250px;
+	width:100%;
+}
+#spl h1 {
+	display:none;
+}
+.season	{
+	width:100%;
+	margin:auto;
+	margin-top:2%;
+}
+.season h2 {
+	display:none;
+}
+.season h3 {
+	font-size:1.2em;
+}
+.columns {
+	-webkit-column-count: 2; /* Chrome, Safari, Opera */
+    column-count: 2;
+	display:block;
+	margin-top:1%;
+}
+.battles {
+	height:370px;
+}
+.season .battles h2 {
+	display:block;
+}
+.rooster {
+	margin-top:.3%;
+	margin-bottom:5%;
+}
+.rooster h2 {
+	display:block;
+}
+#fin {
+	text-align:center;
+	padding-top:5%;
+}
+/* *************** SCOOTERS SEASON ***************** */
+#scooters {
+	background:url('/tournaments/hof/spl/Scooters_Logo.png') no-repeat 0px 0px;
+	width:100%;
+	height:130px;
+	border-bottom:25px #BFB6DA double;
+}
+.season .scooterstopbar {
+	border-top:25px #BFB6DA double;
+}
+.season .scootersinglebar{
+	border-top:5px #BFB6DA solid;
+}
+#fin .hrsc{
+	border-bottom:4px #BFB6DA solid;
+}
+/* *************** SHARKS SEASON ***************** */
+#sharks {
+	background:url('/tournaments/hof/spl/Sharks_Logo.png') no-repeat 0px 0px;
+	height:130px;
+	border-bottom:25px #529698 double;
+}
+.season .sharkstopbar {
+	border-top:25px #529698 double;
+}
+.season .sharksinglebar{
+	border-top:5px #529698 solid;
+}
+#fin .hrsh{
+	border-bottom:4px #529698 solid;
+}
+/* *************** RUINERS SEASON ***************** */
+#ruiners {
+	background:url('/tournaments/hof/spl/Ruiners_Logo.png') no-repeat 0px 0px;
+	height:130px;
+	border-bottom:25px #FFDFBC double;
+}
+.season .ruinerstopbar {
+	border-top:25px #FFDFBC double;
+}
+.season .ruinersinglebar{
+	border-top:5px #FFDFBC solid;
+}
+#fin .hrr{
+	border-bottom:4px #FFDFBC solid;
+}
+/* *************** WOLVES SEASON ***************** */
+#wolves {
+	background:url('/tournaments/hof/spl/Wolves_Logo.png') no-repeat 0px 0px;
+	height:130px;
+	border-bottom:25px #ef5f52 double;
+}
+.season .wolvestopbar {
+	border-top:25px #ef5f52 double;
+}
+.season .wolvesinglebar{
+	border-top:5px #ef5f52 solid;
+}
+#fin .hrw{
+	border-bottom:4px #ef5f52 solid;
+}
+/* *************** CLASSIES SEASON ***************** */
+#classies {
+	background:url('/tournaments/hof/spl/Classies_Logo.png') no-repeat 0px 0px;
+	height:130px;
+	border-bottom:25px #15b76e double;
+}
+.season .classiestopbar {
+	border-top:25px #15b76e double;
+}
+.season .classiesinglebar{
+	border-top:5px #15b76e solid;
+}
+#fin .hrc{
+	border-bottom:4px #15b76e solid;
+}
+/* ***************GENERAL BOXES*************** */
+.mentor {
+	overflow: hidden;
+    display: inline-block;
+    display: block;
+	overflow:hidden;
+	width:60%;
+	background:#f8f6f7;
+	margin:auto;
+	margin-bottom:2%;
+	border-radius:18px;
+	border-bottom: 4px #ccc solid;
+}
+.mentor ul {
+	display:block;
+	position:relative;
+	margin-top:6%;
+}
+.mentor li {
+	list-style:none;
+	text-align:left;
+	margin:0px 15px 1px 0px;
+}
+.mentor input {
+	float:left;
+	background: #ECF0F1;
+	border:1px #000 dashed;
+	font:1em georgia;
+	font-style:italic;
+	letter-spacing:1.5px;
+	margin:1px 0px 0px 27px;
+	padding:5.5px;
+	border-radius:18px;
+}
+.mentor .separator {
+	height:32px;
+}
+.battles iframe{
+	clear:both;
+}
+.mentor h2 {
+	text-align:right;
+	font-size:5vh;
+	margin:0px 10px 0px 0px;
+	padding:65px 0px 5px 115px;
+}
+.mentor a:link {
+	text-decoration:none;
+}
+/* ***************SCOOTERS*************** */
+.headscootersman {
+	height:95px;
+	background:url('/tournaments/hof/spl/captainbg.gif');
+	background-repeat:repeat;
+	border-radius:18px 18px 0px 0px;
+	margin:0;
+}
+.headscooters {
+	height:95px;
+	background:url('/tournaments/hof/spl/Scooters_Background.png');
+	background-repeat:repeat;
+	border-radius:18px 18px 0px 0px;
+	margin:0;
+}
+.titlescooters {
+	background:url('/tournaments/hof/spl/Scooters_Avatar.png') no-repeat;
+	background-position:10px 10px;
+	height:95px;
+}
+.mentor .backscooters{
+	background-image:url('/tournaments/hof/spl/Scooters_top_bar.png');
+	background-repeat: repeat-x;
+}
+.mentor .backscooters input:hover {
+	background-color:#ED008C;
+}
+.mentor .boldscooters li>strong {
+	color:#ED008C;
+}
+
+/* ***************SHARKS*************** */
+.headsharks {
+	height:95px;
+	background:url('/tournaments/hof/spl/Sharks_Background.png');
+	background-repeat:repeat;
+	border-radius:18px 18px 0px 0px;
+	margin:0;
+}
+.titlesharks {
+	background:url('/tournaments/hof/spl/Sharks_Avatar.png') no-repeat;
+	background-position:9px 0px;
+	height:95px;
+}
+.mentor .backsharks{
+	background-image:url('/tournaments/hof/spl/Sharks_Bar.png');
+	background-repeat: repeat-x;
+}
+.mentor .backsharks input:hover {
+	background-color:#F27F21;
+}
+.mentor .boldsharks li>strong {
+	color:#F27F21;
+}
+/* ***************RUINERS*************** */
+.headruiners {
+	height:95px;
+	background:url('/tournaments/hof/spl/Ruiners_Background.png');
+	background-repeat:repeat;
+	border-radius:18px 18px 0px 0px;
+	margin:0;
+}
+.titleruiners {
+	background:url('/tournaments/hof/spl/Ruiners_Avatar.png') no-repeat;
+	background-position:13px 0px;
+	height:95px;
+}
+.mentor .backruiners{
+	background-image:url('/tournaments/hof/spl/Ruiner_top_bar.png');
+	background-repeat: repeat-x;
+}
+.mentor .backruiners input:hover {
+	background-color:#FF9F1B;
+}
+.mentor .boldruiners li>strong {
+	color:#FF9F1B;
+}
+
+/* ***************WOLVES*************** */
+.headwolves {
+	height:95px;
+	background:url('/tournaments/hof/spl/Wolves_Background.png');
+	background-repeat:repeat;
+	border-radius:18px 18px 0px 0px;
+	margin:0;
+}
+.titlewolves {
+	background:url('/tournaments/hof/spl/Wolves_Avatar.png') no-repeat;
+	background-position:20px 8px;
+	height:95px;
+}
+.mentor .backwolves{
+	background-image:url('/tournaments/hof/spl/Wolves_Bar.png');
+	background-repeat: repeat-x;
+}
+.mentor .backwolves input:hover {
+	background-color:#706F70;
+}
+.mentor .boldwolves li>strong {
+	color:#706F70;
+}
+
+/* ***************CLASSIES*************** */
+.headclassy {
+	height:95px;
+	background:url('/tournaments/hof/spl/Classies_Background.png');
+	background-repeat:repeat;
+	border-radius:18px 18px 0px 0px;
+	margin:0;
+}
+.titleclassy {
+	background:url('/tournaments/hof/spl/Classies_Avatar.png') no-repeat;
+	background-position:10px 0px;
+	height:95px;
+}
+.mentor .backclassy{
+	background-image:url('/tournaments/hof/spl/Classies_Bar.png');
+	background-repeat: repeat-x;
+}
+.mentor .backclassy input:hover {
+	background-color:#F34F82;
+}
+.mentor .boldclassy li>strong {
+	color:#F34F82;
+}

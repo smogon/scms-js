@@ -1,0 +1,153 @@
+/* /articles/articles-index.css 
+ * By anto (http://www.smogon.com/forums/members/anto.222754/) and Quarkz (http://www.smogon.com/forums/members/quarkz.206020/)
+ * Please remember that this is a .scss file and all edits should be reflected
+ * in the articles-index.css file when edits are made. This file is purely for
+ * the developer's convenience.
+ */
+#body {
+  max-width: 1100px;
+  margin: 0 auto;
+}
+#body #articleIndex {
+  display: inline-block;
+  border-collapse: collapse;
+  width: 100%;
+}
+#body #articleIndex a {
+  color: #527596;
+  text-decoration: none;
+}
+#body #articleIndex a:hover {
+  text-decoration: underline;
+  background: transparent;
+}
+#body #articleIndex tr:hover {
+  background-color: #FFDE79;
+}
+#body #articleIndex tr td {
+  padding: 3px;
+  font-size: 1.1em;
+}
+#body #articleIndex tr td a {
+  white-space: normal;
+}
+#body #articleIndex tr td ul {
+  margin: 0;
+  padding: 0;
+}
+#body #articleIndex tr td .contributor.article-author {
+  font-weight: bold;
+}
+#body #articleIndex tr > th {
+  text-align: center;
+  font-family: georgia;
+  font-weight: bold;
+  letter-spacing: 2pt;
+  padding: 10px 0;
+  position: relative;
+  color: #fff;
+  background: #412234;
+}
+#body #articleIndex tr > th#titleHead, #body #articleIndex tr > th#contribsHead {
+  width: 30%;
+}
+#body #articleIndex tr > th#pubdateHead, #body #articleIndex tr > th#tagsHead {
+  width: 20%;
+}
+#body #articleIndex tr > th:first-letter {
+  font-size: 1.15em;
+}
+#body #articleIndex tr > th:first-child {
+  border-radius: 10px 0 0 0;
+}
+#body #articleIndex tr > th:last-child {
+  border-radius: 0 10px 0 0;
+}
+#body #articleIndex .articleTag {
+  color: #527596;
+  font-family: monospace;
+  font-size: 1.15em;
+  cursor: pointer;
+}
+#body #articleIndex .articleTag:before {
+  content: "#";
+  color: #000;
+}
+#body #articleIndex .articleTag:hover {
+  text-decoration: underline;
+}
+#body #articleIndex ul > li {
+  list-style-type: none;
+  display: inline-block;
+}
+#body #articleIndex tbody {
+  text-align: center;
+  font-size: .8em;
+  border-bottom: 3px double #000;
+  background: #fff4d1;
+}
+#body #articleIndex tbody td:first-child {
+  background: #FFDE79;
+}
+#body #articleIndex .arrow-down {
+  width: 0;
+  height: 0;
+  border-left: 20px solid transparent;
+  border-right: 20px solid transparent;
+  border-top: 20px solid #412234;
+  margin: auto;
+  margin-top: -5px;
+}
+#body #articleIndex tbody > tr:first-child {
+  border: none;
+}
+#body #articleIndex td:nth-child {
+  padding-top: 10px;
+}
+#body #articleIndex #filterbar #searchBar {
+  width: 170px;
+  border-radius: 50px;
+  background: url("images/search.png") right no-repeat;
+  background-position: 162px 7px;
+  padding: 8px;
+  border: 1px transparent solid;
+  background-color: #fff;
+}
+#body #articleIndex #filterbar #searchBar:focus {
+  outline: none;
+  box-shadow: 0 0 5px rgba(90, 125, 170, 0.9);
+  border: 1px solid #6485af;
+}
+#body #articleIndex #filterbar #bar {
+  background: #fff4d1;
+  display: inline-block;
+  padding: 10px;
+  border-radius: 50px;
+  float: right;
+  margin-bottom: 10px;
+}
+#body #articleIndex #yearSelect {
+    width: 70%;
+}
+#body #articleIndex #yearSelect > li {
+    padding: 4px 8px;
+    margin: -4px 12px;
+    border-radius: 12px;
+    border: 1px transparent solid;
+    background-color: #FFF4D1;
+    font-family: monospace;
+    font-size: 1.15em;
+    cursor: pointer;
+}
+#body #articleIndex #yearSelect > #current {
+    background-color: #FFDE79;
+}
+#body #articleIndex #yearSelect > li:hover {
+    text-decoration: underline;
+    border: 1px #412234 solid;
+}
+#body #credit {
+  font-family: monospace;
+  font-size: 0.9em;
+  text-align: center;
+}

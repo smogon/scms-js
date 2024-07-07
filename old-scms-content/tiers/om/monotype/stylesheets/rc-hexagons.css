@@ -1,0 +1,109 @@
+/* line 1, ../sass/rc-hexagons.scss */
+.rc-section {
+  overflow: hidden;
+  width: 90%;
+  margin: 0 auto;
+  padding: 0.866% 0;
+  font-family: 'Raleway', sans-serif;
+  font-size: 15px;
+}
+
+/* line 9, ../sass/rc-hexagons.scss */
+.rc-section:after {
+  content: "";
+  display: block;
+  clear: both;
+}
+
+/* line 14, ../sass/rc-hexagons.scss */
+.rc-hex {
+  position: relative;
+  list-style-type: none;
+  float: left;
+  overflow: hidden;
+  visibility: hidden;
+  outline: 1px solid transparent;
+  /* fix for jagged edges in FF on hover transition */
+  -webkit-transform: rotate(-60deg) skewY(30deg) translatez(-1px);
+  -ms-transform: rotate(-60deg) skewY(30deg) translatez(-1px);
+  transform: rotate(-60deg) skewY(30deg) translatez(-1px);
+}
+
+/* line 25, ../sass/rc-hexagons.scss */
+.rc-hex * {
+  position: absolute;
+  visibility: visible;
+  outline: 1px solid transparent;
+  /* fix for jagged edges in FF on hover transition */
+}
+
+/* line 30, ../sass/rc-hexagons.scss */
+.rc-hex-inner {
+  display: block;
+  width: 100%;
+  height: 100%;
+  text-align: center;
+  color: #fff;
+  overflow: hidden;
+  -webkit-transform: skewY(-30deg) rotate(60deg);
+  -ms-transform: skewY(-30deg) rotate(60deg);
+  transform: skewY(-30deg) rotate(60deg);
+}
+
+/*** HEX CONTENT **********************************************************************/
+/* line 43, ../sass/rc-hexagons.scss */
+.rc-hex img {
+  left: -100%;
+  right: -100%;
+  width: auto;
+  height: 100%;
+  margin: 0 auto;
+}
+
+/* line 50, ../sass/rc-hexagons.scss */
+.rc-hex-inner div {
+  width: 500px;
+  height: 500px;
+  left: -100%;
+  right: -100%;
+  margin: 0 auto;
+}
+
+/*** SPACING AND SIZING *****************************************************************/
+/* <- 3-2  hexagons per row */
+/* line 66, ../sass/rc-hexagons.scss */
+.rc-hex {
+  width: 48.5%;
+  /* = (100-nMargins*marginWidth) / nHex */
+  padding-bottom: 56.00298%;
+  /* =  width / sin(60deg) */
+}
+
+/* line 78, ../sass/rc-hexagons.scss */
+.rc-hex:nth-child(3n+3) {
+  margin-top: -11.40267%;
+  margin-bottom: -11.40267%;
+  -webkit-transform: translateX(50%) rotate(-60deg) skewY(30deg);
+  -ms-transform: translateX(50%) rotate(-60deg) skewY(30deg);
+  transform: translateX(50%) rotate(-60deg) skewY(30deg);
+}
+
+/* line 86, ../sass/rc-hexagons.scss */
+.rc-hex:nth-child(3n + 3):last-child {
+  margin-bottom: 0;
+}
+
+/* line 92, ../sass/rc-hexagons.scss */
+.rc-hex:nth-child(3n+3) {
+  margin-left: 1.5%;
+}
+
+/* line 95, ../sass/rc-hexagons.scss */
+.rc-hex:nth-child(3n+2) {
+  margin-left: 3%;
+}
+
+/* line 98, ../sass/rc-hexagons.scss */
+.rc-hex:nth-child(3n+4) {
+  clear: left;
+}

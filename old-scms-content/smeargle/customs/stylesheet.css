@@ -1,0 +1,7 @@
+.avatarembed {margin-top:3%;}
+.avatarembed iframe {
+        width:700px;height:600px;
+    }
+.avatarembed iframe img {image-rendering: pixelated;}
+h2.desc {font-size:1.15em;text-align:center;font-weight:bold;}
+.align-center {text-align:center;}

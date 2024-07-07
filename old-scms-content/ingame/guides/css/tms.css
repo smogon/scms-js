@@ -1,0 +1,48 @@
+/* CSS by ant */
+
+h2 {
+    font-style: italic;
+    margin-top: 40px;
+}
+.tmhm>dt {
+    font-size: 1.1em;
+    letter-spacing: 1pt;
+    background: #eee;
+    padding: 4px 0px 4px 5px;
+    margin-top: 30px;
+}
+.tmhm>dd:not(.type):not(.align-center):before {
+    content: "- ";
+}
+.type {
+    font-size: .8em;
+    display: inline-block;
+    min-width: 2%;
+    text-align: center;
+    border-radius: 5px;
+    margin: 4px 0px 4px 10px;
+    padding: 3.5px 11px 4px 11px;
+    color: #fff;
+    text-shadow: 1px 1px 1px rgba(66, 66, 66, 1);
+    float: right;
+}
+.type:hover{opacity:.9;}
+.ice{background:#7ACCCC;border:1px solid #45B6B6;}
+.poison{background:#953B95;border:1px solid #662966;}
+.dragon{background:#6529F5;border:1px solid #3D07C0;}
+.psychic{background:#F74379;border:1px solid #D60945;}
+.dark{background:#6B5445;border:1px solid #362A23;}
+.water{background:#5582EE;border:1px solid #1753E3;}
+.fight{background:#B52D26;border:1px solid #82211B;}
+.normal{background:#9F9F6E;border:1px solid #79794E;}
+.fly{background:#A28CE5;border:1px solid #7762B6;}
+.fire{background:#EA7826;border:1px solid #B4530D;}
+.grass{background:#6DBC46;border:1px solid #4A892B;}
+.rock{background:#AD9635;border:1px solid #746523;}
+.elec{background:#F7CE2A;border:1px solid #C19B07;}
+.ground{background:#DDBA5A;border:1px solid #AA8623;}
+.ghost{background:#6B5491;border:1px solid #413359;}
+.fairy{background:#F87DFF;border:1px solid #C1079B;}
+.steel{background:#AEAEC9;border:1px solid #7A7AA7;}
+.bug{background:#9FAE1E;border:1px solid #616B13;}
+.typeless{background:#006666;border:1px solid #004c4d;}

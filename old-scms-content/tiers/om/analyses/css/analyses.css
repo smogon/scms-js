@@ -1,0 +1,41 @@
+/* Analyses CSS
+* by Kris (http://www.smogon.com/forums/members/241023/)
+* Last updated by Kris: Oct 10, 2017
+*/
+
+a:link:hover, a:visited:hover {
+    background: transparent;
+    text-decoration: none;
+}
+.backto{
+    letter-spacing:1.2pt;
+    font-weight:bold;
+    text-transform:uppercase;
+}
+.mon{margin-left:10px;}
+.backto>a:link, .backto>a:visited {
+    color:#779EC5;
+    margin:20px 0 20px 0;
+    text-align:center;
+    text-decoration:none;
+    padding:5px 20px;
+    border-radius:30px;
+    border:3px solid #779ec5;
+    background:#D7D7D7;
+}
+.backto>a:hover, .backto>a:visited:hover{opacity:0.7;}
+.author {
+    margin-top:-1.5em;
+    padding:0 0 1em 35px;
+    font-style:italic;
+}
+hr{border:0; margin: 3% 0;}
+ul>li{list-style-type:none;}
+.cnc>li{margin-top:10px;}
+.cnc>li:first-child{margin-top:0;}
+.float-left{float:left;margin-right:20px;margin-bottom:20px;margin-top:20px;}
+.float-right{float:right;margin-left:20px;margin-bottom:20px;margin-top:20px;}
+.align-center{text-align:center;margin-bottom:20px;margin-top:20px;}
+/* Analyis Tables */
+.analyses {width: 25%;margin:0 auto;}
+.analyses tr>td:first-child{height:32px;width:50%;text-align:center;}

@@ -1,0 +1,127 @@
+body {
+    font: 13px Verdana, sans-serif;
+    text-align: center;
+}
+table {
+    border-collapse:separate;
+    border-spacing: 3px 3px;
+    color:black;
+    font-size: 14px;
+    width: auto;
+    margin: 0px auto; /*general smogon css comes with a margin on tables*/
+    table-layout: fixed;
+    padding-right: 10px;
+    text-align: center;
+}
+
+/*sweeper-calc-esque table styling*/
+td, tr {
+    padding: 5px 10px 5px 10px;
+    margin: 0px;
+    background-color: #8D8DCD;
+    font-weight: normal;
+}
+tr.top8, tr.top8>td {
+    font-weight: bold;
+}
+thead>tr>th {
+    background-color: #2C2C80;
+    color: #FDFDFF;
+    font-weight: bold;
+    font-size: 15px;
+    padding: 5px 20px 5px 20px;
+}
+.row:hover td {
+    background-color: #BEBEE7;
+}
+.rank{
+    text-align: right;
+    padding-right:2px;
+}
+.name:hover {
+    cursor: pointer;
+}
+.total {
+    font-weight: bold;
+}
+table.sortable thead {
+    background-color:#eee;
+    color:#666666;
+    font-weight: bold;
+    cursor: default;
+}
+
+#logo {
+    width: 189px;
+    height: 200px;
+    background: url(/media/zracknel-beta.svg);
+    background-size: 189px 200px;
+    position: relative; /*overwrite default smogon CSS*/
+    margin-left: 0px; /*overwrite default smogon CSS*/
+    display: none;
+}
+.logo {
+    height: 110px;
+}
+
+#browser-support {
+    color:white;
+    font-size: 12px;
+}
+
+#header_island, #search_help, #about, body{
+    background: #6363b0 url(/media/bg.png) repeat-x;
+    /*background:rgb(99,99,176);*/
+}
+
+#header a:visited, #top_breadcrumbs, #header a:link, a:link, a:visited {
+    color: black;
+    text-decoration: none;
+}
+
+a:link:hover, a:visited:hover {
+    background: rgba(0,0,0,0); /*default smogon css makes this yellow*/
+}
+
+#content_wrapper h1, #navigation, #top_breadcrumbs, #header, h1 {
+    display: none;
+}
+#title {
+    background: url(http://i.imgur.com/AJ9XaZZ.png);
+    background-size: 905px 117px;
+    width: 905px;
+    height: 117px;
+}
+
+#help {
+    text-align: left; 
+    width: 800px; 
+    margin:0 auto;
+    border: 5px solid #2C2C80;
+    background: #8D8DCD;
+    color: black;
+    border-radius: 15px;
+    padding: 15px;
+    margin-bottom: 20px;
+    display: none;
+    font-size: 12px;
+}
+
+#help a {
+    color: #2C2C80;
+    text-decoration: underline;
+}
+
+#hide, #show {
+    font-weight: bold;
+    border: 3px solid #2C2C80;
+    background: #2C2C80;
+    color: white;
+    border-radius: 7px;
+    padding: 5px;
+    width: 135px;
+    margin: 0 auto;
+}
+#hide:hover, #show:hover {
+    cursor: pointer;
+}

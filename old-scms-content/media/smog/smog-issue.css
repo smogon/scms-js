@@ -1,0 +1,109 @@
+/* smog-issue.css - /smog/issueNumber/
+ * By Setsuna (http://www.smogon.com/forums/member.php?u=32828) & ToastPlusOne (http://www.smogon.com/forums/member.php?u=30562)
+ * Last update: Setsuna 03/05/2013 */
+
+/* *********************
+ * Current issue section 
+ * ********************* */
+#current-issue { 
+    margin-right: 32px; 
+    float: left;
+    max-width: 280px;
+    text-align: center;
+}
+#current-issue img {
+    -webkit-box-shadow: 7px 7px 10px #97999c;
+       -moz-box-shadow: 7px 7px 10px #97999c;
+            box-shadow: 7px 7px 10px #97999c;
+}
+
+/* **********************
+ * Issue contents section 
+ * ********************** */
+#issue-contents { 
+    float: left; 
+    min-width: 320px; 
+    max-width: 640px; 
+}
+#issue-contents .section {
+    padding: 12px;
+}
+#issue-contents .column { 
+    width: 272px; 
+    float: left; 
+}
+#issue-contents .section h3 {
+    padding: 2px;
+    margin: 0;
+}
+#issue-contents .section a {
+    display: block;
+    white-space: pre-wrap;
+    padding: 4px;
+    border-left: 4px solid transparent;
+    border-top: 1px dashed #CCC;
+}
+/* Hover states for each article category */
+#issue-contents .section a:hover { background-color: #F8F8F8 !important; }
+#issue-contents .section.general a:hover { border-left: 4px solid #52BF90; }
+#issue-contents .section.battling-strategy a:hover { border-left: 4px solid #8A7AA3; }
+#issue-contents .section.metagame a:hover { border-left: 4px solid #89F2DA; }
+#issue-contents .section.arts-and-recreation a:hover { border-left: 4px solid #99C1CE; }
+#issue-contents .section.entertainment a:hover { border-left: 4px solid #ECCC75; }
+#issue-contents .section.other a:hover { border-left: 4px solid #c67474; }
+
+/* Contributors */
+#contribs {  
+    border-top: 1px solid #ECE;
+    padding-top: 8px;
+    margin: 22px 5px 0px 5px;
+    text-align: center;
+    font-size: .80em;
+}
+
+/* **************************
+ * Body / Logo / Page-wrapper 
+ * ************************** */
+#body {
+    max-width: 1350px;
+    margin: auto;
+}
+
+.clear { 
+    clear: both; 
+}
+
+/* The Smog logo */
+#smog-main-header { 
+    text-align: center; 
+    padding-bottom: 8px; 
+}
+#smog-main-header a:hover { 
+    background: transparent !important; 
+}
+
+/* Page wrapper */
+#page-wrapper * { 
+    color: #333; 
+}
+#page-wrapper img { 
+    padding: 0; 
+}
+#page-wrapper { 
+    max-width: 1020px; 
+    margin: auto; 
+    padding: 32px;
+    margin-bottom: 16px;
+}
+#page-wrapper.full {
+    border: 1px solid #ECE; 
+    border-radius: 8px; 
+}
+#page-wrapper a {
+    text-decoration: none !important;
+    color: #6e5573 !important;
+}
+#page-wrapper a:hover {
+    text-decoration: underline !important; 
+    background-color: transparent !important;
+}

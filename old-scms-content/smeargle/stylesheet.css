@@ -1,0 +1,115 @@
+#content_wrapper{
+    max-width:800px;
+    margin:auto;
+    margin-bottom:3%;
+}
+h2{
+    margin-top:5%;
+    margin-bottom:0%;
+    font-size:1.3em;
+}
+ul{margin-top:10px;}
+ul>li{
+    margin-left:20px;
+    margin-bottom:5px;
+    list-style-type:none;
+}
+h3{
+    margin-top:3%;
+    margin-bottom:0%;
+    font-size:1em;
+    font-family:"Lucida Sans Unicode", "Lucida Grande", sans-serif;
+}
+#contribs{
+    font: bold 1.75em "Trebuchet MS";
+    line-height: 23px;
+    letter-spacing: .05em;
+}
+#content_wrapper a{
+    text-decoration:none;
+    color:#3d7eff;
+}
+#content_wrapper a:hover{
+    background-color:transparent;
+    color:#6196ff;
+}
+.section {
+    line-height: 0.3;
+    margin-left:19px;
+    color:#999999;
+}
+.section span {
+    display: inline-block;
+    position: relative;
+}
+.section span:before {
+    content: "";
+    position: absolute;
+    height: 5px;
+    border-top: 1px solid #999999;
+    top: 0;
+    width: 10px;
+}
+.section span:after {
+    content: "";
+    position: absolute;
+    height: 5px;
+    border-top: 1px solid #999999;
+    top: 0;
+    width: 150px;
+}
+.section span:before {
+    right: 100%;
+    margin-right: 10px;
+}
+.section span:after {
+    left: 100%;
+    margin-left: 10px;
+}
+.artwork {
+    text-align:center;
+    margin-right: 10px;
+}
+hr{
+    margin-top:5%;
+    margin-bottom:5%;
+    border:none;
+    background:transparent;
+    border-bottom:3px double #000;
+}
+.float-right{float:right;margin-left:20px;}
+.float-left{float:left;margin-right:20px;}
+.leftspacing{margin-left:5%;}
+
+.navigationbar {
+	border: 1px solid #c9c9e4;
+	background:#e7e3e8;
+	border-radius: 11px;
+	border-bottom:3px solid #c7bfca;
+	font-size:1.1em;
+}
+.navigationbar .left {width: 40%; border-right:1px solid #c7bfca;}
+.navigationbar .right {width: 40%; text-align: right; border-left:1px solid #c7bfca;}
+.navigationbar .middle {width: 20%; text-align: center;}
+	
+.navigationbar a {
+	margin:-4px;
+	text-decoration:none;
+	color:#595959;
+	display:block;
+	padding:4px 10px;
+}
+.navigationbar .left>a:hover {
+	border-top-left-radius: 11px;
+	border-bottom-left-radius: 11px;
+}
+.navigationbar .right>a:hover {
+	border-top-right-radius: 11px;
+	border-bottom-right-radius: 11px;
+}
+.navigationbar a:hover {
+	transition: all .2s ease-in-out;
+	background:#c7bfca;
+	color:#ffffff;
+}
+.navigationbar .inactive-link{color:#c7bfca; padding:4px 10px;}

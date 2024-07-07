@@ -1,0 +1,159 @@
+/* line 1, ../sass/analysis-hexagons.scss */
+.analysis-hex {
+  font: 13px 'Raleway', sans-serif !important;
+  position: relative;
+  list-style-type: none;
+  float: left;
+  overflow: hidden;
+  visibility: hidden;
+  left: -8%;
+  outline: 1px solid transparent;
+  /* fix for jagged edges in FF on hover transition */
+  -webkit-transform: rotate(-60deg) skewY(30deg) translatez(-1px);
+  -ms-transform: rotate(-60deg) skewY(30deg) translatez(-1px);
+  transform: rotate(-60deg) skewY(30deg) translatez(-1px);
+}
+
+/* line 15, ../sass/analysis-hexagons.scss */
+.analysis-hex * {
+  position: absolute;
+  visibility: visible;
+  outline: 1px solid transparent;
+  /* fix for jagged edges in FF on hover transition */
+}
+
+/* line 20, ../sass/analysis-hexagons.scss */
+.analysis-hex-inner {
+  display: block;
+  width: 100%;
+  height: 100%;
+  text-align: center;
+  color: #fff;
+  overflow: hidden;
+  -webkit-transform: skewY(-30deg) rotate(60deg);
+  -ms-transform: skewY(-30deg) rotate(60deg);
+  transform: skewY(-30deg) rotate(60deg);
+}
+
+/*** HEX CONTENT **********************************************************************/
+/* line 33, ../sass/analysis-hexagons.scss */
+.analysis-hex img {
+  left: -100%;
+  right: -100%;
+  width: auto;
+  height: 100%;
+  margin: 0 auto;
+}
+
+/* line 41, ../sass/analysis-hexagons.scss */
+.analysis-hex h2, .analysis-hex p {
+  width: 102%;
+  padding: 5%;
+  margin: 0px;
+  box-sizing: border-box;
+  font-weight: 300;
+  -webkit-transition: -webkit-transform 0.2s ease-out;
+  transition: transform 0.2s ease-out;
+}
+
+/* line 50, ../sass/analysis-hexagons.scss */
+.analysis-hex h2 {
+  bottom: 50%;
+  padding-top: 50%;
+  font-size: 2em;
+  z-index: 1;
+  -webkit-transform: translateY(-100%) translatez(-1px);
+  -ms-transform: translateY(-100%) translatez(-1px);
+  transform: translateY(-100%) translatez(-1px);
+}
+
+/* line 59, ../sass/analysis-hexagons.scss */
+.analysis-hex h2:after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 42.5%;
+  width: 15%;
+  text-align: center;
+  border-bottom: 1px solid #fff;
+}
+
+/* line 68, ../sass/analysis-hexagons.scss */
+.analysis-hex p {
+  top: 50%;
+  height: 100%;
+  padding-bottom: 50%;
+  -webkit-transform: translateY(110%) translatez(-1px);
+  -ms-transform: translateY(110%) translatez(-1px);
+  transform: translateY(110%) translatez(-1px);
+}
+
+/* line 83, ../sass/analysis-hexagons.scss */
+.analysis-hex {
+  width: 26.85714%;
+  /* = (100-nMargins*marginWidth) / nHex */
+  padding-bottom: 31.01196%;
+  /* =  width / sin(60deg) */
+  margin-right: 2%;
+}
+
+/* line 96, ../sass/analysis-hexagons.scss */
+.analysis-hex:nth-child(6n+4) {
+  margin-top: -7.3131%;
+  margin-bottom: -7.3131%;
+  -webkit-transform: translateX(50%) rotate(-60deg) skewY(30deg);
+  -ms-transform: translateX(50%) rotate(-60deg) skewY(30deg);
+  transform: translateX(50%) rotate(-60deg) skewY(30deg);
+}
+
+/* line 104, ../sass/analysis-hexagons.scss */
+.analysis-hex:nth-child(6n + 4):last-child {
+  margin-bottom: 0;
+}
+
+/* line 96, ../sass/analysis-hexagons.scss */
+.analysis-hex:nth-child(6n+5) {
+  margin-top: -7.3131%;
+  margin-bottom: -7.3131%;
+  -webkit-transform: translateX(50%) rotate(-60deg) skewY(30deg);
+  -ms-transform: translateX(50%) rotate(-60deg) skewY(30deg);
+  transform: translateX(50%) rotate(-60deg) skewY(30deg);
+}
+
+/* line 104, ../sass/analysis-hexagons.scss */
+.analysis-hex:nth-child(6n + 5):last-child {
+  margin-bottom: 0;
+}
+
+/* line 96, ../sass/analysis-hexagons.scss */
+.analysis-hex:nth-child(6n+6) {
+  margin-top: -7.3131%;
+  margin-bottom: -7.3131%;
+  -webkit-transform: translateX(50%) rotate(-60deg) skewY(30deg);
+  -ms-transform: translateX(50%) rotate(-60deg) skewY(30deg);
+  transform: translateX(50%) rotate(-60deg) skewY(30deg);
+}
+
+/* line 104, ../sass/analysis-hexagons.scss */
+.analysis-hex:nth-child(6n + 6):last-child {
+  margin-bottom: 0;
+}
+
+/* line 109, ../sass/analysis-hexagons.scss */
+.analysis-hex:nth-child(6n + 4) {
+  margin-left: 1%;
+}
+
+/* line 114, ../sass/analysis-hexagons.scss */
+.analysis-hex-inner:hover h2 {
+  -webkit-transform: translateY(0%) translatez(-1px);
+  -ms-transform: translateY(0%) translatez(-1px);
+  transform: translateY(0%) translatez(-1px);
+}
+
+/* line 121, ../sass/analysis-hexagons.scss */
+.analysis-hex-inner:hover p {
+  -webkit-transform: translateY(0%) translatez(-1px);
+  -ms-transform: translateY(0%) translatez(-1px);
+  transform: translateY(0%) translatez(-1px);
+}

@@ -1,0 +1,109 @@
+table.standings {
+    border-spacing: 0;
+    border-collapse: collapse;
+    border: solid #000;
+    border-width: 1px;
+}
+
+table.standings td, table.standings th {
+    border: solid #000;
+}
+
+table.standings th {
+    border-width: 1px;
+    background: #6363B0;
+    color: #fff;
+    font-size: .846em;
+    text-align: left;
+    padding: .5em;
+    white-space: nowrap;
+} 
+
+table.standings td{
+    padding: .3em;
+    border-width: 0 1px;
+	width:33%;
+}
+
+table.rosters td{
+    text-align: left;
+	padding: .3em;
+    border-width: 0 1px;
+	width:50%;
+}
+
+.azn {
+    color: #009000;
+}
+
+.ben {
+    color: #FFA812;
+}
+
+.bra {
+    color: #FFE905;
+}
+
+.bro {
+    color: #AD6D48;
+}
+ 
+.cdn {
+    color: #C82536;
+}
+
+.eur {
+    color: #220088;
+}
+
+.fra {
+    color: #00FF00;
+}
+
+.ger {
+    color: #00CDCD;
+}
+
+.ita {
+    color: #CD00CD;
+}
+
+.mex {
+    color: #AD6D48;
+}
+
+.ocn {
+    color: #008080;
+}
+
+.lat {
+    color: #BEA393;
+}
+
+.spa {
+    color: #F24B45;
+}
+
+.ukb {
+    color: #7745A9;
+}
+
+.usc {
+    color: #CD6600;
+}
+
+.use {
+    color: #5C82FB;
+}
+
+.usm {
+    color: #CD6090;
+}
+
+.uss {
+    color: #6E7B8B;
+}
+
+.usw {
+    color: #9A98CA;
+}

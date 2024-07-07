@@ -1,0 +1,279 @@
+/*  The Player Article Stylesheet
+ *  Based on The Smog stylesheet (http://www.smogon.com/media/smog/smog-articles.css) by Setsuna
+	(http://www.smogon.com/forums/members/setsuna.32828/) and Toast++ (http://www.smogon.com/forums/members/toast.30562/)
+	with tweaks and changes by Quarkz (http://www.smogon.com/forums/members/quarkz.206020/)
+ */
+ 
+#body {
+	max-width: 1350px;
+	margin: auto;
+}
+
+/**********************
+ * Alignment / Floats *
+ **********************/
+ 
+.align-center {
+	text-align: center;
+	margin-bottom: 10px;
+}
+
+.float-left {
+	float: left;
+	margin-right: 10px;
+}
+
+.float-right {
+	float: right;
+	margin-left: 10px;
+}
+
+.clear { 
+	clear: both; 
+}
+
+.side-by-side {
+	display: inline-block;
+	margin-bottom: 2em;
+}
+.side-by-side div img {
+	margin-right: 10px;
+}
+
+/**********************
+ * General Formatting *
+ **********************/
+ 
+strong{
+	font-weight: bold;
+}
+
+em{
+	font-style: italic;
+}
+
+del{
+	text-decoration: line-through;
+}
+
+u{
+	text-decoration: underline;
+}
+
+dd {
+    padding: 5px 0 10px 5px;
+}
+
+a:link:hover, a:visited:hover {
+    background: transparent;
+    text-decoration: none;
+}
+
+/*******************
+ * Header / Footer *
+ *******************/
+ 
+.playerheader{
+	width: 80%;
+	margin: 15px auto 15px auto;
+	padding: 5px;
+	background-color: #edf0f7;
+	border: 0px;
+	-webkit-border-radius: 100px;
+	   -moz-border-radius: 100px;
+			border-radius: 100px;
+}
+
+.playerheader a, .playerheader span{
+	height: 12px;
+	padding: 2px 10px 2px 10px;
+	-webkit-border-radius: 100px;
+	   -moz-border-radius: 100px;
+			border-radius: 100px;
+	background-color: #FEFEFF;
+	text-transform: uppercase;
+	font-weight: bold;
+}
+
+.playerheader span{
+	color: #edf0f7;
+}
+
+.playerheader a{
+	color: #9CA9C8;
+	text-decoration: none;
+	transition: all 0.4s ease-in-out;
+}
+.playerheader a:hover{
+	color: #FEFEFF;
+	background-color: #9CA9C8;
+}
+
+.playerheader td:nth-child(1){
+	float: left;
+}
+
+.playerheader td:nth-child(3){
+	float: right;
+}
+
+/******************
+ * Editors' Notes *
+ ******************/
+ 
+.ednote{
+	width: 90%;
+	margin: 25px auto;
+	padding: 10px;
+	-webkit-border-radius: 20px;
+       -moz-border-radius: 20px;
+			border-radius: 20px;
+}
+
+.ednote div{
+	padding: 10px;
+	margin-left: 120px;
+	-webkit-border-radius: 20px;
+       -moz-border-radius: 20px;
+			border-radius: 20px;
+}
+
+.ednote img{
+	float: left;
+	-webkit-border-radius: 10px;
+       -moz-border-radius: 10px;
+			border-radius: 10px;
+}
+
+/* Scene given styling in the CSS due to the fact that it is used a lot */
+.editor-scene{
+	background-color: #EC8200;
+}
+
+.editor-scene div{
+	background-color: #F9DAB2;
+}
+
+/* Vacate given styling in the CSS due to the fact that it is used a lot */
+.editor-vacate{
+	background-color: #061731;
+}
+
+.editor-vacate div{
+	background-color: #B4B9C1;
+}
+
+/********************************
+ * Interviews / Mini Interviews *
+ ********************************/
+ 
+.interview .interview-speaker, .interview .aside, .minterview .interview-speaker, .minterview .aside{
+	margin-bottom: 15px;
+	padding: 10px;
+	-webkit-border-radius: 20px;
+       -moz-border-radius: 20px;
+			border-radius: 20px;
+}
+
+.minterview .interview-speaker, .minterview .aside{
+	padding: 5px;
+}
+
+.interview .interview-speaker{
+	min-height: 80px;
+}
+
+.interview .interview-speaker div, .minterview .interview-speaker div{
+	padding: 10px;
+	-webkit-border-radius: 20px;
+       -moz-border-radius: 20px;
+			border-radius: 20px;
+}
+
+.interview .interview-speaker div{
+	margin-left: 90px;
+}
+
+.interview .interview-speaker img{
+	display: table-cell;
+	float: left;
+	-webkit-border-radius: 10px;
+       -moz-border-radius: 10px;
+			border-radius: 10px;
+}
+
+.interview .aside, .minterview .aside{
+	background-color: #e0e0e0;
+}
+
+.interview .aside div, .minterview .aside div{
+	background-color: #f9f9f9;
+	padding: 10px;
+	-webkit-border-radius: 20px;
+       -moz-border-radius: 20px;
+			border-radius: 20px;
+}
+
+.interview .interview-speaker p:last-of-type, .interview .aside p:last-of-type, .minterview .interview-speaker p:last-of-type, .minterview .aside p:last-of-type{
+	margin-bottom: 0px;
+}
+
+/******************
+ * Ask the Admins *
+ ******************/
+ 
+/* Note that mini interviews should be used to present answers */
+
+.ata .question{
+	margin-bottom: 5px;
+}
+
+.ata .asker{
+	margin-left: 30px;
+	font-style: italic;
+}
+
+/******************************
+ * Recently on PS! / Gossiper *
+ ******************************/
+
+.news-article{
+	width: 50%;
+	margin: 10px auto;
+	-webkit-column-count: 2;  
+	   -moz-column-count: 2;  
+			column-count: 2;
+}
+
+.news-article:not(:last-of-type){
+	border-bottom: 2px solid black;
+	padding-bottom: 10px;
+}
+
+.news-article h3{
+	margin: 0px;
+	-webkit-column-span: all;
+			column-span: all;
+}
+
+.news-article p{
+	margin: 0;
+}
+
+.news-article .byline{
+	font-style: italic;
+	margin: 2px 0px 10px 0px;
+	-webkit-column-span: all;
+			column-span: all;
+}
+
+.recently-promotions{
+	width: 50%;
+	margin: 0 auto;
+	text-align: center;
+}
+
+.recently-promotions-line{
+	margin: 2px;
+	font-weight: bold;
+}

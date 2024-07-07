@@ -1,0 +1,79 @@
+.slidertext {
+    color: #FFFFFF;
+    padding:10px 0px 10px 0px;
+}
+.slidertextbox {
+    background-color: rgba(0,0,0,0.8);
+}
+ #wrapper {
+    width: 3200px;
+    position: relative;
+    left: 0px;
+    transition: left .5s ease-in-out;
+}
+#container {
+    width: 800px;
+    height: 400px;
+    border: 3px black solid;
+    overflow: hidden;
+}
+.content {
+    float: left;
+    width: 800px;
+    height: 400px;
+    white-space: normal;
+    background-repeat: no-repeat;
+}
+#slide1 {
+    background-color: #D1D1D1;
+    background-image:url('/tournaments/hof/classic/classic.png');
+    background-position: center;
+}
+#slide2 {
+    background-color: #FF7F50;
+    background-image:url('http://img836.imageshack.us/img836/3263/lcopen.png');
+    background-position: center;
+}
+#slide3 {
+    background-color: #1E90FF;
+     background-image:url('/tournaments/hof/HoF.png');
+    background-position: center;
+}
+#slide4 {
+    background-color: #DC143C;
+     background-image:url('/scms/media/images/koffing.gif');
+    background-position: center;
+}
+
+#navLinks {
+    text-align: center;
+    width: 500px;
+}
+#navLinks ul {
+    margin: 0px;
+    padding: 0px;
+    display: inline-block;
+}
+#navLinks ul li {
+    float: left;
+    text-align: center;
+    margin: 10px;
+    list-style: none;
+    cursor: pointer;
+    background-color: #CCCCCC;
+    padding: 5px;
+    border-radius: 50%;
+    border: 3px black solid;
+}
+#navLinks ul li:hover {
+    background-color: #FFFF00;
+}
+#navLinks ul li.active {
+    background-color: #333333;
+    color: #FFFFFF;
+    outline-width: 7px;
+}
+#navLinks ul li.active:hover {
+    background-color: #484848;
+    color: #FFFFFF;
+}
