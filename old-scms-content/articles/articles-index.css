@@ -1,4 +1,4 @@
-/* /articles/articles-index.css 
+/* /articles/articles-index.css
  * By anto (http://www.smogon.com/forums/members/anto.222754/) and Quarkz (http://www.smogon.com/forums/members/quarkz.206020/)
  * Please remember that this is a .scss file and all edits should be reflected
  * in the articles-index.css file when edits are made. This file is purely for
@@ -150,4 +150,11 @@
   font-family: monospace;
   font-size: 0.9em;
   text-align: center;
+}
+#body #articleIndex .moreContributors {
+  cursor: pointer;
+  font-style: italic;
+}
+#body #articleIndex .moreContributors:hover {
+  text-decoration: underline;
 }
