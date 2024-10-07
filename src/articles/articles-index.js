@@ -1,4 +1,4 @@
-/* /articles/articles-index.js 
+/* /articles/articles-index.js
  * By Quite Quiet http://www.smogon.com/forums/members/196780/
  */
 
@@ -20,7 +20,7 @@ var ArticleIndexRow = function(title, date, tags, contributors, ref) {
     this.ref = ref;
 };
 
-ArticleIndexRow.prototype.getRowHtml = function() {
+ArticleIndexRow.prototype.getRowHtml = function(visibleContributors) {
     var html = '<tr>';
     html += '<td><a href="/articles/' + this.ref + '" title="Read the article!">' + this.title + '</a></td>';
     html += '<td>' + moment(this.pubdate).format('ddd MMM Do YYYY') + '</td>';
@@ -32,7 +32,9 @@ ArticleIndexRow.prototype.getRowHtml = function() {
     html += htmlTags.join('<span> | </span>');
     html += '</ul></td><td><ul>';
     var contributorsHtml = [];
+    var authors = 0;
     if (this.contributors.authors) {
+        authors = this.contributors.authors.length;
         for (var i = 0; i < this.contributors.authors.length; i++) {
             var author = this.contributors.authors[i];
             contributorsHtml.push('<li><a class="article-author contributor" href="/forums/members/' + author.id + '" title="Produced the article">' + author.name + '</a></li>');
@@ -56,20 +58,34 @@ ArticleIndexRow.prototype.getRowHtml = function() {
             contributorsHtml.push('<li><a class="contributor" href="/forums/members/' + coder.id + '" title="Wrote the code">' + coder.name + '</a></li>');
         }
     }
+    if (this.contributors.qcers) {
+        for (var i = 0; i < this.contributors.qcers.length; i++) {
+            var qcer = this.contributors.qcers[i];
+            contributorsHtml.push('<li><a class="contributor" href="/forums/members/' + qcer.id + '" title="Checked the content">' + qcer.name + '</a></li>');
+        }
+    }
+
+    // Limit the number of displayed if there's many of them
+    var visible = Math.max(visibleContributors, authors);
+    if (contributorsHtml.length > visible + 1) {
+        contributorsHtml.push('<li class="moreContributors" title="Show more contributors!" data-visible="' + visible + '">&raquo; Expand</li>');
+    }
+
     html += contributorsHtml.join('<span> | </span>');
     html += '</ul></td></tr>';
     return html;
 };
 
-var ArticleIndex = function (data, tags, year) {
+var ArticleIndex = function (data, config, year) {
     this.firstYear = data[0].pubdate.substring(0, 4);
     this.currentYear = data[data.length - 1].pubdate.substring(0, 4);
     this.data = data.map(function(a) {
        return new ArticleIndexRow(a.title, a.pubdate, a.tags, a.contributors, a.ref);
     }).reverse();
     this.year = year;
-    this.allTags = tags;
+    this.allTags = config.tags;
     this.allTags.unshift('All Tags');
+    this.visibleContributors = config.visible_contributors;
     this.articleYearData = this.getYearData(this.year);
     this.searchParams = Object.keys(this.data[0].contributors).map(function (e) {return e.slice(0, -1);});
     this.activeSearch = false;
@@ -109,7 +125,7 @@ ArticleIndex.prototype.buildDataIndex = function(indexData) {
     indexTable += '<th id="tagsHead">Tags</th>';
     indexTable += '<th id="contribsHead">Contributors</th></tr>';
     for (var i = 0; i < indexData.length; i++) {
-        indexTable += indexData[i].getRowHtml();
+        indexTable += indexData[i].getRowHtml(this.visibleContributors);
     }
     indexTable += '</table>';
     return indexTable;
@@ -142,7 +158,7 @@ ArticleIndex.prototype.filterBySearch = function(search) {
             var colonIndex = search.indexOf(':');
             var param = search.substring(0, colonIndex);
             search = search.substring(colonIndex + 1);
-            articles = this.data.filter(function(article) { 
+            articles = this.data.filter(function(article) {
                 var contributors = article.contributors[param + 's'];
                 return contributors && contributors.some(function (author) { return author.name.toLowerCase() === search;});
             });
@@ -162,20 +178,33 @@ ArticleIndex.prototype.addEventHandlers = function() {
         self.filterByTag(this.value);
         $('#tagSelect').val(tag);
     });
-    
+
     $('.articleTag').click(function() {
         var tag = $(this).text();
         self.filterByTag(tag);
         $('#tagSelect').val(tag);
     });
-    
+
+    $('.moreContributors').each(function() {
+        var $this = $(this);
+        var visible = $this.data('visible');
+        var $contributors = $this.siblings().slice(visible * 2); // li + divider
+        $contributors.hide();
+        $this.show();
+        $this.click(function() {
+            $contributors.show();
+            $this.hide();
+            $this.prev().hide();
+        })
+    });
+
     $('#searchBar').on('input textchange propertychange paste', function() {
         var search = $(this).val();
         self.filterBySearch(search);
         $('#searchBar').val(search);
         $('#searchBar').focus();
     });
-    
+
     $('#yearSelect li').on('click keydown', function(e) {
         if (e.type === 'keydown' && e.which !== 13) return; // Support pressing enter to change year
         var year = $(this).text();
@@ -192,21 +221,20 @@ function getYear() {
             y = p[1];
         }
     }
+    if (!y) {
+        y = new Date().getFullYear().toString();
+    }
     return y;
 }
 
-var year = getYear();
-if (year) {
+
+$(document).ready(function () {
     $.get('data/articles.json', function(data) {
-        $.get('data/tags.json', function(tags) {
-            var startTime = performance.now();
-            var articleIndex = new ArticleIndex(data, tags, year);
-            articleIndex.buildIndex();
-            var endTime = performance.now();
-            $('#articleIndexGeneration').html('<p style="font-size: 0.8em;  text-align: center;">Page generated in ' + (endTime - startTime) + ' milliseconds.</p>');
-        });
+        var config = window.scmsJSON;
+        var startTime = performance.now();
+        var articleIndex = new ArticleIndex(data, config, getYear());
+        articleIndex.buildIndex();
+        var endTime = performance.now();
+        $('#articleIndexGeneration').html('<p style="font-size: 0.8em;  text-align: center;">Page generated in ' + (endTime - startTime) + ' milliseconds.</p>');
     });
-} else {
-    // Redirect users back to this page with the default  in the query string
-    window.location = window.location.pathname + '?y=' + new Date().getFullYear();
-}
+});
