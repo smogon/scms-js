@@ -31,7 +31,8 @@ $(document).ready(function () {
     var suffix = gen > 4 || gen === 2 || isNaN(gen) ? 'gif' : 'png';
     var pkmnSprite = '/dex/media/sprites//' + genIdent + '/' + set.species.toLowerCase().replace(/\./g, '').replace(/ /g, '-') + '.' + suffix;
     buf += '<img class="img-pokemon" src="' + pkmnSprite + '" />';
-    if (set.item && set.item.includes('/')) set.item = set.item.split('/')[0].trim();
+    if (!set.item) set.item = "No Item";
+    if (set.item.includes('/')) set.item = set.item.split('/')[0].trim();
     var itemSprite = '/forums//media/minisprites/' + set.item.toLowerCase().replace(/ /g, '-') + '.png';
     buf += '<img class="img-item" src="' + itemSprite + '" /></div>';
     buf += '<pre>' + pkmn.sets.Sets.exportSet(set);
