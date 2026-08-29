@@ -2,13 +2,13 @@
 
 $(document).ready(function () {
     
-    $('<div>' + '<img src="/media/competitor/logo.png" class="logo" alt="" />' + '</div>').prependTo('#section');
-    $('<p>' + '<img src="/media/competitor/news_item.png" class="news" alt="" />' + '</p>').insertBefore('.article > h2').addClass('align-left');
-    $('<img src="/media/competitor/date_icon.png" alt="" />').prependTo('h3').addClass('date-icon');
-    $('<img src="/media/competitor/dotted_line.png" alt="" />').appendTo('.button').addClass('dotted-line');
+    $('<div>' + '<img src="https://www.smogon.com/__uploads/P1cL3wpDXX_B0l5IF5c5QQ.png" class="logo" alt="" />' + '</div>').prependTo('#section');
+    $('<p>' + '<img src="https://www.smogon.com/__uploads/lV55ACFkLyyoNNc5CXoOjw.png" class="news" alt="" />' + '</p>').insertBefore('.article > h2').addClass('align-left');
+    $('<img src="https://www.smogon.com/__uploads/TcZ3xQ4fgsQrQSFiYCL4jw.png" alt="" />').prependTo('h3').addClass('date-icon');
+    $('<img src="https://www.smogon.com/__uploads/uDojig4buqMqEWgK80zbWw.png" alt="" />').appendTo('.button').addClass('dotted-line');
     $('<hr />').insertAfter('.article > h2').addClass('separator');
     $('#section').css({
-        'background-image': 'url("/media/competitor/background.png")',
+        'background-image': 'url("https://www.smogon.com/__uploads/_ai004ebfIlDid93q_nytQ.png")',
         'background-position': '725px 40px',
         'background-repeat': 'repeat-y',
         'background-attachment': 'fixed'
@@ -123,7 +123,7 @@ $(document).ready(function () {
     // Something to expand on in the future
     if (navigator.userAgent.match(/(iPod|iPhone|iPad)/i)) {
         $('#section').removeAttr('style');
-        $('div > img.logo').replaceWith('<div class="logo-ios">' + '<img src="/media/competitor/logo_ios.png" alt="" />' + '</div>');
+        $('div > img.logo').replaceWith('<div class="logo-ios">' + '<img src="https://www.smogon.com/__uploads/OAKEwX34paa9fl2wo6bLtA.png" alt="" />' + '</div>');
         $('<h2>Smogon\'s Official Tournament Coverage</h2>').appendTo('div.logo-ios').addClass('ios-slogan'); 
         $('.article').css({
             'width': '820px'

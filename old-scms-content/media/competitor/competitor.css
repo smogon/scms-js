@@ -99,7 +99,7 @@ h4 {
 	position: relative;
 	top: 5px;
 	height: 2px;
-	background-image: url('http://www.smogon.com/media/competitor/bottom_line.png'); /* Fallback image */
+	background-image: url('https://www.smogon.com/__uploads/64ntxbygLB6NPfRAhF692w.png'); /* Fallback image */
 	background-image: -webkit-linear-gradient(left, rgba(113,114,117,0), rgba(113,114,117,0.35), rgba(113,114,117,0)); 
 	background-image:    -moz-linear-gradient(left, rgba(113,114,117,0), rgba(113,114,117,0.35), rgba(113,114,117,0));  
 	background-image:      -o-linear-gradient(left, rgba(113,114,117,0), rgba(113,114,117,0.35), rgba(113,114,117,0)); 
@@ -114,7 +114,7 @@ h4 {
 	font-size: 11px;
 	color: #ffffff;
 	text-decoration: none;
-	background: url('http://www.smogon.com/media/competitor/gradient_ie.png') repeat-x; /* Fallback Image */
+	background: url('https://www.smogon.com/__uploads/cqc6XZ7imakiIboq-JBMyA.gif') repeat-x; /* Fallback Image */
 	background-image: -webkit-linear-gradient(top, #cccccc, #717275);
 	background-image:    -moz-linear-gradient(top, #cccccc, #717275);
 	background-image:      -o-linear-gradient(top, #cccccc, #717275);

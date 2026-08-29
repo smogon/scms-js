@@ -56,7 +56,7 @@
 }
 /* *************** SCOOTERS SEASON ***************** */
 #scooters {
-	background:url('/tournaments/hof/spl/Scooters_Logo.png') no-repeat 0px 0px;
+	background:url('https://www.smogon.com/__uploads/oJy_beMWnNg8bn1TqiuygA.png') no-repeat 0px 0px;
 	width:100%;
 	height:130px;
 	border-bottom:25px #BFB6DA double;
@@ -87,7 +87,7 @@
 }
 /* *************** RUINERS SEASON ***************** */
 #ruiners {
-	background:url('/tournaments/hof/spl/Ruiners_Logo.png') no-repeat 0px 0px;
+	background:url('https://www.smogon.com/__uploads/3HpuHn1CkCmdQEgyLVZ6XA.png') no-repeat 0px 0px;
 	height:130px;
 	border-bottom:25px #FFDFBC double;
 }
@@ -102,7 +102,7 @@
 }
 /* *************** WOLVES SEASON ***************** */
 #wolves {
-	background:url('/tournaments/hof/spl/Wolves_Logo.png') no-repeat 0px 0px;
+	background:url('https://www.smogon.com/__uploads/YHOLqpELSE3c0Pa0_zSqhg.png') no-repeat 0px 0px;
 	height:130px;
 	border-bottom:25px #ef5f52 double;
 }
@@ -117,7 +117,7 @@
 }
 /* *************** CLASSIES SEASON ***************** */
 #classies {
-	background:url('/tournaments/hof/spl/Classies_Logo.png') no-repeat 0px 0px;
+	background:url('https://www.smogon.com/__uploads/tYGBcnxvSP3jJZW3DAKiRg.png') no-repeat 0px 0px;
 	height:130px;
 	border-bottom:25px #15b76e double;
 }
@@ -182,25 +182,25 @@
 /* ***************SCOOTERS*************** */
 .headscootersman {
 	height:95px;
-	background:url('/tournaments/hof/spl/captainbg.gif');
+	background:url('https://www.smogon.com/__uploads/5VmVPestJHoaTkrFuVTmxw.gif');
 	background-repeat:repeat;
 	border-radius:18px 18px 0px 0px;
 	margin:0;
 }
 .headscooters {
 	height:95px;
-	background:url('/tournaments/hof/spl/Scooters_Background.png');
+	background:url('https://www.smogon.com/__uploads/oBOGqRkkfb8XUdycAqNhHw.png');
 	background-repeat:repeat;
 	border-radius:18px 18px 0px 0px;
 	margin:0;
 }
 .titlescooters {
-	background:url('/tournaments/hof/spl/Scooters_Avatar.png') no-repeat;
+	background:url('https://www.smogon.com/__uploads/v2JwU01M2Q5CYrdvcS4_Pg.png') no-repeat;
 	background-position:10px 10px;
 	height:95px;
 }
 .mentor .backscooters{
-	background-image:url('/tournaments/hof/spl/Scooters_top_bar.png');
+	background-image:url('https://www.smogon.com/__uploads/YriCfhoxvWdnyAuh7E3EJQ.png');
 	background-repeat: repeat-x;
 }
 .mentor .backscooters input:hover {
@@ -236,18 +236,18 @@
 /* ***************RUINERS*************** */
 .headruiners {
 	height:95px;
-	background:url('/tournaments/hof/spl/Ruiners_Background.png');
+	background:url('https://www.smogon.com/__uploads/850jyyi2BXVItV9SXwFsRw.png');
 	background-repeat:repeat;
 	border-radius:18px 18px 0px 0px;
 	margin:0;
 }
 .titleruiners {
-	background:url('/tournaments/hof/spl/Ruiners_Avatar.png') no-repeat;
+	background:url('https://www.smogon.com/__uploads/jOfkCH72WVK4JSZ0L4REjQ.png') no-repeat;
 	background-position:13px 0px;
 	height:95px;
 }
 .mentor .backruiners{
-	background-image:url('/tournaments/hof/spl/Ruiner_top_bar.png');
+	background-image:url('https://www.smogon.com/__uploads/zbZk4oPclphGGXApM1TgZw.png');
 	background-repeat: repeat-x;
 }
 .mentor .backruiners input:hover {
@@ -260,18 +260,18 @@
 /* ***************WOLVES*************** */
 .headwolves {
 	height:95px;
-	background:url('/tournaments/hof/spl/Wolves_Background.png');
+	background:url('https://www.smogon.com/__uploads/s5sqixKvDdbL_cpJG2LcqA.png');
 	background-repeat:repeat;
 	border-radius:18px 18px 0px 0px;
 	margin:0;
 }
 .titlewolves {
-	background:url('/tournaments/hof/spl/Wolves_Avatar.png') no-repeat;
+	background:url('https://www.smogon.com/__uploads/vhchmHMea6qAJ6xZZuaEIA.png') no-repeat;
 	background-position:20px 8px;
 	height:95px;
 }
 .mentor .backwolves{
-	background-image:url('/tournaments/hof/spl/Wolves_Bar.png');
+	background-image:url('https://www.smogon.com/__uploads/HdWtCw_DAcdKoaS1nRllbQ.png');
 	background-repeat: repeat-x;
 }
 .mentor .backwolves input:hover {
@@ -284,18 +284,18 @@
 /* ***************CLASSIES*************** */
 .headclassy {
 	height:95px;
-	background:url('/tournaments/hof/spl/Classies_Background.png');
+	background:url('https://www.smogon.com/__uploads/TaC0ViSyHVdpmAVIHBVRrQ.png');
 	background-repeat:repeat;
 	border-radius:18px 18px 0px 0px;
 	margin:0;
 }
 .titleclassy {
-	background:url('/tournaments/hof/spl/Classies_Avatar.png') no-repeat;
+	background:url('https://www.smogon.com/__uploads/_VVYoQtehkowyS4PmyRN1w.png') no-repeat;
 	background-position:10px 0px;
 	height:95px;
 }
 .mentor .backclassy{
-	background-image:url('/tournaments/hof/spl/Classies_Bar.png');
+	background-image:url('https://www.smogon.com/__uploads/CXMQjT1QuLHi4aWGBQGXvw.png');
 	background-repeat: repeat-x;
 }
 .mentor .backclassy input:hover {
