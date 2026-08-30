@@ -90,3 +90,13 @@ function createGrid(sudokuLayout) {
 		$(this).css('background-image', 'none');
 	});
 }
+
+// The layout the document used to pass in as an argument.
+// window.scmsJSON.sudoku is nine rows of nine letters, read at ready because
+// the CMS assigns scmsJSON at the end of [head].
+$(document).ready(function () {
+    // Only when the page has one. The first thing createGrid does is empty
+    // the container, so calling it with nothing would take a grid away.
+    var layout = (window.scmsJSON || {}).sudoku;
+    if (layout) createGrid(layout);
+});

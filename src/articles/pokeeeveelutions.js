@@ -108,3 +108,13 @@ function createEeveeGrid(sudokuLayout) {
 		$(this).css('background-image', 'none');
 	});
 }
+
+// The layout the document used to pass in as an argument.
+// window.scmsJSON.eeveelutions is one {x, y, dir} per arrow, read at ready
+// because the CMS assigns scmsJSON at the end of [head].
+$(document).ready(function () {
+    // Only when the page has one. The first thing createEeveeGrid does is empty
+    // the container, so calling it with nothing would take a grid away.
+    var layout = (window.scmsJSON || {}).eeveelutions;
+    if (layout) createEeveeGrid(layout);
+});
