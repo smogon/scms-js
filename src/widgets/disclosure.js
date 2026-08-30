@@ -33,6 +33,11 @@ $(document).ready(function () {
         // Slide length in ms. 0 is the instant show/hide, not a slide of no
         // duration.
         duration: 500,
+        // Slide length in ms for a panel going shut, where the page closes at
+        // a different pace than it opens. accordion mode only, because the
+        // other two close with the same slideToggle that opens. null is
+        // duration.
+        closeDuration: null,
         // Worn by the trigger whose panel is open. siblings mode only.
         activeClass: null,
         // Classes carried by the trigger's <i> children: the first is worn
@@ -138,6 +143,7 @@ $(document).ready(function () {
         // The panel standing open, by the name its trigger gave it. Empty
         // means none, which is also the name no panel can have.
         var current = '';
+        var closing = s.closeDuration === null ? s.duration : s.closeDuration;
 
         $triggers.on('click', function (evt) {
             evt.preventDefault();
@@ -149,7 +155,7 @@ $(document).ready(function () {
             var picture = s.preview ? preview($trigger, s) : null;
 
             if (target === current) {
-                named($panels, s.panel, current).slideUp(s.duration);
+                named($panels, s.panel, current).slideUp(closing);
                 if (picture) picture.close();
                 decorate(named($triggers, s.trigger, current), s, false);
                 current = '';
@@ -168,7 +174,7 @@ $(document).ready(function () {
             if ($open.length > 0) {
                 if (picture) picture.swap();
                 decorate(named($triggers, s.trigger, was), s, false);
-                $open.slideUp(s.duration, show);
+                $open.slideUp(closing, show);
             } else {
                 if (picture) picture.open();
                 show();
