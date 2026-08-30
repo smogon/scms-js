@@ -11,7 +11,16 @@ for (var i = 0; i < links.length; i++) {
 }
  
 links[activeLink].classList.add("active");
- 
+
+// A slide that stands for a thread or a member says so on the markup. The two
+// that stand for neither say nothing, where they used to open a blank tab.
+var slides = document.querySelectorAll("[data-open-url]");
+for (var s = 0; s < slides.length; s++) {
+    slides[s].addEventListener('click', function () {
+        window.open(this.getAttribute("data-open-url"));
+    });
+}
+
 function setClickedItem(e) {
     removeActiveLinks();
     resetTimer();
