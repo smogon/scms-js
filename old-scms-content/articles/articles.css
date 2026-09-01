@@ -469,3 +469,114 @@ td.pokelink-click:hover img {
 .set-pick-6:checked ~ .set-pick-blocks > :nth-child(6) {
     display: block;
 }
+
+/* The booklets. Every page carries its own arrows, and only the page showing
+   has them on screen, so an arrow is a label for the neighbouring page's radio
+   and turning a page is checking one. Keyed on a class per position: the pages
+   are siblings with nothing wrapping them.
+
+   The fold is jQuery UI's, reproduced. It hid a page by collapsing its width
+   and then its height -- horizFirst, 300ms -- and showed the next by running
+   that backwards over 600ms, height first and then width. Two axes moving one
+   after the other is not one transform tween, so each is a registered number
+   with its own duration and delay, and clip-path reads them: the page is
+   clipped away like paper rather than squashed like rubber.
+
+   display carries allow-discrete so the page being left stays in flow while it
+   folds, instead of vanishing before it can. Without @starting-style the page
+   you arrive on is simply there, unfolded, which is what it was before. A
+   browser too old for either lands on the plain swap. */
+@property --bk-x {
+    syntax: "<number>";
+    inherits: false;
+    initial-value: 1;
+}
+@property --bk-y {
+    syntax: "<number>";
+    inherits: false;
+    initial-value: 1;
+}
+.bk {
+    position: absolute;
+    opacity: 0;
+    width: 0;
+    height: 0;
+    pointer-events: none;
+}
+.bk-page {
+    display: none;
+    --bk-x: 0.04;
+    --bk-y: 0;
+    clip-path: inset(0 calc((1 - var(--bk-x)) * 100%) calc((1 - var(--bk-y)) * 100%) 0);
+    transition: --bk-x 150ms ease,
+                --bk-y 150ms ease 150ms,
+                display 300ms allow-discrete;
+}
+.bk-1:checked ~ .bk-page-1,
+.bk-2:checked ~ .bk-page-2,
+.bk-3:checked ~ .bk-page-3,
+.bk-4:checked ~ .bk-page-4,
+.bk-5:checked ~ .bk-page-5,
+.bk-6:checked ~ .bk-page-6,
+.bk-7:checked ~ .bk-page-7,
+.bk-8:checked ~ .bk-page-8,
+.bk-9:checked ~ .bk-page-9,
+.bk-10:checked ~ .bk-page-10,
+.bk-11:checked ~ .bk-page-11,
+.bk-12:checked ~ .bk-page-12,
+.bk-13:checked ~ .bk-page-13,
+.bk-14:checked ~ .bk-page-14,
+.bk-15:checked ~ .bk-page-15,
+.bk-16:checked ~ .bk-page-16,
+.bk-17:checked ~ .bk-page-17 {
+    display: block;
+    --bk-x: 1;
+    --bk-y: 1;
+    transition: --bk-y 300ms ease,
+                --bk-x 300ms ease 300ms,
+                display 600ms allow-discrete;
+}
+@starting-style {
+.bk-1:checked ~ .bk-page-1,
+.bk-2:checked ~ .bk-page-2,
+.bk-3:checked ~ .bk-page-3,
+.bk-4:checked ~ .bk-page-4,
+.bk-5:checked ~ .bk-page-5,
+.bk-6:checked ~ .bk-page-6,
+.bk-7:checked ~ .bk-page-7,
+.bk-8:checked ~ .bk-page-8,
+.bk-9:checked ~ .bk-page-9,
+.bk-10:checked ~ .bk-page-10,
+.bk-11:checked ~ .bk-page-11,
+.bk-12:checked ~ .bk-page-12,
+.bk-13:checked ~ .bk-page-13,
+.bk-14:checked ~ .bk-page-14,
+.bk-15:checked ~ .bk-page-15,
+.bk-16:checked ~ .bk-page-16,
+.bk-17:checked ~ .bk-page-17 {
+    --bk-x: 0.04;
+    --bk-y: 0;
+}
+}
+
+/* Before a reader has turned anything, the first page is simply open. Its
+   radio ships unchecked so that this rule and not the one above is what shows
+   it -- otherwise the starting style would fold the article open on arrival,
+   which the script never did. Turning back to page one goes through the rule
+   above and folds like any other page. */
+body:not(:has(.bk:checked)) .bk-page-1 {
+    display: block;
+    --bk-x: 1;
+    --bk-y: 1;
+    transition: none;
+}
+
+.prev > label, .next > label {
+    cursor: pointer;
+}
+td.prev > label, td.next > label, p.prev > label, p.next > label {
+    display: block;
+}
+@media (prefers-reduced-motion: reduce) {
+    .bk-page { transition: none; }
+}
