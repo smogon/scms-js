@@ -593,3 +593,15 @@ td.prev > label, td.next > label, p.prev > label, p.next > label {
     height: 0;
     pointer-events: none;
 }
+
+/* The panel pickers. Each thumbnail is a label holding its own checkbox, and
+   which panel it opens is the page's own business -- the rules pair the
+   checkbox with the panel sharing its data-id and live in the page's <style>.
+   A checkbox rather than a radio, so a panel opens and closes on its own. */
+.pp-box {
+    position: absolute;
+    opacity: 0;
+    width: 0;
+    height: 0;
+    pointer-events: none;
+}
