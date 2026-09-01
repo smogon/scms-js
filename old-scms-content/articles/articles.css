@@ -580,3 +580,16 @@ td.prev > label, td.next > label, p.prev > label, p.next > label {
 @media (prefers-reduced-motion: reduce) {
     .bk-page { transition: none; }
 }
+
+/* The button bars. Each tab is a label holding its own radio, so the bar
+   styles the open one by :has(> .tb-radio:checked) where it used to style
+   .cur. Which panel each radio shows is the page's own business: the rules
+   are made of the selectors the bar and its buttons already named, and live
+   in the page's <style>. */
+.tb-radio {
+    position: absolute;
+    opacity: 0;
+    width: 0;
+    height: 0;
+    pointer-events: none;
+}
