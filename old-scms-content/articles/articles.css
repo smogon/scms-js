@@ -430,3 +430,42 @@ td.pokelink-click:hover img {
 @keyframes move {
 	100% {-webkit-transform: translateY(2px); }
 }
+
+/* The set pickers. A <select> used to swap these blocks; now the nth radio
+   shows the nth block, and the radio itself is off-screen behind its label. */
+.set-pick {
+    position: absolute;
+    opacity: 0;
+    width: 0;
+    height: 0;
+    pointer-events: none;
+}
+.set-pick-label {
+    display: inline-block;
+    cursor: pointer;
+    margin: 0 6px 8px 0;
+    padding: 4px 10px;
+    border: 1px solid #b9b9d8;
+    border-radius: 4px;
+    background: #f2f2f8;
+}
+.set-pick:checked + .set-pick-label {
+    background: #6363B0;
+    border-color: #6363B0;
+    color: #fff;
+}
+.set-pick:focus-visible + .set-pick-label {
+    outline: 2px solid #6363B0;
+    outline-offset: 2px;
+}
+.set-pick-blocks > * {
+    display: none;
+}
+.set-pick-1:checked ~ .set-pick-blocks > :nth-child(1),
+.set-pick-2:checked ~ .set-pick-blocks > :nth-child(2),
+.set-pick-3:checked ~ .set-pick-blocks > :nth-child(3),
+.set-pick-4:checked ~ .set-pick-blocks > :nth-child(4),
+.set-pick-5:checked ~ .set-pick-blocks > :nth-child(5),
+.set-pick-6:checked ~ .set-pick-blocks > :nth-child(6) {
+    display: block;
+}
