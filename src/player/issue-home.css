@@ -1,0 +1,70 @@
+/*
+ *  The Player issue homepage stylesheet (desktop client)
+ *  By Vacate (http://www.smogon.com/forums/members/vacate.189371/) with contributions from Quarkz (http://www.smogon.com/forums/members/quarkz.206020/) and Quinella (http://www.smogon.com/forums/members/quinella.195572/)
+ *  Last update by Quarkz (30/08/2014)
+ */
+
+#issuebacking{
+	width: 1000px;
+}
+
+.column{
+	width: 625px;
+	float: right;
+}
+
+/* Cover image section*/
+#bottom a{
+	font-size: 13px;
+}
+
+#credit p{
+	font-size: 11px !important;
+}
+
+#credit a{
+	font-size: 11px !important;
+}
+
+/* Articles */
+.star{
+	-webkit-transition:background-color 400ms ease-in-out;
+	   -moz-transition:background-color 400ms ease-in-out;
+	        transition:background-color 400ms ease-in-out;
+}
+
+.article{
+	-webkit-transition:background-color 400ms ease-in-out;
+	   -moz-transition:background-color 400ms ease-in-out;
+	        transition:background-color 400ms ease-in-out;
+}
+
+.article:hover .articlePreview{
+	max-height: 120px;
+	margin-bottom: 1em;
+}
+
+/* CSS3 transition to add slide effect to previews when hovering over articles */
+.articlePreview{
+	max-height: 0;
+	margin-bottom: 0;
+	overflow: hidden;
+	-webkit-transition: max-height 400ms ease-in-out, margin 400ms ease-in-out;
+	   -moz-transition: max-height 400ms ease-in-out, margin 400ms ease-in-out;
+			transition: max-height 400ms ease-in-out, margin 400ms ease-in-out;
+}
+
+.leftcolumn{
+	float:left;
+	position:inherit;
+}
+
+/* Used to make the content on the left of the page fixed (see: issue-home-scripts.js) */
+.fixed{
+	position:fixed;
+}
+
+/* Toogle client button */
+#toggle{
+	text-align: center;
+}

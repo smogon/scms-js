@@ -1,0 +1,98 @@
+/* smog-main.css - /smog/
+ * By Setsuna (http://www.smogon.com/forums/member.php?u=32828) & ToastPlusOne (http://www.smogon.com/forums/member.php?u=30562)
+ * Last update: Setsuna 03/05/2013 */
+
+/* *********************
+ * Current issue section 
+ * ********************* */
+#current-issue { 
+    margin-right: 32px; 
+    float: left;
+    max-width: 280px;
+    text-align: center;
+}
+#current-issue img {
+    -webkit-box-shadow: 7px 7px 10px #97999c;
+       -moz-box-shadow: 7px 7px 10px #97999c;
+            box-shadow: 7px 7px 10px #97999c;
+}
+
+/* *******************
+ * Past issues section 
+ * ******************* */
+#past-issues { 
+    float: left; 
+    min-width: 320px; 
+    max-width: 640px; 
+}
+#past-issues .issue { 
+    float: left; 
+    margin: 16px 16px 16px 16px;
+    width: 126px; 
+    height: 160px;
+    overflow: visible;
+}
+#past-issues .issue img { 
+    width: 100%; 
+    border: 1px solid transparent; 
+}
+#past-issues .issue-cover:hover { 
+    width: 110%; 
+    margin: -5%; 
+    box-shadow: 2px 2px 4px 2px #333; 
+    border: 1px solid #333; 
+}
+
+.transition { 
+    transition: .25s; 
+    -webkit-transition: .25s; 
+       -moz-transition: .25s; 
+         -o-transition: .25s; 
+}
+
+/* **************************
+ * Body / Logo / Page-wrapper 
+ * ************************** */
+#body {
+    max-width: 1350px;
+    margin: auto;
+}
+
+.clear { 
+    clear: both; 
+}
+
+/* The Smog logo */
+#smog-main-header { 
+    text-align: center; 
+    padding-bottom: 8px; 
+}
+#smog-main-header a:hover { 
+    background: transparent !important; 
+}
+
+/* Page wrapper */
+#page-wrapper * { 
+    color: #333; 
+}
+#page-wrapper img { 
+    padding: 0; 
+}
+#page-wrapper { 
+    max-width: 1020px; 
+    margin: auto; 
+    padding: 32px;
+    margin-bottom: 16px;
+}
+#page-wrapper.full {
+    border: 1px solid #ECE; 
+    border-radius: 8px; 
+}
+#page-wrapper a {
+    text-decoration: none !important;
+    color: #6e5573 !important;
+}
+#page-wrapper a:hover {
+    text-decoration: underline !important; 
+    background-color: transparent !important;
+}

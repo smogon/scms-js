@@ -1,0 +1,119 @@
+/*
+ *  Global CSS for The Player issue homepage used by both the mobile and desktop versions.
+ *  By Vacate (http://www.smogon.com/forums/members/vacate.189371/) with contributions from Quarkz (http://www.smogon.com/forums/members/quarkz.206020/) and Quinella (http://www.smogon.com/forums/members/quinella.195572/)
+ *  Last update by Quarkz (1/07/2014)
+ */
+
+h1{
+	display: none;
+}
+
+.center{
+	text-align: center;
+}
+
+#mainlogo{
+	padding-bottom:10px;
+}
+
+#issuebacking{
+	margin: auto;
+	-webkit-border-radius: 6px;
+	   -moz-border-radius: 6px;
+	        border-radius: 6px;
+    overflow: hidden;
+	padding: 20px;
+}
+    
+.column{
+    padding-left: 15px;
+	padding-right: 15px;
+}
+
+/* Cover image section*/
+.columnpic{
+	display: block;
+	width: 325px;
+	height: 400px;
+}
+
+#coverimage{
+	-webkit-box-shadow: 1px 0px 15px 0px rgba(50, 50, 50, 0.68);
+	   -moz-box-shadow: 1px 0px 15px 0px rgba(50, 50, 50, 0.68);
+	        box-shadow: 1px 0px 15px 0px rgba(50, 50, 50, 0.68);
+	margin-bottom:20px;
+	width: 325px;
+	height: 400px;
+}
+
+#bottom{
+  	margin-top: 20px;
+}
+
+#bottom a{
+	text-decoration: none;
+	text-transform: uppercase;
+}
+
+#bottom p{
+    text-align: center;
+    text-transform: uppercase;
+    font-size: 13px;
+    margin-bottom: 0px;
+}
+
+#credit p{
+  	margin-top:5px;
+}
+
+/* Articles */
+.star{
+	padding: 0px 10px 20px;
+	margin: 10px;
+	-webkit-border-radius: 3px;
+	   -moz-border-radius: 3px;
+	        border-radius: 3px;
+}
+
+.star p{
+	margin-bottom: 0;
+}
+
+.star a{
+	text-decoration: none;
+}
+
+.article{
+	padding: 0px 10px 0px 10px;
+	margin: 10px;
+	-webkit-border-radius: 3px;
+	   -moz-border-radius: 3px;
+	        border-radius: 3px;
+}
+
+.a a{
+    text-decoration: none;
+}
+
+.b a{
+    text-decoration: none;
+}
+
+.leftcolumn{
+	position:inherit;
+}
+
+
+/* Noscript styling */
+.warning{
+	color: #ff0000;
+	text-transform: uppercase;
+	text-align: center;
+}
+
+/* Toogle client button */
+#toggle{
+    text-decoration: underline;
+    font-weight: bold;
+	cursor: pointer;
+}

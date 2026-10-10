@@ -1,0 +1,73 @@
+table.standings {
+    border-spacing: 0;
+    border-collapse: collapse;
+    border: solid #000;
+    border-width: 1px;
+}
+
+table.standings td, table.standings th {
+    border: solid #000;
+}
+
+table.standings th {
+    border-width: 1px;
+    background: #6363B0;
+    color: #fff;
+    font-size: .846em;
+    text-align: left;
+    padding: .5em;
+    white-space: nowrap;
+} 
+
+table.standings td{
+    padding: .3em;
+    border-width: 0 1px;
+	width:33%;
+}
+
+table.rosters td{
+    text-align: left;
+	padding: .3em;
+    border-width: 0 1px;
+	width:50%;
+}
+
+.alp {
+    color: #FF8C00;
+}
+
+.big {
+    color: #0000FF;
+}
+
+.brt {
+    color: #000080;
+}
+
+.sha {
+    color: #14535D;
+}
+
+.cir {
+    color: #CC8899;
+}
+
+.con {
+    color: #556B2F;
+}
+
+.cry {
+    color: #48D1CC;
+}
+
+.ind {
+    color: #7F007F;
+}
+
+.rai {
+    color: #39FF14;
+}
+
+.wol {
+    color: #964B00;
+}

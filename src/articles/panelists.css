@@ -1,0 +1,357 @@
+/* Compendium of user-specific panelist CSS, compiled by Lumari
+ * This file ONLY contains user-specific CSS; global panel CSS still goes in the article proper
+ * Newly added classes should follow a rough username-pokemonspecies format, where the only hyphen is between username and Pokemon species and separate words are concatenated otherwise; e.g. .lumari-galarianponyta
+ * DO NOT change any class names or CSS currently in this file for the sake of not breaking old panels, remake the class if you must
+ * Last update: Oct 9th, 2022 */
+
+	.panel span {font-weight:bold;}
+
+	.panel .aaronboyer-megagallade {
+		background: #3c9c74;
+		border: 1px solid #0e362b;
+		position: relative;
+	}
+	.aaronboyer-megagallade span { color: #0e362b; }
+
+	.panel .adeleine-cradily {
+		background:#CCF4CC;
+		border:1px solid #95CD95;
+		position: relative;
+	}
+	.adeleine-cradily span {color:#95CD95;}
+
+	.panel .aquajet-cottonee {
+		background: #9AE1F3;
+		border: 1px solid #7BC97B;
+		position: relative;
+	}
+	.aquajet-cottonee span{color: #7BC97B;}
+
+	.panel .aquajet-floatzel {
+		background: #FFF176;
+		border: 1px solid #F8A157;
+		position: relative;
+	}
+	.aquajet-floatzel span{color: #F8A157;}
+
+	.panel .astra-bidoof {
+		background:#D4B984;
+		border:1px solid #B88B5A;
+		position: relative;
+	}
+	.astra-bidoof span {color:#8f673d;}
+
+	.panel .ausma-hattrem {
+		background: #b3d0df;
+		border: 1px solid #337090;
+		position: relative;
+	}
+	.ausma-hattrem span {color: #337090;}
+
+	.panel .avarice-slowbro {
+		background: #a2c6e7;
+		border: 1px solid #1c466d;
+		position: relative;
+	}
+	.avarice-slowbro span {color: #1e4b76;}
+
+	.panel .band-croagunk {
+		background:#8EA0E1;
+		border:1px solid #616FA4;
+		position: relative;
+	}
+	.band-croagunk span {color:#616FA4;}
+
+	.panel .blitz-spectrier {
+		background:#D5BDD0;
+		border:1px solid #564390;
+		position: relative;
+	}
+	.blitz-spectrier span {color:#564390;}
+
+	.panel .churine-petilil {
+		background: #E1ED91;
+		border: 1px solid #7FC65B;
+		position: relative;
+	}
+	.churine-petilil span{color: #7FC65B;}
+
+	.panel .clorodulce-jirachi {
+		background:#99D08B;
+		border:1px solid #1C730A;
+		position: relative;
+	}
+	.clorodulce-jirachi span {color:#1C730A;}
+
+	.panel .codraroll-arbok {
+		background:#d3b1e2;
+		border:1px solid #9043b1;
+		position: relative;
+	}
+	.codraroll-arbok span {color:#5a2a6f;}
+
+	.panel .dave-drifblim {
+		background: #e3a5ca;
+		border: 1px solid #c74b96;
+		position: relative;
+	}
+	.dave-drifblim span{color: #c74b96;}
+
+	.panel .daylight-gardevoir {
+		background: #E1F5B7;
+		border: 1px solid #7C864E;
+		position: relative;
+	}
+	.daylight-gardevoir span {color: #7C864E;}
+
+	.panel .deetah-garchomp {
+		background:#FEC0E6;
+		border:1px solid #5E6A91;
+		position: relative;
+	}
+	.deetah-garchomp span {color:#5E6A91;}
+
+	.panel .dhr107-shuckle {
+		background: #fee3a4;
+		border: 1px solid #fdb50d;
+		position: relative;
+	}
+	.dhr107-shuckle span {color:#c54345;}
+	
+	.panel .drampasgrandpa-drampa {
+		background: #c9dd88;
+		border: 1px solid #829357;
+		position: relative;
+	}
+	.drampasgrandpa-drampa span {color:#829357;}
+
+	.panel .estarossa-umbreon {
+		background: #F5E29E;
+		border: 1px solid #313F55;
+		position: relative;
+	}
+	.estarossa-umbreon span {color: #313F55;}
+
+	.panel .eve-galarianzigzagoon {
+		background: #B5ADA5;
+		border: 1px solid #573A32;
+		position: relative;
+	}
+	.eve-galarianzigzagoon span{color: #573A32;}
+
+	.panel .gatodelfuego-galvantula {
+		background: #ffe799;
+		border: 1px solid #826917;
+		position: relative;
+	}
+	.gatodelfuego-galvantula span {color: #b89214;}
+
+	.panel .guestfacebookreviewer-unown {
+		background: #c299ff;
+		border: 1px solid #cc00ff;
+		position: relative;
+	}
+	.guestfacebookreviewer-unown span {color: #3939ac;}
+
+	.panel .heritage-arctozolt{
+		background:#7fcadf;
+		border:1px solid #33515a;
+		position: relative;
+	}
+	.heritage-arctozolt span {color: #33515a;}
+	
+	.panel .itchy-stufful {
+		background: #cb68f2;
+		border: 1px solid #570a75;
+		position: relative;
+	}
+	.itchy-stufful span {color: #570a75;}
+
+	.panel .ivy-victreebel {
+		background:#DBE48E;
+		border:1px solid #57B645;
+		position: relative;
+	}
+	.ivy-victreebel span {color:#57B645;}
+
+	.panel .justoonsmitts-mimikyu {
+		background:#D9D1AF;
+		border:1px solid #677079;
+		position: relative;
+	}
+	.justoonsmitts-mimikyu span {color:#677079;}
+
+	.panel .kaijubunny-mew {
+		background: #F8DAE2;
+		border: 1px solid #B256CB;
+		position: relative;
+	}
+	.kaijubunny-mew span{color: #B256CB;}
+
+	.panel .kalalokki-wingull {
+		background: #d3ebbc;
+		border: 1px solid #5aa35a;
+		position: relative;
+	}
+	.kalalokki-wingull span{color:#5aa35a;}
+
+	.panel .lily-togedemaru {
+		background: #F3E98A;
+		border: 1px solid #F2BC84;
+		position: relative;
+	}
+	.lily-togedemaru span{color: #F2BC84;}
+
+	.panel .lockjaw-dracovish {
+		background:#A7DDEE;
+		border:1px solid #006657;
+		position: relative;
+	}
+	.lockjaw-dracovish span {color:#006657;}
+
+	.panel .lumari-galarianponyta	{
+		background: #DCC0DC;
+		border: 1px solid #7C7588;
+		position: relative;
+	}
+	.lumari-galarianponyta span{color: #7C7588;}
+
+	.panel .lumii-jirachi {
+		background: #f2adcc;
+		border: 1px solid #d72877;
+		position: relative;
+	}
+	.lumii-jirachi span {color: #d72877;}
+	
+	.panel .lydian-noibat {
+		background: #9CEDE0;
+		border: 1px solid #15253A;
+		position: relative;
+	}
+	.lydian-noibat span {color: #15253A;}
+
+	.panel .magnum-dragonite {
+		background: #DAA78E;
+		border: 1px solid #FAF4DF;
+		position: relative;
+	}
+	.magnum-dragonite span{color: #FAF4DF;}
+
+	.panel .maroon-excadrill {
+		background: #D58E8D;
+		border: 1px solid #5B4C49;
+		position: relative;
+	}
+	.maroon-excadrill span{color:#5B4C49;}
+
+	.panel .maxoptimizer-chandelure {
+		background: #E6D8E9;
+		border: 1px solid #82739B;
+		position: relative;
+	}
+	.maxoptimizer-chandelure span {color:#82739B;}
+
+	.panel .neko-hisuianzorua {
+		background:#E2E1DF;
+		border:1px solid #578EC8;
+		position: relative;
+	}
+	.neko-hisuianzorua span {color:#578EC8;}
+
+	.panel .pikachu315111-pikachu {
+		background: #FBFFA1;
+		border: 1px solid #E23232;
+		position: relative;
+	}
+	.pikachu315111-pikachu span {color: #E23232;}
+	
+	.panel .pokemonvigilante-grovyle {
+		background:#A0F794;
+		border: 1px solid #518b41;
+		position: relative;
+	}
+	.pokemonvigilante-grovyle span {color:#518b41;}
+
+	.panel .rabia-mew {
+		background: #EDF6FD;
+		border: 1px solid #B7D9F2;
+		position: relative;
+	}
+	.rabia-mew span {color: #75b7e6;}
+
+	.panel .repu-sandshrew {
+		background:#FFFED9;
+		border:1px solid #D99B3F;
+		position: relative;
+	}
+	.repu-sandshrew span {color:#D99B3F;}
+
+	.panel .romanji-azumarill {
+		background: #D0EEFD;
+		border: 1px solid #81C2E4;
+		position: relative;
+	}
+	.romanji-azumarill span{color: #81C2E4;}
+
+	.panel .roxiee-megabanette {
+		background: #8C99D9;
+		border: 1px solid #444484;
+		position: relative;
+	}
+	.roxiee-megabanette span {color: #142068;}
+
+	.panel .ryotamitarai-rotom {
+		background: #8DD1E4;
+		border: 1px solid #0D4684;
+		position: relative;
+	}
+	.ryotamitarai-rotom span {color: #0D4684;}
+
+	.panel .shadowshocker-duskull {
+		background: #976B9C;
+		border: 1px solid #2B1D2C;
+		position: relative;
+	}
+	.shadowshocker-duskull span {color: #2B1D2C;}
+
+	.panel .swiffix-piplup{
+		background:#B0D7D6;
+		border:1px solid #083978;
+		position: relative;
+	}
+	.swiffix-piplup span {color:#083978;}
+
+	.panel .windingsss-frillish {
+		background:#DDF7FC;
+		border:1px solid #90B1B8;
+		position: relative;
+	}
+	.windingsss-frillish span {color:#90B1B8;}
+
+	.panel .zee-dratini {
+		background: #C8C1EB;
+		border: 1px solid #635F9F;
+		position: relative;
+	}
+	.zee-dratini span {color: #635F9F;}
+
+	.panel .zephyri-porygon2 {
+		background:#E5B8C6;
+		border:1px solid #852B46;
+		position: relative;
+	}
+	.zephyri-porygon2 span {color:#852B46;}
+
+	.panel .yogi-ledian {
+		background:#F8AF98;
+		border:1px solid #503C36;
+		position: relative;
+	}
+	.yogi-ledian span {color:#503C36;}
+
+	.panel .kaede-megamawile {
+		background:#f5de69;
+		border:1px solid #a8911e;
+		position: relative;
+	}
+	.kaede-megamawile span {color:#a8911e;}

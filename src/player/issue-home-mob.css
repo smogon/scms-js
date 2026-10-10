@@ -1,0 +1,64 @@
+/*
+ *  The Player issue homepage stylesheet (mobile client)
+ *  By Quarkz (http://www.smogon.com/forums/members/quarkz.206020/), Quinella (http://www.smogon.com/forums/members/quinella.195572/), and Vacate (http://www.smogon.com/forums/members/vacate.189371/)
+ *  Last update by Quarkz (31/07/2014)
+ */
+ 
+#issuebacking{
+	width: 75%;
+	text-align: center;
+}
+
+.column{
+	width: 70%;
+	margin-left: auto;
+	margin-right: auto;
+	margin-top: 20px;
+}
+
+/* Cover image section*/
+.columnpic{
+	margin-left: auto;
+	margin-right: auto;
+}
+
+#bottom a{
+	font-size: 16px;
+	text-decoration: underline;
+}
+
+#credit p{
+	font-size: 15px !important;
+}
+
+#credit a{
+	font-size: 15px !important;
+	text-decoration: underline;
+}
+
+/* Articles */
+.star{
+	margin-left: auto;
+	margin-right: auto;
+	margin-bottom: 1em;
+	width: 90%;
+	cursor: pointer;
+}
+
+.article{
+	margin-left: auto;
+	margin-right: auto;
+	margin-bottom: 1em;
+	cursor: pointer;
+}
+
+.leftcolumn{
+	position:inherit;
+}
+
+/* Toogle client button */
+#toggle{
+	text-decoration: underline;
+	font-weight: bold;
+	cursor: pointer;
+}

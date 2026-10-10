@@ -1,0 +1,395 @@
+/* The Smog.css
+* By Setsuna (http://www.smogon.com/forums/member.php?u=32828) & additions by ToastPlusOne (http://www.smogon.com/forums/member.php?u=30562)
+* Last update: Setsuna 03/05/2013 
+* Status: deprecated; no longer being used */
+
+
+/* Begin - Smog Main Pre-12/27/2012 */
+    /* Front table and other elements */
+    #smogfront td {
+        vertical-align: top;
+        padding: 0;
+        border: .3em solid white;
+    }
+
+    #smogfront ul {
+        position: relative;
+        text-align: left;
+        width: 17em;
+        margin: 0;
+        padding: .7em .3em .7em 1.75em;
+    } 
+
+    #smogfront {
+        width: auto;
+        margin: 0 auto 1em auto;
+    }
+
+    #smogfront h3 {
+        font-size: 1em;
+        padding: 1em 0 .5em 0;
+        margin: 0;
+        background: white;
+        text-align: center;
+    }
+
+    #smogfront a { white-space: normal; }
+
+    /* Begin - Issue Index Pre-12/27/2012 */
+.col1 { 
+    background: #FFFF99; 
+}
+.col1 h3 { 
+    border-bottom: 1px solid #B3B300; 
+}
+.col2 { 
+    background: #CEFF99; 
+}
+.col2 h3 { 
+    border-bottom: 1px solid #69CC00; 
+}
+.col3 { 
+    background: #CCE6FF; 
+}
+.col3 h3 { 
+    border-bottom: 1px solid #339CFF; 
+}
+/* End - Issue Index Pre-12/27/2012  */
+
+#past-issues { 
+    float: left; 
+    min-width: 320px; 
+    max-width: 640px; 
+}
+
+#past-issues .issue { 
+    float: left; 
+    margin: 16px 16px 16px 16px;
+    width: 126px; 
+    height: 160px;
+    overflow: visible;
+}
+
+#past-issues .issue img { 
+    width: 100%; 
+    border: 1px solid transparent; 
+}
+
+#past-issues .issue-cover:hover { 
+    width: 110%; 
+    margin: -5%; 
+    box-shadow: 2px 2px 4px 2px #333; 
+    border: 1px solid #333; 
+}
+
+.transition { 
+    transition: .25s; 
+    -webkit-transition: .25s; 
+       -moz-transition: .25s; 
+         -o-transition: .25s; 
+}
+/* End - Smog Main Post-12/27/2012 */
+
+/* Begin - Issue Index Pre-12/27/2012 */
+.col1 { 
+    background: #FFFF99; 
+}
+.col1 h3 { 
+    border-bottom: 1px solid #B3B300; 
+}
+.col2 { 
+    background: #CEFF99; 
+}
+.col2 h3 { 
+    border-bottom: 1px solid #69CC00; 
+}
+.col3 { 
+    background: #CCE6FF; 
+}
+.col3 h3 { 
+    border-bottom: 1px solid #339CFF; 
+}
+/* End - Issue Index Pre-12/27/2012  */
+
+/* Begin - Issue Index Post-12/27/2012 */
+#current-issue { 
+    margin-right: 32px; 
+    float: left;
+    max-width: 280px;
+    text-align: center;
+}
+#current-issue img {
+    -webkit-box-shadow: 7px 7px 10px #97999c;
+       -moz-box-shadow: 7px 7px 10px #97999c;
+            box-shadow: 7px 7px 10px #97999c;
+}
+
+#issue-contents { 
+    float: left; 
+    min-width: 320px; 
+    max-width: 640px; 
+}
+#issue-contents .section {
+    padding: 12px;
+}
+#issue-contents .column { 
+    width: 272px; float: left; 
+}
+#issue-contents .section h3 {
+    padding: 2px;
+    margin: 0;
+}
+#issue-contents .section a {
+    display: block;
+    white-space: pre-wrap;
+    padding: 4px;
+    border-left: 4px solid transparent;
+    border-top: 1px dashed #CCC;
+}
+/* Hover states for each section */
+#issue-contents .section a:hover { background-color: #F8F8F8 !important; }
+#issue-contents .section.general a:hover { border-left: 4px solid #52BF90; }
+#issue-contents .section.battling-strategy a:hover { border-left: 4px solid #8A7AA3; }
+#issue-contents .section.metagame a:hover { border-left: 4px solid #89F2DA; }
+#issue-contents .section.arts-and-recreation a:hover { border-left: 4px solid #99C1CE; }
+#issue-contents .section.entertainment a:hover { border-left: 4px solid #ECCC75; }
+#issue-contents .section.other a:hover { border-left: 4px solid #c67474; }
+
+#contribs {  
+    border-top: 1px solid #ECE;
+    padding-top: 8px;
+    margin: 22px 5px 0px 5px;
+    text-align: center;
+    font-size: .80em;
+}
+/* End - Issue Index Post-12/27/2012  */
+
+/* General */
+#body {
+    max-width: 1350px;
+    margin: auto;
+}
+
+#page-wrapper * { 
+    color: #333; 
+}
+#page-wrapper img { 
+    padding: 0; 
+}
+#page-wrapper { 
+    max-width: 1020px; 
+    margin: auto; 
+    padding: 32px;
+    margin-bottom: 16px;
+}
+#page-wrapper.full {
+    border: 1px solid #ECE; 
+    border-radius: 8px; 
+}
+#page-wrapper a {
+    text-decoration: none !important;
+    color: #6e5573 !important;
+}
+#page-wrapper a:hover {
+    text-decoration: underline !important; 
+    background-color: transparent !important;
+}
+
+.inactive-link { 
+    color: #AAA; 
+}
+
+/* Header and footer */
+#smogheader, #smogfooter {
+    margin: .5em 0 1.5em 0;
+    padding: .3em .5em;
+    border: 1px solid #b8b8db;
+    background: #f9f9f9;
+    -webkit-border-radius: 4px;
+       -moz-border-radius: 4px;
+            border-radius: 4px;
+}
+
+#smogheader .left, #smogfooter .left { 
+    width: 33%; 
+}
+#smogheader .middle, #smogfooter .middle {
+    width: 33%;
+    text-align: center;
+}
+#smogheader .right, #smogfooter .right {
+    width: 33%;
+    text-align: right;
+}
+
+#smog-main-header { 
+    text-align: center; 
+    padding-bottom: 8px; 
+}
+#smog-main-header a:hover { 
+    background: transparent !important; 
+}
+
+/* RMT border */
+#rmt-border {
+    margin: 20px 10px 20px 10px;
+    padding: 3px 10px 10px 10px;
+    background-color: #ededed;
+    border: 1px solid #adadad;
+    -webkit-border-radius: 12px;
+       -moz-border-radius: 12px;
+            border-radius: 12px;
+}
+
+/* Blockquote */
+blockquote {
+    margin: 20px 10px 20px 10px;
+    padding: 1em;
+    background-color: #ededed;
+    border: 1px solid #adadad;
+    -webkit-border-radius: 12px;
+       -moz-border-radius: 12px;
+            border-radius: 12px;
+}
+
+blockquote p { 
+    margin: 0; 
+}
+
+blockquote p+p { 
+    margin-top: 1em; 
+}
+
+/* Text alignment and floats */
+.align-center {
+    text-align: center;
+    margin-bottom: 10px;
+}
+
+.float-left {
+    float: left;
+    margin-right: 10px;
+}
+
+.float-right {
+    float: right;
+    margin-left: 10px;
+}
+
+.clear { 
+    clear: both; 
+}
+
+/* Interview */
+#interview { 
+    position: relative; 
+}
+
+#interview .interview-speaker {
+    min-height: 80px;
+    height: auto !important;
+    height: 80px;
+    margin: 25px 0;
+    padding: 10px;
+    padding-left: 100px;
+    -webkit-border-radius: 9px;
+       -moz-border-radius: 9px;
+            border-radius: 9px;
+}
+
+#interview .interview-speaker img {
+    position: absolute;
+    left: 10px;
+}
+
+#interview .aside {
+    border: 1px solid #e0e0e0;
+    background: #f9f9f9;    
+    padding: 10px 40px;
+    margin: 10px 50px;
+    font-style: italic; 
+    -webkit-border-radius: 9px;
+       -moz-border-radius: 9px;
+            border-radius: 9px;
+}
+
+/* Panel */
+.panel .panel-speaker {
+    margin: 25px 0;
+    padding: 10px 10px 0 10px;
+    min-height: 80px;
+    height: auto !important;
+    height: 80px;
+    -webkit-border-radius: 9px;
+       -moz-border-radius: 9px;
+            border-radius: 9px;
+}
+
+.panel .panel-speaker img {
+    float: left;
+    padding: 2px 10px 2px 0;
+}
+
+/* Note from the Editor */
+#editor {
+    position: relative;
+    margin: 25px 0;
+    padding: 10px 10px 0 10px;
+    min-height: 80px;
+    height: auto !important;
+    height: 80px;
+    background: #f9f0fd;
+    border: 1px solid #f1d8f9;
+    -webkit-box-shadow: 2px 2px 8px #d3d3d5;
+       -moz-box-shadow: 2px 2px 8px #d3d3d5;
+            box-shadow: 2px 2px 8px #d3d3d5;
+    -webkit-border-radius: 5px;
+       -moz-border-radius: 5px;
+            border-radius: 5px;
+}
+
+#editor img {
+    float: left;
+    padding: 2px 10px 2px 0;
+}
+
+/* Ask the Admins */
+
+/* Question boxes */
+.questions {
+    display: inline-block;
+    margin: 35px 3px 3px 3px;
+    padding: 6px;
+    font-family: 'Trebuchet MS', Helvetica, Arial;
+    font-size: 16px;
+    font-style: italic;
+    font-weight: 600;
+    line-height: 22px;
+    -webkit-border-radius: 10px;
+       -moz-border-radius: 10px;
+            border-radius: 10px;
+}
+
+.q-1 {
+    background-color: #CCE6FF;
+    border: 1px solid #99CEFF;
+}
+
+.q-2 {
+    background-color: #FFCCFF;
+    border: 1px solid #FF99FF;
+}
+
+.q-3 {
+    background-color: #ffcaaf;
+    border: 1px solid #ffad84;
+}
+
+.q-author { 
+    font-size: 15px; 
+}
+
+/* Lists */
+dd {
+    padding: 5px 0 10px 5px;
+}

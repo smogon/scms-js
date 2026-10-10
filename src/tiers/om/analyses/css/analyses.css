@@ -1,0 +1,80 @@
+/* Analyses CSS
+* by Kris (http://www.smogon.com/forums/members/241023/)
+* Last updated by Kris: Oct 10, 2017
+*/
+
+a:link:hover, a:visited:hover {
+    background: transparent;
+    text-decoration: none;
+}
+.backto{
+    letter-spacing:1.2pt;
+    font-weight:bold;
+    text-transform:uppercase;
+}
+.mon{margin-left:10px;}
+.backto>a:link, .backto>a:visited {
+    color:#779EC5;
+    margin:20px 0 20px 0;
+    text-align:center;
+    text-decoration:none;
+    padding:5px 20px;
+    border-radius:30px;
+    border:3px solid #779ec5;
+    background:#D7D7D7;
+}
+.backto>a:hover, .backto>a:visited:hover{opacity:0.7;}
+.author {
+    margin-top:-1.5em;
+    padding:0 0 1em 35px;
+    font-style:italic;
+}
+hr{border:0; margin: 3% 0;}
+ul>li{list-style-type:none;}
+.cnc>li{margin-top:10px;}
+.cnc>li:first-child{margin-top:0;}
+.float-left{float:left;margin-right:20px;margin-bottom:20px;margin-top:20px;}
+.float-right{float:right;margin-left:20px;margin-bottom:20px;margin-top:20px;}
+.align-center{text-align:center;margin-bottom:20px;margin-top:20px;}
+/* Analyis Tables */
+.analyses {width: 25%;margin:0 auto;}
+.analyses tr>td:first-child{height:32px;width:50%;text-align:center;}
+
+/* The set pickers. A <select> used to swap these blocks; now the nth radio
+   shows the nth block, and the radio itself is off-screen behind its label. */
+.set-pick {
+    position: absolute;
+    opacity: 0;
+    width: 0;
+    height: 0;
+    pointer-events: none;
+}
+.set-pick-label {
+    display: inline-block;
+    cursor: pointer;
+    margin: 0 6px 8px 0;
+    padding: 4px 10px;
+    border: 1px solid #b9b9d8;
+    border-radius: 4px;
+    background: #f2f2f8;
+}
+.set-pick:checked + .set-pick-label {
+    background: #6363B0;
+    border-color: #6363B0;
+    color: #fff;
+}
+.set-pick:focus-visible + .set-pick-label {
+    outline: 2px solid #6363B0;
+    outline-offset: 2px;
+}
+.set-pick-blocks > * {
+    display: none;
+}
+.set-pick-1:checked ~ .set-pick-blocks > :nth-child(1),
+.set-pick-2:checked ~ .set-pick-blocks > :nth-child(2),
+.set-pick-3:checked ~ .set-pick-blocks > :nth-child(3),
+.set-pick-4:checked ~ .set-pick-blocks > :nth-child(4),
+.set-pick-5:checked ~ .set-pick-blocks > :nth-child(5),
+.set-pick-6:checked ~ .set-pick-blocks > :nth-child(6) {
+    display: block;
+}

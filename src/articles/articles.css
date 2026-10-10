@@ -1,0 +1,607 @@
+/* Articles Stylesheet
+ * By Setsuna (http://www.smogon.com/forums/member.php?u=32828) & Toast++ (http://www.smogon.com/forums/member.php?u=30562), updated by Spy (http://www.smogon.com/forums/member.php?u=169106)
+ * Last update: Quite Quiet May 31st, 2019 */
+ * 
+ 
+
+/* ******************************
+ * NEWEST 2016 Header nav / Footer nav
+ * ****************************** */
+
+#articlehead, #articlefoot {
+    border: 1px solid #c9c9e4;
+    background:#e7e3e8;
+    border-radius: 11px;
+    border-bottom:3px #c7bfca solid;
+    font-size:1.1em;
+}
+#articlehead a, #articlefoot a{
+    margin:-4px;
+    text-decoration:none;
+    color:#595959;
+    display:block;
+    padding:4px 10px;
+}
+#articlehead td:first-child, #articlefoot td:first-child{border-right:1px solid #c7bfca;}
+
+#articlehead tr>td:first-child>a, #articlefoot tr>td:first-child>a{
+    border-top-left-radius: 11px;
+    border-bottom-left-radius: 11px;
+}
+#articlehead tr>td:last-child>a, #articlefoot tr>td:last-child>a{
+    border-top-right-radius: 11px;
+    border-bottom-right-radius: 11px;
+}
+#articlehead td:last-child, #articlefoot td:last-child{border-left:1px solid #c7bfca;}
+#articlehead .left, #articlefooter .left { 
+    width: 40%;
+}
+#articlehead td>a:hover, #articlefoot td>a:hover{
+    transition: all .2s ease-in-out;
+    background:#c7bfca;
+    color:#Fff;
+}
+#articlehead .middle, #articlefoot .middle {
+    width: 20%;
+    text-align: center;
+}
+#articlehead .right, #articlefoot .right {
+    width: 40%;
+    text-align: right;
+}
+
+.artist{
+    color:#595959;
+    font-size:.8em;
+    font-style:italic;
+    margin-top:-5px;
+    padding-top:5px;
+    padding-bottom:5px;
+    text-align:center;
+}
+.author2{
+    font-size:.9em;
+    padding-top:4px;
+    padding-left:3px;
+    font-style:italic;
+    color:#616161;
+    border-top:1px #000 solid;
+    margin:0px -2px;
+}
+#articlehead .inactive-link, #articlefoot .inactive-link{padding:4px 6px;}
+
+/* ******************************
+ * OLD Body / Header nav / Footer nav 
+ * ****************************** */
+#body {
+    max-width: 960px;
+    margin: auto;
+}
+
+#articleheader, #articlefooter {
+    margin: .5em 0 1.5em 0;
+    padding: .3em .5em;
+    border: 1px solid #b8b8db;
+    background: #f9f9f9;
+    -webkit-border-radius: 4px;
+       -moz-border-radius: 4px;
+            border-radius: 4px;
+}
+#articleheader .left, #articlefooter .left { 
+    width: 33%; 
+}
+#articleheader .middle, #articlefooter .middle {
+    width: 33%;
+    text-align: center;
+}
+#articleheader .right, #articlefooter .right {
+    width: 33%;
+    text-align: right;
+}
+
+/* ****************
+ * Borders / Quotes 
+ * **************** */
+#rmt-border {
+    margin: 20px 10px 20px 10px;
+    padding: 3px 10px 10px 10px;
+    background-color: #ededed;
+    border: 1px solid #adadad;
+    -webkit-border-radius: 12px;
+       -moz-border-radius: 12px;
+            border-radius: 12px;
+}
+
+/* Blockquote */
+blockquote {
+    margin: 20px 10px 20px 10px;
+    padding: 1em;
+    background-color: #ededed;
+    border: 1px solid #adadad;
+    -webkit-border-radius: 12px;
+       -moz-border-radius: 12px;
+            border-radius: 12px;
+}
+blockquote p { 
+    margin: 0; 
+}
+blockquote p+p { 
+    margin-top: 1em; 
+}
+
+/* ******************
+ * Alignment / Floats 
+ * ****************** */
+.align-center {
+    text-align: center;
+    margin-bottom: 10px;
+}
+.float-left {
+    float: left;
+    margin-right: 10px;
+}
+
+.float-right {
+    float: right;
+    margin-left: 10px;
+}
+
+.clear { 
+    clear: both; 
+}
+
+.side-by-side {
+    display: inline-block;
+    margin-bottom: 2em;
+}
+.side-by-side div img {
+    margin-right: 10px;
+}
+
+/* *****************
+ * Interview / Panel 
+ * ***************** */
+.interview { 
+    position: relative; 
+}
+.interview .interview-speaker {
+    min-height: 80px;
+    height: auto !important;
+    height: 80px;
+    margin: 25px 0;
+    padding: 10px;
+    padding-left: 100px;
+    -webkit-border-radius: 9px;
+       -moz-border-radius: 9px;
+            border-radius: 9px;
+}
+.interview .interview-speaker img {
+    position: absolute;
+    left: 10px;
+}
+.interview .aside {
+    border: 1px solid #e0e0e0;
+    background: #f9f9f9;    
+    padding: 10px 40px;
+    margin: 10px 50px;
+    font-style: italic; 
+    -webkit-border-radius: 9px;
+       -moz-border-radius: 9px;
+            border-radius: 9px;
+}
+
+/* Panel */
+.panel .panel-speaker {
+    margin: 25px 0;
+    padding: 10px;
+    min-height: 80px;
+    height: auto !important;
+    height: 80px;
+    -webkit-border-radius: 9px;
+       -moz-border-radius: 9px;
+            border-radius: 9px;
+}
+.panel .panel-speaker img {
+    float: left;
+    padding: 2px 10px 2px 0;
+}
+
+/* ********************
+ * Note from the Editor 
+ * ******************** */
+#editor {
+    position: relative;
+    margin: 25px 0;
+    padding: 10px 10px 0 10px;
+    min-height: 80px;
+    height: auto !important;
+    height: 80px;
+    background: #f9f0fd;
+    border: 1px solid #f1d8f9;
+    -webkit-box-shadow: 2px 2px 8px #d3d3d5;
+       -moz-box-shadow: 2px 2px 8px #d3d3d5;
+            box-shadow: 2px 2px 8px #d3d3d5;
+    -webkit-border-radius: 5px;
+       -moz-border-radius: 5px;
+            border-radius: 5px;
+}
+#editor img {
+    float: left;
+    padding: 2px 10px 2px 0;
+}
+
+/* **************
+ * Ask the Admins 
+ * ************** */
+.questions {
+    display: inline-block;
+    margin: 35px 3px 3px 3px;
+    padding: 6px;
+    font-family: 'Trebuchet MS', Helvetica, Arial;
+    font-size: 16px;
+    font-style: italic;
+    font-weight: 600;
+    line-height: 22px;
+    -webkit-border-radius: 10px;
+       -moz-border-radius: 10px;
+            border-radius: 10px;
+}
+
+.q-1 {
+    background-color: #CCE6FF;
+    border: 1px solid #99CEFF;
+}
+.q-2 {
+    background-color: #FFCCFF;
+    border: 1px solid #FF99FF;
+}
+.q-3 {
+    background-color: #ffcaaf;
+    border: 1px solid #ffad84;
+}
+.q-author { 
+    font-size: 15px; 
+}
+
+/* **********************
+ * Lists / Links / Others 
+ * ********************** */
+dd {
+    padding: 5px 0 10px 5px;
+}
+
+a:link:hover, a:visited:hover {
+    background: transparent;
+    text-decoration: none;
+}
+
+.inactive-link { 
+    color: #AAA; 
+}
+
+ul.set > li {
+    list-style-type: none;
+}
+
+ul.stats {
+	list-style: none;
+	width: 250px;
+	padding: 0 35% 0 0;
+	/*margin-top: 4%;
+	margin-left: 20%;*/
+}
+
+ul.stats span {
+	float: left;
+	margin: 0 0 0 -32px;
+	color: black;
+	text-align: right;
+	font-weight: bold;
+	font-size: 12px;
+}
+
+ul.stats li {
+	height: 15px;
+	padding: 0px 3px;
+	margin-bottom: 5px;
+	color: white;
+	text-align: right;
+	font-style: italic;
+	font-weight: bold;
+	font-size: 11px;
+}
+div.hide, div.hidden {display:none;}
+
+/* **********************
+ * iframes / Replays 
+ * ********************** */
+.replayembed {
+    width: calc(640px + 1.3em);
+    height: 450px;
+}
+/* fuck firefox */
+@supports (-moz-appearance:none) {
+    .replayembed {
+        width: calc(640px + 1.81em);
+        height: 450px;
+    }
+}
+
+/* **********************
+ * Puzzles 
+ * ********************** */
+
+/* Crossword */
+.cw-puzzle { margin:32px 16px 0; }
+.cw-words { display:inline-block; vertical-align:top; }
+    hr.noborder {
+    margin:5% 0;
+    border:0;
+}
+
+/* Eeveelutions Sudoku classes */
+.eeveelutions-tr {
+    margin-bottom: -3px;
+	min-width: 12px;
+	min-height: 12px;
+}
+.eeveelutions-tr:nth-child(even) > .eeveelutions-td:nth-child(even) {
+	height: 48px;
+}
+.eeveelutions-td:nth-child(even) {
+	width: 48px;
+}
+.eeveelutions-tr:nth-child(even) > .eeveelutions-td:nth-child(odd) {
+	height: 48px;
+}
+.eeveelutions-td {
+	display: inline-block;
+	min-width: 18px;
+	min-height:18px;
+	border: 1px solid black;
+}
+
+.eeveelutions-options {
+	margin-top: 8px;
+}
+.eeveelutions-image {
+	display: inline-block;
+	width: 72px;
+	height: 72px;
+	border: 1px solid black;
+}
+
+/* Rivals Sudoku CSS */
+.pokesudoku {
+    text-align: center;
+}
+.pokesudoku-tr {
+    margin-bottom: -3px;
+}
+.pokesudoku-td {
+    display: inline-block;
+    width: 48px;
+    height: 48px;
+    border: 1px solid black;
+}
+.pokesudoku-td:first-child {
+    border-left: 3px solid black;
+}
+.pokesudoku-td:nth-child(3n) {
+    border-right: 3px solid black;
+}
+.pokesudoku-tr:first-child .pokesudoku-td {
+    border-top: 3px solid black;
+}
+.pokesudoku-tr:nth-child(3n) .pokesudoku-td {
+    border-bottom: 3px solid black;
+}
+.pokesudoku-options {
+    margin-top: 8px;
+}
+.pokesudoku-image {
+    display: inline-block;
+    width: 72px;
+    height: 72px;
+    border: 1px solid black;
+}
+
+/* Relevant Pokélink classes */
+.pokemonlink{ width:90%; }
+td.pokelink-click {
+    padding:0;
+    margin:0;
+    height: 40px;
+    width: 40px;
+    border: 2px solid black;
+    text-align:center;
+}
+td.pokelink-click img {
+    height: 40px;
+    width: 40px;
+}
+td.pokelink-click:hover {
+	opacity:.9;
+}
+td.pokelink-click:hover img {
+	animation: move .25s ease infinite;
+	animation-play-state: running;
+}
+@keyframes move {
+	100% {-webkit-transform: translateY(2px); }
+}
+
+/* The set pickers. A <select> used to swap these blocks; now the nth radio
+   shows the nth block, and the radio itself is off-screen behind its label. */
+.set-pick {
+    position: absolute;
+    opacity: 0;
+    width: 0;
+    height: 0;
+    pointer-events: none;
+}
+.set-pick-label {
+    display: inline-block;
+    cursor: pointer;
+    margin: 0 6px 8px 0;
+    padding: 4px 10px;
+    border: 1px solid #b9b9d8;
+    border-radius: 4px;
+    background: #f2f2f8;
+}
+.set-pick:checked + .set-pick-label {
+    background: #6363B0;
+    border-color: #6363B0;
+    color: #fff;
+}
+.set-pick:focus-visible + .set-pick-label {
+    outline: 2px solid #6363B0;
+    outline-offset: 2px;
+}
+.set-pick-blocks > * {
+    display: none;
+}
+.set-pick-1:checked ~ .set-pick-blocks > :nth-child(1),
+.set-pick-2:checked ~ .set-pick-blocks > :nth-child(2),
+.set-pick-3:checked ~ .set-pick-blocks > :nth-child(3),
+.set-pick-4:checked ~ .set-pick-blocks > :nth-child(4),
+.set-pick-5:checked ~ .set-pick-blocks > :nth-child(5),
+.set-pick-6:checked ~ .set-pick-blocks > :nth-child(6) {
+    display: block;
+}
+
+/* The booklets. Every page carries its own arrows, and only the page showing
+   has them on screen, so an arrow is a label for the neighbouring page's radio
+   and turning a page is checking one. Keyed on a class per position: the pages
+   are siblings with nothing wrapping them.
+
+   The fold is jQuery UI's, reproduced. It hid a page by collapsing its width
+   and then its height -- horizFirst, 300ms -- and showed the next by running
+   that backwards over 600ms, height first and then width. Two axes moving one
+   after the other is not one transform tween, so each is a registered number
+   with its own duration and delay, and clip-path reads them: the page is
+   clipped away like paper rather than squashed like rubber.
+
+   display carries allow-discrete so the page being left stays in flow while it
+   folds, instead of vanishing before it can. Without @starting-style the page
+   you arrive on is simply there, unfolded, which is what it was before. A
+   browser too old for either lands on the plain swap. */
+@property --bk-x {
+    syntax: "<number>";
+    inherits: false;
+    initial-value: 1;
+}
+@property --bk-y {
+    syntax: "<number>";
+    inherits: false;
+    initial-value: 1;
+}
+.bk {
+    position: absolute;
+    opacity: 0;
+    width: 0;
+    height: 0;
+    pointer-events: none;
+}
+.bk-page {
+    display: none;
+    --bk-x: 0.04;
+    --bk-y: 0;
+    clip-path: inset(0 calc((1 - var(--bk-x)) * 100%) calc((1 - var(--bk-y)) * 100%) 0);
+    transition: --bk-x 150ms ease,
+                --bk-y 150ms ease 150ms,
+                display 300ms allow-discrete;
+}
+.bk-1:checked ~ .bk-page-1,
+.bk-2:checked ~ .bk-page-2,
+.bk-3:checked ~ .bk-page-3,
+.bk-4:checked ~ .bk-page-4,
+.bk-5:checked ~ .bk-page-5,
+.bk-6:checked ~ .bk-page-6,
+.bk-7:checked ~ .bk-page-7,
+.bk-8:checked ~ .bk-page-8,
+.bk-9:checked ~ .bk-page-9,
+.bk-10:checked ~ .bk-page-10,
+.bk-11:checked ~ .bk-page-11,
+.bk-12:checked ~ .bk-page-12,
+.bk-13:checked ~ .bk-page-13,
+.bk-14:checked ~ .bk-page-14,
+.bk-15:checked ~ .bk-page-15,
+.bk-16:checked ~ .bk-page-16,
+.bk-17:checked ~ .bk-page-17 {
+    display: block;
+    --bk-x: 1;
+    --bk-y: 1;
+    transition: --bk-y 300ms ease,
+                --bk-x 300ms ease 300ms,
+                display 600ms allow-discrete;
+}
+@starting-style {
+.bk-1:checked ~ .bk-page-1,
+.bk-2:checked ~ .bk-page-2,
+.bk-3:checked ~ .bk-page-3,
+.bk-4:checked ~ .bk-page-4,
+.bk-5:checked ~ .bk-page-5,
+.bk-6:checked ~ .bk-page-6,
+.bk-7:checked ~ .bk-page-7,
+.bk-8:checked ~ .bk-page-8,
+.bk-9:checked ~ .bk-page-9,
+.bk-10:checked ~ .bk-page-10,
+.bk-11:checked ~ .bk-page-11,
+.bk-12:checked ~ .bk-page-12,
+.bk-13:checked ~ .bk-page-13,
+.bk-14:checked ~ .bk-page-14,
+.bk-15:checked ~ .bk-page-15,
+.bk-16:checked ~ .bk-page-16,
+.bk-17:checked ~ .bk-page-17 {
+    --bk-x: 0.04;
+    --bk-y: 0;
+}
+}
+
+/* Before a reader has turned anything, the first page is simply open. Its
+   radio ships unchecked so that this rule and not the one above is what shows
+   it -- otherwise the starting style would fold the article open on arrival,
+   which the script never did. Turning back to page one goes through the rule
+   above and folds like any other page. */
+body:not(:has(.bk:checked)) .bk-page-1 {
+    display: block;
+    --bk-x: 1;
+    --bk-y: 1;
+    transition: none;
+}
+
+.prev > label, .next > label {
+    cursor: pointer;
+}
+td.prev > label, td.next > label, p.prev > label, p.next > label {
+    display: block;
+}
+@media (prefers-reduced-motion: reduce) {
+    .bk-page { transition: none; }
+}
+
+/* The button bars. Each tab is a label holding its own radio, so the bar
+   styles the open one by :has(> .tb-radio:checked) where it used to style
+   .cur. Which panel each radio shows is the page's own business: the rules
+   are made of the selectors the bar and its buttons already named, and live
+   in the page's <style>. */
+.tb-radio {
+    position: absolute;
+    opacity: 0;
+    width: 0;
+    height: 0;
+    pointer-events: none;
+}
+
+/* The panel pickers. Each thumbnail is a label holding its own checkbox, and
+   which panel it opens is the page's own business -- the rules pair the
+   checkbox with the panel sharing its data-id and live in the page's <style>.
+   A checkbox rather than a radio, so a panel opens and closes on its own. */
+.pp-box {
+    position: absolute;
+    opacity: 0;
+    width: 0;
+    height: 0;
+    pointer-events: none;
+}

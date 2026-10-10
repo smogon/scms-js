@@ -1,0 +1,85 @@
+/* By: Setsuna @ http://www.smogon.com/forums/member.php?u=32828
+   Stylesheet for The Competitor's articles section
+   Based on The Smog's main CSS file */
+
+/* Navigation */
+
+#comp-header, #comp-footer {
+    margin: 10px 0 20px 0;
+    padding: 3px 2px;
+    background: #f9f9f9;
+    border-top:  1px solid #b8b8db;
+    border-bottom:  1px solid #b8b8db;
+}
+
+#comp-header .home, #comp-footer .home {
+    width: 33%;
+    text-align: left;
+}
+
+#comp-header .index, #comp-footer .index {
+    width: 33%;
+    text-align: right;
+}
+
+/* Interviews */
+
+#interview {
+	position: relative;
+}
+
+#interview .speaker {
+    margin: 10px 0;
+    padding: 10px 10px 10px 100px;
+    min-height: 80px;
+    height: auto !important;
+    height: 80px;
+    -webkit-border-radius: 9px;
+       -moz-border-radius: 9px;
+            border-radius: 9px;
+}
+
+#interview .speaker img {
+	position: absolute;
+	left: 10px;
+}
+
+#interview .aside {
+    border: 1px solid #e0e0e0;
+    background: #f9f9f9;    
+    padding: 10px 40px;
+    margin: 10px 50px;
+    font-style: italic; 
+    -webkit-border-radius: 9px;
+       -moz-border-radius: 9px;
+            border-radius: 9px;
+}
+
+/* Alignments / Floats */
+
+.align-center {
+    text-align: center;
+    margin-bottom: 10px;
+}
+
+.float-left {
+    float: left;
+    margin-right: 10px;
+}
+
+.float-right {
+    float: right;
+    margin-left: 10px;
+}
+
+.clear { 
+    clear: both; 
+}
+
+.side-by-side {
+    display: inline-block;
+    margin-bottom: 2em;
+}
+.side-by-side div img {
+    margin-right: 10px;
+}
