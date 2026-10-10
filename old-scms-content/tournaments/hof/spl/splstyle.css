@@ -72,7 +72,7 @@
 }
 /* *************** SHARKS SEASON ***************** */
 #sharks {
-	background:url('/tournaments/hof/spl/Sharks_Logo.png') no-repeat 0px 0px;
+	/* background:url('/tournaments/hof/spl/Sharks_Logo.png') no-repeat 0px 0px; */
 	height:130px;
 	border-bottom:25px #529698 double;
 }
@@ -213,18 +213,18 @@
 /* ***************SHARKS*************** */
 .headsharks {
 	height:95px;
-	background:url('/tournaments/hof/spl/Sharks_Background.png');
+	/* background:url('/tournaments/hof/spl/Sharks_Background.png'); */
 	background-repeat:repeat;
 	border-radius:18px 18px 0px 0px;
 	margin:0;
 }
 .titlesharks {
-	background:url('/tournaments/hof/spl/Sharks_Avatar.png') no-repeat;
+	/* background:url('/tournaments/hof/spl/Sharks_Avatar.png') no-repeat; */
 	background-position:9px 0px;
 	height:95px;
 }
 .mentor .backsharks{
-	background-image:url('/tournaments/hof/spl/Sharks_Bar.png');
+	/* background-image:url('/tournaments/hof/spl/Sharks_Bar.png'); */
 	background-repeat: repeat-x;
 }
 .mentor .backsharks input:hover {

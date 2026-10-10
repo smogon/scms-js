@@ -70,7 +70,7 @@ table.sortable thead {
 }
 
 #header_island, #search_help, #about, body{
-    background: #6363b0 url(/media/bg.png) repeat-x;
+    background: #6363b0 url(https://www.smogon.com/__uploads/qIMRurW-G4HnbS01TBpZvg.png) repeat-x;
     /*background:rgb(99,99,176);*/
 }
 
@@ -87,7 +87,7 @@ a:link:hover, a:visited:hover {
     display: none;
 }
 #title {
-    background: url(http://i.imgur.com/AJ9XaZZ.png);
+    background: url(https://www.smogon.com/__uploads/V1X7AkrXnP1k3VNx7bwfDA.png);
     background-size: 905px 117px;
     width: 905px;
     height: 117px;
