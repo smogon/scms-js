@@ -14,12 +14,17 @@ $(document).ready(function () {
     var exceptions = (window.scmsJSON && window.scmsJSON.credits) || {};
 
     $('#content_wrapper dt').not('.skip-link').each(function () {
-        var name = this.innerHTML;
+        var name = this.textContent;
         // hasOwnProperty rather than a truth test: a contributor called
         // "constructor" would otherwise link to Object's.
         var member = Object.prototype.hasOwnProperty.call(exceptions, name)
-            ? exceptions[name] : encodeURI(name);
-        this.innerHTML = '<a href="/forums/members/' + member + '" target="_blank">' + name + '</a>';
+            ? encodeURIComponent(String(exceptions[name])) : encodeURI(name);
+        // The name's own nodes move into the link; nothing is parsed as html.
+        var link = document.createElement('a');
+        link.href = '/forums/members/' + member;
+        link.target = '_blank';
+        while (this.firstChild) link.appendChild(this.firstChild);
+        this.appendChild(link);
     });
 
     // Pixels scrolled before the link is worth offering.

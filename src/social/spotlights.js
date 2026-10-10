@@ -4,40 +4,74 @@ function toID(text) {
     return ('' + text).toLowerCase().replace(/[^a-z0-9]+/g, '');
 }
 
+// A sprite file's name: the forum's and the dex's are the lowercased name
+// with spaces as dashes and nothing else.
+function spriteName(text) {
+    return ('' + text).toLowerCase().replace(/ /g, '-').replace(/[^a-z0-9-]/g, '');
+}
+
+// Every value here is the author's: it goes into the page as text or as an
+// attribute value, never parsed as html.
+function el(tag, attrs, children) {
+    var node = document.createElement(tag);
+    for (var key in attrs) {
+        if (Object.prototype.hasOwnProperty.call(attrs, key)) node.setAttribute(key, attrs[key]);
+    }
+    for (var i = 0; i < children.length; i++) {
+        node.appendChild(typeof children[i] === 'string' ? document.createTextNode(children[i]) : children[i]);
+    }
+    return node;
+}
+
+function member(pair, role) {
+    return [' | ' + role + ' by ',
+            el('a', {href: '/forums/members/' + encodeURIComponent(String(pair[1])) + '/', target: '_blank'}, [String(pair[0])])];
+}
+
 $(document).ready(function () {
     $('#spotlightFiller').hide();
     var json = window.scmsJSON;
-    var authorURL = json.authorURL;
-    var gpURL = json.gpURL;
-    var qcURL = json.qcURL;
-    var description = json.description +
-        (json.replayLine && json.replayURL ?
-            ('<br /><br /><a href="' + json.replayURL + '" target="_blank">' + json.replayLine + '</a>') : '');
     var formatid = toID(json.formatName);
     var obj = pkmn.sets.Teams.importTeam($("#set").text());
     obj.format = formatid;
     var set = obj.team[0];
-    var buf = '';
-    buf += '<div class="header">';
-    buf += '<h1 style="font-size:x-large;display: inline-block; background: url(/forums//media/minisprites/' + set.species.toLowerCase().replace(/\./g, '').replace(/ /g, '-') + '.png) no-repeat left;">' + json.formatName + ' Set Spotlight: ' + json.setName + ' ' + set.species + '</h1>';
-    buf += '<p class="author">Written by <a href="/forums/members/' + authorURL[1] + '/" target="_blank">' + authorURL[0] + '</a>';
-    if (qcURL) buf += ' | Quality checked by <a href="/forums/members/' + qcURL[1] + '/" target="_blank">' + qcURL[0] + '</a>';
-    if (gpURL) buf += ' | Grammar checked by <a href="/forums/members/' + gpURL[1] + '/" target="_blank">' + gpURL[0] + '</a>';
-    buf += '</p></div>';
-    // image handling
-    buf += '<article><div class="img">';
+
+    var title = json.formatName + ' Set Spotlight: ' + json.setName + ' ' + set.species;
+    var h1 = el('h1', {style: 'font-size:x-large;display: inline-block;'}, [title]);
+    h1.style.background = "url('/forums//media/minisprites/" + spriteName(set.species.replace(/\./g, '')) + ".png') no-repeat left";
+
+    var author = el('p', {'class': 'author'}, ['Written by ',
+        el('a', {href: '/forums/members/' + encodeURIComponent(String(json.authorURL[1])) + '/', target: '_blank'}, [String(json.authorURL[0])])]);
+    if (json.qcURL) member(json.qcURL, 'Quality checked').forEach(function (n) { author.appendChild(typeof n === 'string' ? document.createTextNode(n) : n); });
+    if (json.gpURL) member(json.gpURL, 'Grammar checked').forEach(function (n) { author.appendChild(typeof n === 'string' ? document.createTextNode(n) : n); });
+
     var gen = parseInt(formatid[3]);
     var genIdent = gen >= 6 || isNaN(gen) ? 'xy' : gen === 5 ? 'bw' : gen === 4 ? 'dp' : gen === 3 ? 'rs' : gen === 2 ? 'c' : 'rb';
     var suffix = gen > 4 || gen === 2 || isNaN(gen) ? 'gif' : 'png';
-    var pkmnSprite = '/dex/media/sprites//' + genIdent + '/' + set.species.toLowerCase().replace(/\./g, '').replace(/ /g, '-') + '.' + suffix;
-    buf += '<img class="img-pokemon" src="' + pkmnSprite + '" />';
+    var pkmnSprite = '/dex/media/sprites//' + genIdent + '/' + spriteName(set.species.replace(/\./g, '')) + '.' + suffix;
     if (!set.item) set.item = "No Item";
     if (set.item.includes('/')) set.item = set.item.split('/')[0].trim();
-    var itemSprite = '/forums//media/minisprites/' + set.item.toLowerCase().replace(/ /g, '-') + '.png';
-    buf += '<img class="img-item" src="' + itemSprite + '" /></div>';
-    buf += '<pre>' + pkmn.sets.Sets.exportSet(set);
-    buf += '<div id="description"><br />' + description + '</div></pre>';
-    buf += '</article>';
-    $('title').html("Social Media Spotlight: " + json.formatName + ' ' + json.setName + ' ' + set.species);
-    $("#spotlight").html(buf);
+    var itemSprite = '/forums//media/minisprites/' + spriteName(set.item) + '.png';
+
+    var description = el('div', {id: 'description'}, [el('br', {}, []), String(json.description)]);
+    if (json.replayLine && json.replayURL) {
+        var replay = String(json.replayURL);
+        if (/^(https?:)?\/\//i.test(replay) || replay.charAt(0) === '/') {
+            description.appendChild(el('br', {}, []));
+            description.appendChild(el('br', {}, []));
+            description.appendChild(el('a', {href: replay, target: '_blank'}, [String(json.replayLine)]));
+        }
+    }
+
+    var article = el('article', {}, [
+        el('div', {'class': 'img'}, [
+            el('img', {'class': 'img-pokemon', src: pkmnSprite}, []),
+            el('img', {'class': 'img-item', src: itemSprite}, [])]),
+        el('pre', {}, [pkmn.sets.Sets.exportSet(set), description])]);
+
+    document.title = "Social Media Spotlight: " + title;
+    var spotlight = document.getElementById('spotlight');
+    spotlight.textContent = '';
+    spotlight.appendChild(el('div', {'class': 'header'}, [h1, author]));
+    spotlight.appendChild(article);
 });

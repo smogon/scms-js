@@ -2,22 +2,6 @@
 
 'use strict';
 
-// Polyfill for String.startsWith
-Object.defineProperty(String.prototype, 'startsWith', {
-    value: function(search, pos) {
-        return this.substring(!pos || pos < 0 ? 0 : +pos, search.length) === search;
-    }
-});
-
-Object.defineProperty(String.prototype, 'endsWith', {
-    value: function(search, this_len) {
-        if (this_len === undefined || this_len > search.length) {
-            this_len = search.length;
-        }
-        return this.substring(this_len - search.length, this_len) === search;
-    }
-});
-
 function reformatFileToFormatName(str) {
     const nameWhitelist = window.scmsJSON.nameWhitelist;
     if (nameWhitelist && nameWhitelist[str]) {
@@ -32,13 +16,19 @@ function reformatFileToFormatName(str) {
     return gen;
 };
 
+// A format id is lowercase letters and digits; so is a team's id, which is
+// also the element id its copy button names.
+function toID(s) {
+    return ('' + s).toLowerCase().replace(/[^a-z0-9]+/g, '');
+}
+
 function getFormat() {
     var format = false;
     var q = window.location.search.substring(1).split('&');
     for (var i = 0; i < q.length; i++) {
         var p = q[i].split('=');
         if (p[0] === 'format') {
-            format = p[1];
+            format = toID(p[1]);
             break;
         }
     }
@@ -145,10 +135,10 @@ $(document).ready(function () {
         buf.push('<table class="table">');
         var gen1 = [], gen2 = [], gen3 = [], gen4 = [], gen5 = [], gen6 = [], gen7 = [], gen8 = [];
         for (var i = 0; i < FORMATS.sort().length; i++) {
-            var formatid = FORMATS[i];
+            var formatid = toID(FORMATS[i]);
             if (formatid === 'index') continue;
-            var event = (format && formatid === format ? 'disabled' : 'onclick="goToTeams(\'' + formatid + '\')"');
-            var button = '<button class="button" ' + event + '>' + reformatFileToFormatName(formatid) + '</button>';
+            var event = (format && formatid === format ? 'disabled' : 'data-format="' + formatid + '"');
+            var button = '<button class="button" ' + event + '>' + escapeHTML(reformatFileToFormatName(formatid)) + '</button>';
             if (formatid.startsWith('gen1')) gen1.push(button);
             if (formatid.startsWith('gen2')) gen2.push(button);
             if (formatid.startsWith('gen3')) gen3.push(button);
@@ -178,14 +168,14 @@ $(document).ready(function () {
         if (teamStr === 'INDEX') {
             return buf.join('') + '</div>';
         }
-        buf.push('<h2>' + reformatFileToFormatName(format) + ' teams</h2>');
+        buf.push('<h2>' + escapeHTML(reformatFileToFormatName(format)) + ' teams</h2>');
         var teams = pkmn.sets.Teams.importTeams(teamStr);
         buf.push('<p class="hide" id="allteams">' + escapeHTML(pkmn.sets.Teams.exportTeams(teams), true) + '</p>');
-        buf.push('<div><button class="button" onclick="copyElement(\'#allteams\', \'Successfully copied all teams!\')">Copy All Teams</button></div>');
+        buf.push('<div><button class="button" data-copy="allteams" data-copied="Successfully copied all teams!">Copy All Teams</button></div>');
         for (var i = 0; i < teams.length; i++) {
             var skip = false;
             if (teams[i].name.indexOf('SEPARATOR [') >= 0) {
-                buf.push('<h3>' + teams[i].name.slice(11, teams[i].name.length - 1) + '</h3>');
+                buf.push('<h3>' + escapeHTML(teams[i].name.slice(11, teams[i].name.length - 1)) + '</h3>');
                 skip = true;
             }
             if (!skip) buf.push('<div>');
@@ -195,7 +185,7 @@ $(document).ready(function () {
                 if (teams.length > 10) {
                     var spriteid = mon.species.toLowerCase().replace(/ /g, '-').replace(/[^-a-z0-9]+/g, '');
                     if (spriteid.startsWith('gourgeist')) spriteid = 'gourgeist';
-                    buf.push('<img src="/forums//media/minisprites/' + spriteid + '.png" alt="' + mon.species + '" />');
+                    buf.push('<img src="/forums//media/minisprites/' + spriteid + '.png" alt="' + escapeHTML(mon.species) + '" />');
                 } else {
                     var genNum = parseInt(format.slice(3, 4));
                     var directory = genNum < 5 ? format.slice(0, 4) : (genNum === 5 ? 'gen5ani' : 'ani');
@@ -210,14 +200,14 @@ $(document).ready(function () {
                         spriteid = baseName;
                     }
                     if (spriteid === 'ho-oh') spriteid = 'hooh';
-                    buf.push('<img src="//play.pokemonshowdown.com/sprites/' + directory + '/' + spriteid + '.' + (genNum < 5 ? 'png' : 'gif') + '" alt="' + mon.species + '" />');
+                    buf.push('<img src="//play.pokemonshowdown.com/sprites/' + directory + '/' + spriteid + '.' + (genNum < 5 ? 'png' : 'gif') + '" alt="' + escapeHTML(mon.species) + '" />');
                 }
             }
             if (!skip) {
                 buf.push('</div>');
-                buf.push('<button class="button" style="margin-bottom:-10px;" onclick="copyElement(\'#' + teams[i].name.toLowerCase().replace(/[^-a-z0-9]+/g, '') + '\', \'Successfully copied team!\')">Copy Team</button> ');
-                buf.push('<details><summary>' + teams[i].name + '</summary>');
-                buf.push('<p id="' + teams[i].name.toLowerCase().replace(/[^-a-z0-9]+/g, '') + '">' + escapeHTML(teams[i].export(), true) + '</p>')
+                buf.push('<button class="button" style="margin-bottom:-10px;" data-copy="' + toID(teams[i].name) + '" data-copied="Successfully copied team!">Copy Team</button> ');
+                buf.push('<details><summary>' + escapeHTML(teams[i].name) + '</summary>');
+                buf.push('<p id="' + toID(teams[i].name) + '">' + escapeHTML(teams[i].export(), true) + '</p>')
                 buf.push(generateDescriptionBox(format, teams[i].name.trim()));
                 buf.push('</details>');
             }
@@ -228,8 +218,17 @@ $(document).ready(function () {
 
 
     var format = getFormat();
-    if (!format || FORMATS.indexOf(format.toLowerCase().replace(/[^a-z0-9]+/g, '')) < 0) format = 'index';
+    if (!format || FORMATS.map(toID).indexOf(format) < 0) format = 'index';
     $.get('sample-files/' + format + '.txt', function (data) {
         $('#b').html(buildPage(data, format));
+    });
+
+    // The buttons name what they do on the markup; the handlers are bound
+    // here rather than written into it.
+    $('#b').on('click', '[data-format]', function () {
+        goToTeams(this.getAttribute('data-format'));
+    });
+    $('#b').on('click', '[data-copy]', function () {
+        copyElement(document.getElementById(this.getAttribute('data-copy')), this.getAttribute('data-copied'));
     });
 });

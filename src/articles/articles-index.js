@@ -11,6 +11,13 @@ Object.defineProperty(String.prototype, 'startsWith', {
     }
 });
 
+// Every field below comes out of data/articles.json or [json], and goes into
+// html as text or an attribute value.
+function esc(s) {
+    return ('' + s).replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(/>/g, '&gt;')
+        .replace(/"/g, '&quot;').replace(/'/g, '&#39;');
+}
+
 // Because IE support is fun, prototypes!
 var ArticleIndexRow = function(title, date, tags, contributors, ref) {
     this.title = title;
@@ -22,12 +29,12 @@ var ArticleIndexRow = function(title, date, tags, contributors, ref) {
 
 ArticleIndexRow.prototype.getRowHtml = function(visibleContributors) {
     var html = '<tr>';
-    html += '<td><a href="/articles/' + this.ref + '" title="Read the article!">' + this.title + '</a></td>';
+    html += '<td><a href="/articles/' + esc(this.ref) + '" title="Read the article!">' + esc(this.title) + '</a></td>';
     html += '<td>' + moment(this.pubdate).format('ddd MMM Do YYYY') + '</td>';
     html += '<td><ul>';
     var htmlTags = [];
     for (var i = 0; i < this.tags.length; i++) {
-        htmlTags.push('<li class="articleTag" title="Filter by tag: ' + this.tags[i] + '">' + this.tags[i] + '</li>');
+        htmlTags.push('<li class="articleTag" title="Filter by tag: ' + esc(this.tags[i]) + '">' + esc(this.tags[i]) + '</li>');
     }
     html += htmlTags.join('<span> | </span>');
     html += '</ul></td><td><ul>';
@@ -37,31 +44,31 @@ ArticleIndexRow.prototype.getRowHtml = function(visibleContributors) {
         authors = this.contributors.authors.length;
         for (var i = 0; i < this.contributors.authors.length; i++) {
             var author = this.contributors.authors[i];
-            contributorsHtml.push('<li><a class="article-author contributor" href="/forums/members/' + author.id + '" title="Produced the article">' + author.name + '</a></li>');
+            contributorsHtml.push('<li><a class="article-author contributor" href="/forums/members/' + esc(author.id) + '" title="Produced the article">' + esc(author.name) + '</a></li>');
         }
     }
     if (this.contributors.artists) {
         for (var i = 0; i < this.contributors.artists.length; i++) {
             var artist = this.contributors.artists[i];
-            contributorsHtml.push('<li><a class="contributor" href="/forums/members/' + artist.id + '" title="Created the art">' + artist.name + '</a></li>');
+            contributorsHtml.push('<li><a class="contributor" href="/forums/members/' + esc(artist.id) + '" title="Created the art">' + esc(artist.name) + '</a></li>');
         }
     }
     if (this.contributors.gpers) {
         for (var i = 0; i < this.contributors.gpers.length; i++) {
             var gper = this.contributors.gpers[i];
-            contributorsHtml.push('<li><a class="contributor" href="/forums/members/' + gper.id + '" title="Checked the grammar">' + gper.name + '</a></li>');
+            contributorsHtml.push('<li><a class="contributor" href="/forums/members/' + esc(gper.id) + '" title="Checked the grammar">' + esc(gper.name) + '</a></li>');
         }
     }
     if (this.contributors.coders) {
         for (var i = 0; i < this.contributors.coders.length; i++) {
             var coder = this.contributors.coders[i];
-            contributorsHtml.push('<li><a class="contributor" href="/forums/members/' + coder.id + '" title="Wrote the code">' + coder.name + '</a></li>');
+            contributorsHtml.push('<li><a class="contributor" href="/forums/members/' + esc(coder.id) + '" title="Wrote the code">' + esc(coder.name) + '</a></li>');
         }
     }
     if (this.contributors.qcers) {
         for (var i = 0; i < this.contributors.qcers.length; i++) {
             var qcer = this.contributors.qcers[i];
-            contributorsHtml.push('<li><a class="contributor" href="/forums/members/' + qcer.id + '" title="Checked the content">' + qcer.name + '</a></li>');
+            contributorsHtml.push('<li><a class="contributor" href="/forums/members/' + esc(qcer.id) + '" title="Checked the content">' + esc(qcer.name) + '</a></li>');
         }
     }
 
@@ -99,7 +106,7 @@ ArticleIndex.prototype.getYearData = function(year) {
 ArticleIndex.prototype.buildTableFilter = function() {
     var html = '<div id="filterbar"><select id="tagSelect">';
     for (var i = 0; i < this.allTags.length; i++) {
-        html += '<option>' + this.allTags[i] + '</option>';
+        html += '<option>' + esc(this.allTags[i]) + '</option>';
     }
     html += '</select><div id="bar"><input id="searchBar" type="text" /></div></div>';
     return html;
@@ -132,10 +139,11 @@ ArticleIndex.prototype.buildDataIndex = function(indexData) {
 };
 
 ArticleIndex.prototype.buildIndex = function(data) {
+    var self = this;
     if (!data) data = this.articleYearData;
     $('#articleIndex').html(this.buildDataIndex(data));
     this.addEventHandlers();
-    $('#yearSelect li:contains(' + this.year + ')').attr('id', 'current');
+    $('#yearSelect li').filter(function () { return $(this).text() === self.year; }).attr('id', 'current');
 }
 
 ArticleIndex.prototype.filterByTag = function(tag) {
@@ -221,7 +229,8 @@ function getYear() {
             y = p[1];
         }
     }
-    if (!y) {
+    // A year is four digits; anything else off the address is this year.
+    if (!y || !/^\d{4}$/.test(y)) {
         y = new Date().getFullYear().toString();
     }
     return y;
