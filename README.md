@@ -1,8 +1,8 @@
 This is a transitional repository, related to the long-term project of retiring Smogon's legacy CMS.
 
-`src/` is served at `https://www.smogon.com/__scms-js/`, and `old-scms-content/`
-holds the stylesheets that went with it. A legacy page reaches a script by
-writing a `<script src>` for it in the page's `[head]`.
+`src/` is served at `https://www.smogon.com/__scms-js/`, stylesheets beside the
+scripts. A legacy page reaches either by writing a `<link href>` or a
+`<script src>` for it in the page's `[head]`.
 
 src/widgets
 -----------
