@@ -111,9 +111,3 @@ h1{
 	text-align: center;
 }
 
-/* Toogle client button */
-#toggle{
-    text-decoration: underline;
-    font-weight: bold;
-	cursor: pointer;
-}

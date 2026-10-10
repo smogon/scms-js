@@ -4,6 +4,7 @@
  *  Last update by Quarkz (30/08/2014)
  */
 
+@media (min-width: 801px) {
 #issuebacking{
 	width: 1000px;
 }
@@ -56,15 +57,7 @@
 
 .leftcolumn{
 	float:left;
-	position:inherit;
+	position: sticky;
+	top: 0;
 }
-
-/* Used to make the content on the left of the page fixed (see: issue-home-scripts.js) */
-.fixed{
-	position:fixed;
-}
-
-/* Toogle client button */
-#toggle{
-	text-align: center;
 }

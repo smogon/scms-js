@@ -4,6 +4,7 @@
  *  Last update by Quarkz (31/07/2014)
  */
  
+@media (max-width: 800px) {
 #issuebacking{
 	width: 75%;
 	text-align: center;
@@ -55,10 +56,4 @@
 .leftcolumn{
 	position:inherit;
 }
-
-/* Toogle client button */
-#toggle{
-	text-decoration: underline;
-	font-weight: bold;
-	cursor: pointer;
 }

@@ -49,7 +49,7 @@ h4 {
 	        box-shadow: 7px 7px 10px #97999c;
 }
 
-.article-hover {
+.article:hover, .article-hover {
 	-webkit-box-shadow: 0 0;
 	   -moz-box-shadow: 0 0;
 	        box-shadow: 0 0;
@@ -108,7 +108,7 @@ h4 {
 
 /* Button styling properties */
 
-.button a {
+.button a, .button label {
 	vertical-align: middle;
 	padding: 6px 6px;
 	font-size: 11px;
@@ -123,12 +123,12 @@ h4 {
 	        border-radius: 15px;
 }
 
-.button a:hover {
+.button a:hover, .button label:hover {
 	color: #f0e8f0;
 	background-color: #e85252;
 }
 
-.button a:active {
+.button a:active, .button label:active {
 	background-color: #9e2c2c;
 }
 
